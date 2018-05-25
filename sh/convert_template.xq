@@ -1,7 +1,7 @@
 declare option output:method "csv";
 declare option output:csv "header=yes, separator=comma";
 
-for $incident in doc("../xml/TFS_OPEN_DATA-2011.xml")/FIRE_DATA/INCIDENT
+for $incident in doc("../xml/TFS_OPEN_DATA-2017.xml")/FIRE_DATA/INCIDENT
 return
 <csv>
 	<record>

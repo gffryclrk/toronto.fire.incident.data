@@ -1,0 +1,1380 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={CMTH642 Capstone},
+            pdfauthor={Geoffrey Clark},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{CMTH642 Capstone}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Geoffrey Clark}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{May 28, 2018}
+
+
+\begin{document}
+\maketitle
+
+\subsection{Fire Incident Data
+Overview}\label{fire-incident-data-overview}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Load & Combine Dataset from Yearwise .csv}
+
+\NormalTok{I <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"../csv/2011_i.csv"}\NormalTok{, }\DataTypeTok{header=}\NormalTok{T)}
+
+\ControlFlowTok{for}\NormalTok{(yr }\ControlFlowTok{in}\NormalTok{ (}\DecValTok{2012}\OperatorTok{:}\DecValTok{2016}\NormalTok{))\{}
+\NormalTok{  i_file <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(}\StringTok{"../csv/"}\NormalTok{,yr, }\StringTok{"_i.csv"}\NormalTok{, }\DataTypeTok{sep=}\StringTok{""}\NormalTok{)}
+\NormalTok{  I <-}\StringTok{ }\KeywordTok{rbind}\NormalTok{(I, }\KeywordTok{read.csv}\NormalTok{(i_file, }\DataTypeTok{header=}\NormalTok{T))}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+
+## Warning in `[<-.factor`(`*tmp*`, ri, value = c(323L, 144L, 323L, 323L,
+## 323L, : invalid factor level, NA generated
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str}\NormalTok{(I)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    720370 obs. of  100 variables:
+##  $ INCIDENT_NUMBER                              : Factor w/ 720312 levels "","F11000010",..: 2 3 4 5 6 7 8 9 10 11 ...
+##  $ EVENT_TYPE                                   : Factor w/ 115 levels "","Alarm Commercial/Industrial",..: 54 15 54 26 5 22 25 54 54 35 ...
+##  $ DISPATCH_DATE                                : Factor w/ 702207 levels "","2011-01-01 00:09:02",..: 4 2 3 5 6 9 8 7 11 10 ...
+##  $ ARRIVE_DATE                                  : Factor w/ 702207 levels "","2011-01-01 00:09:02",..: 4 2 3 5 6 9 8 7 11 10 ...
+##  $ EVENT_TYPE_CD                                : Factor w/ 131 levels "","CBRN1","CBRN2",..: 53 8 59 25 13 28 24 62 56 35 ...
+##  $ MAIN_STREET                                  : Factor w/ 8932 levels "","27 S EGLINTON E RAMP",..: 1 3519 1 1510 4401 4951 1715 1 1 4475 ...
+##  $ CROSS_STREET                                 : Factor w/ 11026 levels "","10 EMPRINGHAM DR",..: 1 3401 1 6234 5762 6720 4284 1 1 491 ...
+##  $ FSA                                          : Factor w/ 119 levels "","L3R","L3S",..: 91 1 53 1 1 1 1 50 88 1 ...
+##  $ RESPONDING_UNITS                             : int  1 1 1 1 4 5 18 1 1 5 ...
+##  $ FD_STATION                                   : Factor w/ 375477 levels "F11000001000",..: 2 3 4 5 6 7 8 9 10 11 ...
+##  $ OFM_INVESTIGATIONS_CONTACTED                 : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AID_TO_FROM_OTHER_DEPTS                      : int  4 4 4 4 1 4 4 4 4 4 ...
+##  $ INCIDENT_DATE                                : Factor w/ 2192 levels "01/01/2011","01/02/2011",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ INITIAL_CALL_HOUR                            : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ INITIAL_CALL_MIN                             : int  3 3 5 4 6 6 6 8 8 9 ...
+##  $ INITIAL_CALL_SEC                             : int  43 55 3 46 7 24 48 26 56 33 ...
+##  $ DISPATCH_HOUR                                : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ DISPATCH_MIN                                 : int  4 4 5 6 6 7 7 8 9 10 ...
+##  $ DISPATCH_SEC                                 : int  13 46 50 33 41 23 28 51 31 10 ...
+##  $ ONSCENE_HOUR                                 : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ ONSCENE_MIN                                  : int  10 9 9 10 11 13 12 12 15 14 ...
+##  $ ONSCENE_SEC                                  : int  2 2 34 46 3 46 54 43 44 28 ...
+##  $ INITIAL_UNIT_PERSONNEL                       : int  4 4 4 4 4 4 4 4 4 4 ...
+##  $ TOTAL_NUM_PERSONNEL                          : int  4 4 4 4 14 17 58 4 4 17 ...
+##  $ EST_KM                                       : int  1 1 1 2 1 3 2 2 2 1 ...
+##  $ ALARM_TO_FD                                  : int  3 1 3 1 5 1 1 3 3 4 ...
+##  $ RESPONSE_TYPE                                : int  89 38 89 3 33 34 1 89 89 34 ...
+##  $ RESCUES                                      : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ FF_INJURIES                                  : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ FF_FATALITIES                                : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AGENT_APP_HOUR                               : int  NA NA NA NA NA NA 0 NA NA NA ...
+##  $ AGENT_APP_MIN                                : int  NA NA NA NA NA NA 15 NA NA NA ...
+##  $ AGENT_APP_SEC                                : int  NA NA NA NA NA NA 59 NA NA NA ...
+##  $ CONTROL_DATE                                 : Factor w/ 2182 levels "","01/01/11",..: 1 1 1 1 1 1 2 1 1 1 ...
+##  $ CONTROL_HOUR                                 : int  NA NA NA NA NA NA 1 NA NA NA ...
+##  $ CONTROL_MIN                                  : int  NA NA NA NA NA NA 54 NA NA NA ...
+##  $ CONTROL_SEC                                  : int  NA NA NA NA NA NA 0 NA NA NA ...
+##  $ STATUS_ON_ARRIVAL                            : int  NA NA NA NA NA NA 5 NA NA NA ...
+##  $ WATER                                        : int  NA NA NA NA NA NA 1 NA NA NA ...
+##  $ FIRE_CONTROL                                 : int  NA NA NA NA NA NA 1 NA NA NA ...
+##  $ PROPERTY                                     : Factor w/ 335 levels "","101","102",..: 69 69 70 285 75 75 266 33 298 75 ...
+##  $ AREA_OF_ORIGIN                               : int  NA NA NA NA NA NA 74 NA NA NA ...
+##  $ IGNITION_SOURCE                              : int  NA NA NA NA NA NA 999 NA NA NA ...
+##  $ FUEL_OF_IGNITION_SOURCE                      : int  NA NA NA NA NA NA 99 NA NA NA ...
+##  $ OBJECT_OR_MATERIAL_FIRST_IGNITED             : int  NA NA NA NA NA NA 97 NA NA NA ...
+##  $ POSSIBLE_CAUSE                               : int  NA NA NA NA NA NA 98 NA NA NA ...
+##  $ VEH_PURPOSE                                  : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ VEH_FUEL                                     : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ EST_LOSS                                     : int  0 0 0 0 0 0 1000 0 0 0 ...
+##  $ INSURANCE_ESTIMATE                           : int  NA NA NA NA NA NA 2 NA NA NA ...
+##  $ EST_VALUE_AT_RISK                            : int  NA NA NA NA NA NA 1 NA NA NA ...
+##  $ CIVILIAN_FIRE_INJURY                         : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ CIVILIAN_FIRE_FATALITY                       : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ RESCUED_CHILDREN                             : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ RESCUED_ADULTS                               : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ RESCUED_SENIORS                              : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ PHYSICAL_CONDITION_1                         : int  NA NA NA NA NA NA 98 NA NA NA ...
+##  $ PHYSICAL_CONDITION_2                         : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ PHYSICAL_CONDITION_3                         : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ CIV_FIRE_CONTROL                             : int  NA NA NA NA NA NA 3 NA NA NA ...
+##  $ CIV_EVACUATION                               : int  NA NA NA NA NA NA 4 NA NA NA ...
+##  $ CIV_EVACUATION_REASON_1                      : int  NA NA NA NA NA NA 8 NA NA NA ...
+##  $ CIV_EVACUATION_REASON_2                      : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ OPP                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ MOE                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ TSSA                                         : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ ESA                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ MOL                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ EMS                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ CANUTEC                                      : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ GAS                                          : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ HYDRO                                        : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ MUNICIPAL_BUILDING_OFFICE                    : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ MUNICIPAL_HEALTH_OFFICE                      : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ MUNICIPAL_POLICE                             : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ OTHER                                        : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ INITIAL_DETECTION                            : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ EXTENT_FIRE                                  : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ EXTENT_SMOKE                                 : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ EST_NUM_PERSONS_DISPLACED                    : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ POSSIBLE_BUSINESS_IMPACT                     : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ COMPLEX                                      : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ OCC_STATUS                                   : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ OCC_TYPE                                     : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ BLD_STATUS                                   : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ BLD_HEIGHT                                   : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ LEVEL_OF_ORIGIN                              : Factor w/ 58 levels "","001","002",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ AGE_OF_STRUCTURE                             : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR: int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_FAILURE_TO_OPERATE               : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_TYPE                             : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_OTHER_FLOOR_PRESENCE             : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_ON_ALL_FLOORS                    : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_IMPACT_ON_EVAC                   : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SMOKE_ALARM_IMPACT_ON_NUM_EVAC               : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ FIRE_ALARM_SYSTEM_PRESENCE                   : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ FIRE_ALARM_SYSTEM_OPERATION                  : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ FIRE_ALARM_SYSTEM_IMPACT                     : int  NA NA NA NA NA NA NA NA NA NA ...
+##  $ SPRINKLER_SYSTEM_PRESENCE                    : int  NA NA NA NA NA NA NA NA NA NA ...
+##   [list output truncated]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sapply}\NormalTok{(I, summary)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $INCIDENT_NUMBER
+##           F13063572 F13096124 F13097259 F14016411 F14027496 F14087165 
+##        32         4         4         4         4         4         4 
+## F15048892 F15066701 F15120526 F11000010 F11000011 F11000012 F11000013 
+##         4         4         4         1         1         1         1 
+## F11000014 F11000015 F11000016 F11000017 F11000018 F11000019 F11000020 
+##         1         1         1         1         1         1         1 
+## F11000021 F11000022 F11000023 F11000024 F11000025 F11000026 F11000027 
+##         1         1         1         1         1         1         1 
+## F11000028 F11000029 F11000030 F11000031 F11000032 F11000034 F11000035 
+##         1         1         1         1         1         1         1 
+## F11000036 F11000037 F11000038 F11000039 F11000040 F11000041 F11000042 
+##         1         1         1         1         1         1         1 
+## F11000043 F11000044 F11000045 F11000046 F11000047 F11000048 F11000049 
+##         1         1         1         1         1         1         1 
+## F11000050 F11000052 F11000053 F11000054 F11000055 F11000056 F11000057 
+##         1         1         1         1         1         1         1 
+## F11000058 F11000059 F11000060 F11000061 F11000062 F11000063 F11000064 
+##         1         1         1         1         1         1         1 
+## F11000065 F11000066 F11000068 F11000069 F11000070 F11000071 F11000072 
+##         1         1         1         1         1         1         1 
+## F11000073 F11000074 F11000075 F11000076 F11000077 F11000078 F11000079 
+##         1         1         1         1         1         1         1 
+## F11000080 F11000081 F11000082 F11000083 F11000084 F11000085 F11000086 
+##         1         1         1         1         1         1         1 
+## F11000087 F11000088 F11000089 F11000090 F11000091 F11000092 F11000093 
+##         1         1         1         1         1         1         1 
+## F11000094 F11000095 F11000096 F11000097 F11000098 F11000099 F11000100 
+##         1         1         1         1         1         1         1 
+## F11000101   (Other) 
+##         1    720213 
+## 
+## $EVENT_TYPE
+##                                       Medical 
+##                                        354742 
+##                    Alarm Highrise Residential 
+##                                         46464 
+##                             Alarm Residential 
+##                                         28734 
+##                   Alarm Commercial/Industrial 
+##                                         25569 
+##                     Vehicle - Personal Injury 
+##                                         24850 
+##                 Carbon Monoxide - Non Medical 
+##                                         20502 
+##                          Fire - Grass/Rubbish 
+##                                         18458 
+##                             Rescue - Elevator 
+##                                         17362 
+##                            Fire - Residential 
+##                                         13976 
+##             Vehicle - Personal Injury Highway 
+##                                         13760 
+##                                    Check Call 
+##                                         11656 
+##           Alarm Highrise Residential Downtown 
+##                                         10955 
+##               TEMS TRANSFERRED - READ REMARKS 
+##                                         10686 
+##                             Alarm Institution 
+##                                         10274 
+##                  Fire -  Highrise Residential 
+##                                          9632 
+##                              Natural Gas Leak 
+##                                          9550 
+##                            Wires Down - Hydro 
+##                                          7931 
+##                       Fire Alarm - Check Call 
+##                                          7875 
+##                                Hazmat Level 1 
+##                                          6482 
+##        Alarm Highrise - Commercial - Downtown 
+##                                          5795 
+##                    Vehicle Accident - Trapped 
+##                                          5735 
+##                                  Vehicle Fire 
+##                                          5639 
+##                                 Water Problem 
+##                                          5524 
+##                  Fire - Commercial/Industrial 
+##                                          4666 
+##                  Alarm - Institution - School 
+##                                          4472 
+##                       Fire - Transformer/Pole 
+##                                          3117 
+##                      Vehicle - Spill Clean Up 
+##                                          3113 
+##                    Alarm Institution Downtown 
+##                                          2611 
+##                             Check Call Assist 
+##                                          2314 
+##                     Alarm Highrise Commercial 
+##                                          2175 
+##                             Vehicle Wash Down 
+##                                          2064 
+##                        Vehicle Fire - Highway 
+##                                          1879 
+##          Vehicle Accident - Trapped - Highway 
+##                                          1878 
+##            Carbon Monoxide - Medical Symptoms 
+##                                          1764 
+##                                 Fire - Subway 
+##                                          1619 
+##                    Vehicle Accident with Fire 
+##                                          1511 
+##                                Hazmat Level 2 
+##                                          1376 
+##                    Check Call - Non Emergency 
+##                                          1296 
+##        Fire - Highrise Residential - Downtown 
+##                                          1200 
+##      Vehicle - Spill Clean Up - Non Emergency 
+##                                           989 
+##            Vehicle Accident - Minor Fuel Leak 
+##                                           941 
+##                                 Police Assist 
+##                                           939 
+##                            Fire - Institution 
+##                                           682 
+##                  Rescue - Personal Entrapment 
+##                                           642 
+##            Vehicle - Spill Clean Up - Highway 
+##                                           488 
+##                       Island Medical Response 
+##                                           447 
+##                                  Fire - Other 
+##                                           423 
+##                                  Alarm Subway 
+##                                           373 
+##                            Fire - Hydro Vault 
+##                                           372 
+##                                  CBRN Level 1 
+##                                           358 
+##         Fire - Highrise Commercial - Downtown 
+##                                           345 
+##                                Rescue - Other 
+##                                           240 
+##                               Rescue - Subway 
+##                                           228 
+##                      Vehicle Washdown Highway 
+##                                           225 
+## Carbon Monoxide - Non Medical - Non Emergency 
+##                                           223 
+##                    Vehicle Fire - Underground 
+##                                           220 
+##                      Fire - Subway - Downtown 
+##                                           207 
+##                   Fire - Institution - School 
+##                                           195 
+##                           Rescue - High Level 
+##                                           175 
+##                 Fire - Institution - Downtown 
+##                                           159 
+##           Carbon Monoxoide - Medical Symptoms 
+##                                           152 
+##                     Rescue - Water w/Fireboat 
+##                                           151 
+##            Alarm Waterfront Marina/Industrial 
+##                                           145 
+##                    Fire - Highrise Commercial 
+##                                           130 
+##                         Alarm Subway Downtown 
+##                                           107 
+##                 Police Assist - Non Emergency 
+##                                            99 
+##                                   Alarm Other 
+##                                            92 
+##                 Water Problem - Non Emergency 
+##                                            89 
+##                           Rescue - Industrial 
+##                                            85 
+##                        Fire - Outside Storage 
+##                                            84 
+##                                 Public Hazard 
+##                                            84 
+##              Rescue - Water/Ice - No Fireboat 
+##                                            82 
+##                    Island Fire Alarm Response 
+##                                            81 
+##                                               
+##                                            80 
+##                  Rescue - Structural Collapse 
+##                                            77 
+##                  Police Assist - Bomb Standby 
+##                                            76 
+##                               Rescue - Bluffs 
+##                                            76 
+##                          Lake Rescue Response 
+##                                            50 
+##              Fire - Alarm Waterfront Highrise 
+##                                            49 
+##      Vehicle Accident - Trap - Hwy - Elevated 
+##                                            49 
+##                               Clandestine Lab 
+##                                            41 
+##                                  CBRN Level 2 
+##                                            39 
+##                       Rescue - Confined Space 
+##                                            39 
+##                       Rescue - Streetcar Lift 
+##                                            35 
+##                        Island - Fire Response 
+##                                            32 
+##                              Natural Gas Fire 
+##                                            29 
+##               Vehicle Fire - Highway Elevated 
+##                                            29 
+##                           Rescue - Water Pool 
+##                                            27 
+##                        Rescue - Trench Rescue 
+##                                            20 
+##                       Fire - Alarm Waterfront 
+##                                            19 
+##                            Lake Fire Response 
+##                                            19 
+##                               TEST EVENT TYPE 
+##                                            18 
+##             Fire Waterfront Marina/Industrial 
+##                                            17 
+##                         Island Hazmat Level 1 
+##                                            16 
+##                                Hazmat Level 3 
+##                                            13 
+##                         Island Hazmat Level 2 
+##                                            13 
+##                         Lake Medical Response 
+##                                             9 
+##              Police Assist - Joint Operations 
+##                                             5 
+##                  Fire - Waterfront - Highrise 
+##                                             5 
+##                                       (Other) 
+##                                            30 
+## 
+## $DISPATCH_DATE
+##                     2013-08-03 16:26:00 2013-11-23 17:52:58 
+##               16802                   4                   4 
+## 2013-11-28 08:06:32 2014-02-18 14:46:23 2014-03-28 10:38:55 
+##                   4                   4                   4 
+## 2014-10-04 10:01:14 2015-05-27 02:10:37 2015-07-18 16:18:54 
+##                   4                   4                   4 
+## 2015-12-31 18:16:51 2011-08-10 13:56:42 2011-11-26 12:07:07 
+##                   4                   3                   3 
+## 2011-01-01 02:12:13 2011-01-01 11:26:37 2011-01-03 13:09:33 
+##                   2                   2                   2 
+## 2011-01-04 09:37:28 2011-01-04 10:58:47 2011-01-05 16:13:54 
+##                   2                   2                   2 
+## 2011-01-05 18:24:34 2011-01-06 18:04:48 2011-01-06 18:20:36 
+##                   2                   2                   2 
+## 2011-01-06 23:11:36 2011-01-07 09:12:48 2011-01-07 11:57:44 
+##                   2                   2                   2 
+## 2011-01-08 15:51:07 2011-01-10 12:34:10 2011-01-12 09:32:55 
+##                   2                   2                   2 
+## 2011-01-12 13:48:03 2011-01-13 05:49:13 2011-01-16 18:25:32 
+##                   2                   2                   2 
+## 2011-01-17 09:36:04 2011-01-18 18:00:14 2011-01-23 16:44:00 
+##                   2                   2                   2 
+## 2011-01-23 20:08:38 2011-01-24 09:39:32 2011-01-24 13:24:20 
+##                   2                   2                   2 
+## 2011-01-26 07:38:20 2011-01-28 16:55:19 2011-01-29 05:00:39 
+##                   2                   2                   2 
+## 2011-01-29 07:30:34 2011-01-30 00:17:11 2011-01-31 04:28:24 
+##                   2                   2                   2 
+## 2011-01-31 08:15:58 2011-02-02 01:27:52 2011-02-02 20:36:24 
+##                   2                   2                   2 
+## 2011-02-03 13:39:10 2011-02-03 16:44:54 2011-02-05 12:05:09 
+##                   2                   2                   2 
+## 2011-02-07 15:11:57 2011-02-09 10:20:04 2011-02-09 18:58:56 
+##                   2                   2                   2 
+## 2011-02-11 11:44:23 2011-02-13 00:26:49 2011-02-14 08:38:41 
+##                   2                   2                   2 
+## 2011-02-14 10:59:10 2011-02-14 20:39:34 2011-02-18 15:10:51 
+##                   2                   2                   2 
+## 2011-02-19 00:43:51 2011-02-19 14:16:52 2011-02-19 17:04:03 
+##                   2                   2                   2 
+## 2011-02-20 12:58:58 2011-02-23 10:41:15 2011-02-26 23:37:52 
+##                   2                   2                   2 
+## 2011-02-27 00:54:16 2011-02-27 14:31:28 2011-03-01 11:43:36 
+##                   2                   2                   2 
+## 2011-03-04 21:40:57 2011-03-06 00:37:08 2011-03-06 00:55:10 
+##                   2                   2                   2 
+## 2011-03-07 19:20:18 2011-03-09 17:34:02 2011-03-10 07:28:14 
+##                   2                   2                   2 
+## 2011-03-15 12:31:35 2011-03-16 08:15:50 2011-03-20 21:58:38 
+##                   2                   2                   2 
+## 2011-03-21 09:24:59 2011-03-21 18:50:31 2011-03-26 18:25:01 
+##                   2                   2                   2 
+## 2011-03-28 19:59:13 2011-03-29 11:26:47 2011-03-29 16:16:15 
+##                   2                   2                   2 
+## 2011-03-30 08:37:27 2011-04-02 11:59:16 2011-04-02 13:44:22 
+##                   2                   2                   2 
+## 2011-04-02 15:22:36 2011-04-03 20:52:01 2011-04-04 22:42:05 
+##                   2                   2                   2 
+## 2011-04-05 22:09:04 2011-04-08 10:32:01 2011-04-09 15:37:46 
+##                   2                   2                   2 
+## 2011-04-10 13:01:35 2011-04-10 15:04:59 2011-04-11 11:53:18 
+##                   2                   2                   2 
+## 2011-04-11 21:50:15 2011-04-12 13:27:47 2011-04-12 15:53:36 
+##                   2                   2                   2 
+## 2011-04-20 16:21:54 2011-04-21 18:51:10 2011-04-24 10:34:58 
+##                   2                   2                   2 
+##             (Other) 
+##              703352 
+## 
+## $ARRIVE_DATE
+##                     2013-08-03 16:26:00 2013-11-23 17:52:58 
+##               16802                   4                   4 
+## 2013-11-28 08:06:32 2014-02-18 14:46:23 2014-03-28 10:38:55 
+##                   4                   4                   4 
+## 2014-10-04 10:01:14 2015-05-27 02:10:37 2015-07-18 16:18:54 
+##                   4                   4                   4 
+## 2015-12-31 18:16:51 2011-08-10 13:56:42 2011-11-26 12:07:07 
+##                   4                   3                   3 
+## 2011-01-01 02:12:13 2011-01-01 11:26:37 2011-01-03 13:09:33 
+##                   2                   2                   2 
+## 2011-01-04 09:37:28 2011-01-04 10:58:47 2011-01-05 16:13:54 
+##                   2                   2                   2 
+## 2011-01-05 18:24:34 2011-01-06 18:04:48 2011-01-06 18:20:36 
+##                   2                   2                   2 
+## 2011-01-06 23:11:36 2011-01-07 09:12:48 2011-01-07 11:57:44 
+##                   2                   2                   2 
+## 2011-01-08 15:51:07 2011-01-10 12:34:10 2011-01-12 09:32:55 
+##                   2                   2                   2 
+## 2011-01-12 13:48:03 2011-01-13 05:49:13 2011-01-16 18:25:32 
+##                   2                   2                   2 
+## 2011-01-17 09:36:04 2011-01-18 18:00:14 2011-01-23 16:44:00 
+##                   2                   2                   2 
+## 2011-01-23 20:08:38 2011-01-24 09:39:32 2011-01-24 13:24:20 
+##                   2                   2                   2 
+## 2011-01-26 07:38:20 2011-01-28 16:55:19 2011-01-29 05:00:39 
+##                   2                   2                   2 
+## 2011-01-29 07:30:34 2011-01-30 00:17:11 2011-01-31 04:28:24 
+##                   2                   2                   2 
+## 2011-01-31 08:15:58 2011-02-02 01:27:52 2011-02-02 20:36:24 
+##                   2                   2                   2 
+## 2011-02-03 13:39:10 2011-02-03 16:44:54 2011-02-05 12:05:09 
+##                   2                   2                   2 
+## 2011-02-07 15:11:57 2011-02-09 10:20:04 2011-02-09 18:58:56 
+##                   2                   2                   2 
+## 2011-02-11 11:44:23 2011-02-13 00:26:49 2011-02-14 08:38:41 
+##                   2                   2                   2 
+## 2011-02-14 10:59:10 2011-02-14 20:39:34 2011-02-18 15:10:51 
+##                   2                   2                   2 
+## 2011-02-19 00:43:51 2011-02-19 14:16:52 2011-02-19 17:04:03 
+##                   2                   2                   2 
+## 2011-02-20 12:58:58 2011-02-23 10:41:15 2011-02-26 23:37:52 
+##                   2                   2                   2 
+## 2011-02-27 00:54:16 2011-02-27 14:31:28 2011-03-01 11:43:36 
+##                   2                   2                   2 
+## 2011-03-04 21:40:57 2011-03-06 00:37:08 2011-03-06 00:55:10 
+##                   2                   2                   2 
+## 2011-03-07 19:20:18 2011-03-09 17:34:02 2011-03-10 07:28:14 
+##                   2                   2                   2 
+## 2011-03-15 12:31:35 2011-03-16 08:15:50 2011-03-20 21:58:38 
+##                   2                   2                   2 
+## 2011-03-21 09:24:59 2011-03-21 18:50:31 2011-03-26 18:25:01 
+##                   2                   2                   2 
+## 2011-03-28 19:59:13 2011-03-29 11:26:47 2011-03-29 16:16:15 
+##                   2                   2                   2 
+## 2011-03-30 08:37:27 2011-04-02 11:59:16 2011-04-02 13:44:22 
+##                   2                   2                   2 
+## 2011-04-02 15:22:36 2011-04-03 20:52:01 2011-04-04 22:42:05 
+##                   2                   2                   2 
+## 2011-04-05 22:09:04 2011-04-08 10:32:01 2011-04-09 15:37:46 
+##                   2                   2                   2 
+## 2011-04-10 13:01:35 2011-04-10 15:04:59 2011-04-11 11:53:18 
+##                   2                   2                   2 
+## 2011-04-11 21:50:15 2011-04-12 13:27:47 2011-04-12 15:53:36 
+##                   2                   2                   2 
+## 2011-04-20 16:21:54 2011-04-21 18:51:10 2011-04-24 10:34:58 
+##                   2                   2                   2 
+##             (Other) 
+##              703352 
+## 
+## $EVENT_TYPE_CD
+## Medical     MEU    METB    FAHR     FAR    FACI    VEPI    CONM     FIG 
+##  158831   64176   60585   46474   28735   25573   24852   20504   18462 
+##     REE    MECP     FIR   VEPIH     MEO      CC   FAHRD    TEMS     FAI 
+##   17365   16076   13976   13761   12386   11658   10958   10686   10275 
+##    FIHR  NGASLK    MESC     WDH    FACC     MEA     MEV    HAZ1   FAHCD 
+##    9633    9550    9529    7931    7878    7831    7074    6485    5795 
+##    VEAT     VEF     WAT    MEPI    FICI    FAIS    FITP    VESC  MEALRG 
+##    5735    5641    5526    5255    4666    4472    3117    3114    3017 
+##    MECR    FAID     MEB     CCA    MECI    FAHC    VEWD     COM    VEFH 
+##    2766    2611    2390    2314    2191    2175    2065    1916    1879 
+##   VEATH     FIS    VEAF    HAZ2    CCNE    MECB   FIHRD  VESCNE   VEALF 
+##    1878    1619    1511    1377    1296    1288    1200     989     941 
+##      PA    MECC     FII    REPE   VESCH    ISME     FIO     FAS    FIHV 
+##     940     916     682     642     488     447     423     373     372 
+##   CBRN1   FIHCD     REO     RES   VEWDH  CONMNE    VEFU   MEANE     MEE 
+##     358     345     240     228     225     223     220     219     211 
+##    FISD    FIIS    REHL    FIID    REWL   FAWMI    FIHC    FASD   PASNE 
+##     207     195     175     159     151     145     130     107      99 
+##     FAO   WATNE     REI    FIOS     PUB    REWR    ISFA    REST  PABOMB 
+##      92      89      85      84      84      82      81      77      76 
+##     REB    LKRE    FAWH  VEATHE    CLAN   CBRN2    RECS    RESC         
+##      76      50      49      49      41      39      39      35      32 
+## (Other) 
+##     302 
+## 
+## $MAIN_STREET
+##                                YONGE ST      LAWRENCE AVE E 
+##              420556                5798                3815 
+##         BATHURST ST       SHERBOURNE ST          BLOOR ST W 
+##                3361                2996                2923 
+##      EGLINTON AVE E         DUNDAS ST W           WESTON RD 
+##                2807                2756                2597 
+##             JANE ST      SHEPPARD AVE E         KINGSTON RD 
+##                2535                2400                2305 
+##         DUFFERIN ST              BAY ST           KING ST W 
+##                2257                2228                2204 
+##          QUEEN ST E   LAKE SHORE BLVD W          QUEEN ST W 
+##                2138                2120                1936 
+##      EGLINTON AVE W      WELLESLEY ST E       ISLINGTON AVE 
+##                1882                1775                1729 
+##            KEELE ST         BAYVIEW AVE        GERRARD ST E 
+##                1727                1712                1661 
+##         KIPLING AVE         FINCH AVE W        DANFORTH AVE 
+##                1658                1603                1532 
+## THORNCLIFFE PARK DR      ST CLAIR AVE W      LAWRENCE AVE W 
+##                1472                1449                1426 
+##      SHEPPARD AVE W       BIRCHMOUNT RD   VICTORIA PARK AVE 
+##                1373                1343                1339 
+##          COLLEGE ST          WILSON AVE            DIXON RD 
+##                1328                1261                1230 
+##      UNIVERSITY AVE        ELLESMERE RD          BLOOR ST E 
+##                1225                1173                1144 
+##       THE QUEENSWAY        DON MILLS RD           AVENUE RD 
+##                1133                1075                1070 
+##         FINCH AVE E       THE WEST MALL         DUNDAS ST E 
+##                1037                1011                1010 
+##          KENNEDY RD         MIDLAND AVE           SHUTER ST 
+##                1003                 984                 978 
+##        DAVENPORT RD      ST CLAIR AVE E           JARVIS ST 
+##                 963                 951                 929 
+##        PHARMACY AVE          MARKHAM RD      QUEENS QUAY  W 
+##                 926                 916                 913 
+##          FRONT ST W          CARLTON ST           CHURCH ST 
+##                 900                 882                 870 
+##     WELLINGTON ST W          WARDEN AVE       BROADVIEW AVE 
+##                 869                 867                 808 
+##       LANSDOWNE AVE       RICHMOND ST W        CHALKFARM DR 
+##                 785                 777                 774 
+##         SPADINA AVE         BLEECKER ST           KING ST E 
+##                 760                 737                 713 
+##       PARLIAMENT ST       ADELAIDE ST W       STEELES AVE W 
+##                 711                 707                 680 
+##      WEST LODGE AVE      WILLOWRIDGE RD          SPADINA RD 
+##                 675                 662                 659 
+##     MARTIN GROVE RD          MCCOWAN RD       THE ESPLANADE 
+##                 642                 633                 625 
+##       ROYAL YORK RD           LESLIE ST       YORK MILLS RD 
+##                 621                 617                 616 
+##           ALBION RD             MAIN ST            PAPE AVE 
+##                 609                 600                 590 
+##         MABELLE AVE           DUPONT ST        ST GEORGE ST 
+##                 583                 581                 571 
+##       THE EAST MALL        FALSTAFF AVE              OAK ST 
+##                 569                 566                 562 
+##         JAMESON AVE          ONTARIO ST        REXDALE BLVD 
+##                 543                 543                 537 
+##         COXWELL AVE     MORNINGSIDE AVE          BRIMLEY RD 
+##                 535                 511                 509 
+##             BOND ST         COSBURN AVE       YORKVILLE AVE 
+##                 508                 482                 469 
+## HUMBER COLLEGE BLVD          VAUGHAN RD          TUXEDO CRT 
+##                 465                 464                 462 
+##             (Other) 
+##              177848 
+## 
+## $CROSS_STREET
+##                                                    YONGE ST 
+##                        390349                          6409 
+##                    BLOOR ST W                   BATHURST ST 
+##                          2343                          2270 
+##                   DUNDAS ST E                    MARKHAM RD 
+##                          2188                          1812 
+##                       JANE ST                        BAY ST 
+##                          1777                          1762 
+##                   KINGSTON RD                      KEELE ST 
+##                          1649                          1627 
+##                   DUFFERIN ST                   FINCH AVE W 
+##                          1618                          1522 
+##                     SHUTER ST                         C N R 
+##                          1494                          1493 
+##                SHEPPARD AVE E                EGLINTON AVE E 
+##                          1481                          1469 
+##                   DUNDAS ST W             VICTORIA PARK AVE 
+##                          1457                          1438 
+##                     WESTON RD                    KENNEDY RD 
+##                          1404                          1373 
+##                    QUEEN ST E                     CHURCH ST 
+##                          1319                          1293 
+##                   KIPLING AVE                   FINCH AVE E 
+##                          1278                          1250 
+##                     KING ST W                  DON MILLS RD 
+##                          1225                          1217 
+##                LAWRENCE AVE E            WEST DON RIVER TRL 
+##                          1164                          1151 
+##                    ONTARIO ST                   MIDLAND AVE 
+##                          1143                          1126 
+##                 ISLINGTON AVE                    WARDEN AVE 
+##                          1089                          1064 
+##               MORNINGSIDE AVE                     AVENUE RD 
+##                          1035                          1022 
+##                    QUEEN ST W                          HEPC 
+##                          1017                          1007 
+##                LAWRENCE AVE W                    COLLEGE ST 
+##                          1003                           995 
+##                  GERRARD ST W                  ELLESMERE RD 
+##                           988                           920 
+##             LAKE SHORE BLVD W                 BIRCHMOUNT RD 
+##                           895                           887 
+##                    WILSON AVE                   BAYVIEW AVE 
+##                           868                           835 
+##                   DANFORTH RD                ST CLAIR AVE W 
+##                           835                           825 
+##                EGLINTON AVE W                  PHARMACY AVE 
+##                           800                           794 
+##                     JARVIS ST                SHEPPARD AVE W 
+##                           774                           756 
+##               MARLINGTON CRES                    MCCOWAN RD 
+##                           740                           726 
+##                   BLACK CREEK                 STEELES AVE W 
+##                           723                           707 
+##                    BRIMLEY RD                   BLEECKER ST 
+##                           688                           684 
+##                     DUPONT ST                        ELM ST 
+##                           681                           670 
+##                   CORDOVA AVE                   GALLOWAY RD 
+##                           668                           667 
+##                   SPADINA AVE                  GERRARD ST E 
+##                           663                           649 
+##              CRESCENT TOWN RD                    SOUDAN AVE 
+##                           639                           639 
+##                    CARLTON ST                      HURON ST 
+##                           629                           624 
+##                 STEELES AVE E                         C P R 
+##                           615                           607 
+##                     LESLIE ST       LN N QUEEN E SHERBOURNE 
+##                           603                           596 
+##             MOUNT PLEASANT RD                  BLYTHWOOD RD 
+##                           596                           595 
+##                 BROADVIEW AVE                      PAPE AVE 
+##                           578                           575 
+##                  RICHGROVE DR               MARTIN GROVE RD 
+##                           556                           548 
+##                WELLESLEY ST E HUMBER RIVER RECREATIONAL TRL 
+##                           533                           529 
+##                 PARLIAMENT ST                  MAIDSTONE ST 
+##                           527                           524 
+##                 ROYAL YORK RD            IAN MACDONALD BLVD 
+##                           524                           515 
+##               WELLINGTON ST W               SPRINGHURST AVE 
+##                           510                           506 
+##                   SCARLETT RD                 BEACONHILL RD 
+##                           500                           494 
+##                  PROGRESS AVE                     LOGAN AVE 
+##                           491                           490 
+##                      RIVER ST                 QUEENS QUAY W 
+##                           490                           484 
+##                        OAK ST                    MARLEE AVE 
+##                           478                           475 
+##       WEST HIGHLAND CREEK TRL       KIPLING AVE BICYCLE TRL 
+##                           474                           472 
+##                   LOWTHER AVE                 THE QUEENSWAY 
+##                           471                           470 
+##                  REXDALE BLVD                 SHERBOURNE ST 
+##                           465                           455 
+##                    NEILSON RD                       (Other) 
+##                           452                        234865 
+## 
+## $FSA
+##             M5A     M6K     M1E     M1P     M9V     M1K     M5V     M4C 
+##  355138   10398    7653    6976    6714    6621    6596    6397    6248 
+##     M9W     M1B     M2N     M5T     M1L     M4Y     M5B     M3N     M2R 
+##    6215    6175    6147    6066    6065    6029    6011    5823    5686 
+##     M6M     M6N     M6H     M6E     M5R     M3C     M8V     M2J     M9C 
+##    5671    5606    5323    5191    5164    5062    5056    4994    4929 
+##     M6G     M3H     M1J     M4K     M2M     M6A     M6J     M6P     M6B 
+##    4801    4770    4723    4722    4718    4602    4498    4498    4346 
+##     M4J     M4M     M3J     M1R     M9N     M9R     M4X     M4L     M9A 
+##    4329    4247    4181    4159    4107    4076    3996    3988    3986 
+##     M9B     M1W     M6S     M1G     M1T     M5G     M1N     M1V     M3A 
+##    3968    3926    3691    3617    3614    3509    3495    3450    3410 
+##     M1M     M5S     M1S     M9P     M4S     M1C     M4W     M3M     M6R 
+##    3298    3293    3165    3143    3040    3026    2940    2919    2756 
+##     M1H     M6C     M4B     M9M     M4E     M3L     M6L     M4P     M8W 
+##    2645    2645    2610    2496    2495    2492    2479    2476    2455 
+##     M8Z     M2K     M5J     M2H     M4A     M4H     M8Y     M5M     M5P 
+##    2379    2374    2355    2340    2336    2336    2315    2294    2252 
+##     M4V     M4G     M9L     M4N     M5N     M5H     M3B     M4T     M5C 
+##    1805    1713    1679    1667    1624    1614    1574    1486    1436 
+##     M8X     M5E     M3K     M4R     M2L     M1X     M2P     M5W     M7A 
+##    1400    1291    1227    1121     989     960     817     660     182 
+## (Other) 
+##     390 
+## 
+## $RESPONDING_UNITS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##   1.000   1.000   1.000   2.283   4.000 453.000      32 
+## 
+## $FD_STATION
+## F13063572000 F13096124000 F13097259000 F11000001000 F11000010000 
+##            4            4            4            1            1 
+## F11000011000 F11000012000 F11000013000 F11000014000 F11000015000 
+##            1            1            1            1            1 
+## F11000016000 F11000017000 F11000018000 F11000019000 F11000020000 
+##            1            1            1            1            1 
+## F11000021000 F11000022000 F11000023000 F11000024000 F11000025000 
+##            1            1            1            1            1 
+## F11000026000 F11000027000 F11000028000 F11000029000 F11000030000 
+##            1            1            1            1            1 
+## F11000031000 F11000032000 F11000034000 F11000035000 F11000036000 
+##            1            1            1            1            1 
+## F11000037000 F11000038000 F11000039000 F11000040000 F11000041000 
+##            1            1            1            1            1 
+## F11000042000 F11000043000 F11000044000 F11000045000 F11000046000 
+##            1            1            1            1            1 
+## F11000047000 F11000048000 F11000049000 F11000050000 F11000052000 
+##            1            1            1            1            1 
+## F11000053000 F11000054000 F11000055000 F11000056000 F11000057000 
+##            1            1            1            1            1 
+## F11000058000 F11000059000 F11000060000 F11000061000 F11000062000 
+##            1            1            1            1            1 
+## F11000063000 F11000064000 F11000065000 F11000066000 F11000068000 
+##            1            1            1            1            1 
+## F11000069000 F11000070000 F11000071000 F11000072000 F11000073000 
+##            1            1            1            1            1 
+## F11000074000 F11000075000 F11000076000 F11000077000 F11000078000 
+##            1            1            1            1            1 
+## F11000079000 F11000080000 F11000081000 F11000082000 F11000083000 
+##            1            1            1            1            1 
+## F11000084000 F11000085000 F11000086000 F11000087000 F11000088000 
+##            1            1            1            1            1 
+## F11000089000 F11000090000 F11000091000 F11000092000 F11000093000 
+##            1            1            1            1            1 
+## F11000094000 F11000095000 F11000096000 F11000097000 F11000098000 
+##            1            1            1            1            1 
+## F11000099000 F11000100000 F11000101000 F11000103000 F11000104000 
+##            1            1            1            1            1 
+## F11000105000 F11000106000 F11000108000      (Other)         NA's 
+##            1            1            1       375379       344884 
+## 
+## $OFM_INVESTIGATIONS_CONTACTED
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.000000 0.000000 0.000000 0.001588 0.000000 1.000000 
+## 
+## $AID_TO_FROM_OTHER_DEPTS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.000   4.000   4.000   3.948   4.000   4.000 
+## 
+## $INCIDENT_DATE
+## 22/12/2013 23/12/2013 08/07/2013 24/12/2013 25/12/2013 03/03/2015 
+##       2752       1387       1014        931        675        663 
+## 21/08/2011 04/01/2014 09/07/2013 24/11/2014 16/02/2015 17/02/2015 
+##        637        637        635        623        622        608 
+## 19/07/2013 01/06/2012 03/01/2014 21/12/2013 08/06/2011 30/10/2012 
+##        606        601        601        593        575        553 
+## 15/02/2015 01/01/2011 26/12/2013 16/04/2012 24/01/2011 14/02/2016 
+##        549        535        529        502        501        500 
+## 13/02/2016 21/07/2011 28/04/2011 30/07/2011 01/06/2011 08/01/2014 
+##        498        497        497        495        493        490 
+## 23/07/2011 15/07/2012 29/05/2013 18/02/2011 30/09/2011 02/06/2011 
+##        488        485        485        484        478        474 
+## 17/07/2011 03/09/2011 09/06/2011 02/09/2011 07/01/2014 23/06/2011 
+##        473        468        468        465        465        464 
+## 17/09/2011 28/02/2011 30/05/2011 22/07/2011 20/08/2011 01/01/2012 
+##        463        463        463        460        459        459 
+## 03/03/2012 20/09/2011 05/07/2011 04/08/2011 23/01/2011 15/07/2011 
+##        459        458        457        456        456        455 
+## 18/01/2011 04/09/2011 07/09/2016 31/05/2011 17/02/2011 06/01/2011 
+##        455        454        453        451        449        448 
+## 25/01/2011 01/10/2011 04/04/2011 25/07/2011 09/07/2011 11/03/2011 
+##        448        446        446        446        445        445 
+## 29/07/2011 12/05/2012 20/10/2011 24/06/2011 28/05/2012 31/05/2012 
+##        445        445        444        444        443        443 
+## 31/07/2011 03/06/2011 07/06/2011 29/06/2011 09/01/2014 20/07/2011 
+##        442        441        441        441        441        440 
+## 02/07/2011 04/07/2011 12/04/2011 21/05/2011 31/08/2011 02/10/2011 
+##        439        438        438        438        438        437 
+## 03/03/2011 06/10/2011 28/10/2011 16/03/2012 07/08/2011 19/09/2011 
+##        436        436        436        436        435        435 
+## 11/05/2012 20/06/2011 28/06/2011 09/09/2011 04/01/2012 04/05/2012 
+##        435        434        434        433        433        433 
+## 07/03/2012 10/07/2011 11/08/2011    (Other) 
+##        433        432        432     668529 
+## 
+## $INITIAL_CALL_HOUR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    9.00   13.00   12.95   18.00   23.00 
+## 
+## $INITIAL_CALL_MIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00   14.00   29.00   29.49   44.00   59.00 
+## 
+## $INITIAL_CALL_SEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00   14.00   30.00   29.49   45.00   59.00 
+## 
+## $DISPATCH_HOUR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    0.00    9.00   13.00   12.95   18.00   23.00     177 
+## 
+## $DISPATCH_MIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     0.0    15.0    30.0    29.5    44.0    59.0     177 
+## 
+## $DISPATCH_SEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     0.0    15.0    29.0    29.5    45.0    59.0     177 
+## 
+## $ONSCENE_HOUR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    0.00    9.00   14.00   12.97   18.00   23.00   15371 
+## 
+## $ONSCENE_MIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    0.00   15.00   30.00   29.53   45.00   59.00   15371 
+## 
+## $ONSCENE_SEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    0.00   14.00   29.00   29.45   44.00   59.00   15371 
+## 
+## $INITIAL_UNIT_PERSONNEL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   4.000   4.000   3.824   4.000  75.000 
+## 
+## $TOTAL_NUM_PERSONNEL
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##    0.000    4.000    4.000    8.043   13.000 1277.000 
+## 
+## $EST_KM
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  -1.000   2.000   2.000   2.537   3.000  99.000 
+## 
+## $ALARM_TO_FD
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##   1.000   3.000   3.000   3.018   3.000  33.000       1 
+## 
+## $RESPONSE_TYPE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    1.00   34.00   89.00   67.17   89.00  922.00 
+## 
+## $RESCUES
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##  0.00000  0.00000  0.00000  0.02654  0.00000 43.00000 
+## 
+## $FF_INJURIES
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.000000 0.000000 0.000000 0.000373 0.000000 4.000000 
+## 
+## $FF_FATALITIES
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##       0       0       0       0       0       0 
+## 
+## $AGENT_APP_HOUR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       0       8      14      13      19      23  708040 
+## 
+## $AGENT_APP_MIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     0.0    14.0    29.5    29.2    44.8    59.0  708040 
+## 
+## $AGENT_APP_SEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     0.0     0.0     4.0    15.9    30.0    59.0  708040 
+## 
+## $CONTROL_DATE
+##          01/01/00 23/12/13 03/03/15 16/08/13 07/06/14 21/05/16 07/04/12 
+##   478833   228988       22       19       16       16       16       15 
+## 09/04/12 24/03/12 24/12/13 09/05/14 18/04/12 13/07/13 22/12/13 01/02/14 
+##       15       15       15       15       14       14       14       14 
+## 25/05/14 31/01/14 16/02/15 19/12/16 23/07/16 10/06/11 23/12/11 21/05/12 
+##       14       14       14       14       14       13       13       13 
+## 01/06/13 06/05/13 06/12/13 08/02/13 16/05/13 24/01/13 27/04/14 03/10/15 
+##       13       13       13       13       13       13       13       13 
+## 14/03/15 17/05/15 19/05/15 29/07/15 10/05/16 01/07/11 13/05/11 15/07/11 
+##       13       13       13       13       13       12       12       12 
+## 17/07/11 21/12/11 02/04/12 03/04/12 05/07/12 12/04/12 16/01/12 16/04/12 
+##       12       12       12       12       12       12       12       12 
+## 20/10/12 17/08/13 18/08/13 27/05/13 04/01/14 10/08/14 26/05/14 28/05/14 
+##       12       12       12       12       12       12       12       12 
+## 10/02/15 22/05/15 28/02/15 30/07/15 19/06/16 02/11/11 12/04/11 12/07/11 
+##       12       12       12       12       12       11       11       11 
+## 17/10/11 18/06/11 23/07/11 28/08/11 05/10/12 11/07/12 12/07/12 14/07/12 
+##       11       11       11       11       11       11       11       11 
+## 22/11/12 31/08/12 01/02/13 01/05/13 01/09/13 20/07/13 21/07/13 22/11/13 
+##       11       11       11       11       11       11       11       11 
+## 29/11/13 02/04/14 03/08/14 08/03/14 18/09/14 19/11/14 20/06/14 24/04/14 
+##       11       11       11       11       11       11       11       11 
+## 28/04/14 28/06/14 30/09/14 31/05/14 01/01/15 02/10/15 04/03/15 09/09/15 
+##       11       11       11       11       11       11       11       11 
+## 11/04/15 12/07/15 12/10/15  (Other) 
+##       11       11       11    11345 
+## 
+## $CONTROL_HOUR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       0       8      14      13      19      23  707821 
+## 
+## $CONTROL_MIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       0      14      30      29      45      59  707821 
+## 
+## $CONTROL_SEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     0.0     0.0    13.0    18.8    35.0    59.0  707821 
+## 
+## $STATUS_ON_ARRIVAL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       3       3       4       9  708040 
+## 
+## $WATER
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     2.5     5.0     9.0  708040 
+## 
+## $FIRE_CONTROL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     1.7     3.0     5.0  708040 
+## 
+## $PROPERTY
+##     323     301     896     302     223     303     405     901     144 
+##  204952  122844   87632   26743   23119   21600   13091   12177    9504 
+##     331     212     322     321     151     132     861     234     216 
+##    8944    7672    7509    7420    6074    5801    5750    5528    5398 
+##     510     355     407     501     499     906     153     898     134 
+##    5218    4867    4689    4049    3932    3579    3539    3535    3504 
+##     137     231     152     502             311     891     848     367 
+##    3377    3030    2934    2840    2751    2691    2613    2114    1998 
+##     846     229     233     123     401     909     511     599     124 
+##    1993    1943    1749    1728    1706    1651    1591    1485    1472 
+##     142     138     994     999     334     902     760     204     799 
+##    1395    1383    1293    1217    1059    1034    1000     999     966 
+##     133     232     530     101     498     860     113     199     206 
+##     955     925     923     877     860     860     850     825     812 
+##     361     201     143     603     411     503     602     504     521 
+##     798     796     794     743     718     685     647     645     636 
+##     335     403     125     102     157     156     862     218     299 
+##     629     603     561     534     532     516     489     478     463 
+##     161     912     679     601     155     847     837     543     633 
+##     460     453     443     431     427     426     407     403     397 
+##     903     135     158     131     505     850     332     863 (Other) 
+##     394     384     374     373     362     356     346     344   18610 
+##    NA's 
+##    7144 
+## 
+## $AREA_OF_ORIGIN
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    11.0    24.0    50.0    52.3    79.0    99.0  708040 
+## 
+## $IGNITION_SOURCE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##      11      30      77     344     999     999  708040 
+## 
+## $FUEL_OF_IGNITION_SOURCE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     4.0    13.0    50.8    99.0    99.0  708040 
+## 
+## $OBJECT_OR_MATERIAL_FIRST_IGNITED
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    11.0    43.0    48.0    57.3    74.0    99.0  708040 
+## 
+## $POSSIBLE_CAUSE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0    44.0    50.0    53.5    60.0    99.0  708040 
+## 
+## $VEH_PURPOSE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     4.2     1.0    99.0  718631 
+## 
+## $VEH_FUEL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     4.1     1.0    99.0  718631 
+## 
+## $EST_LOSS
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##        0        0        0      465        0 13000000 
+## 
+## $INSURANCE_ESTIMATE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     8.0     5.5     9.0     9.0  707958 
+## 
+## $EST_VALUE_AT_RISK
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     2.0    12.8     5.0    99.0  707958 
+## 
+## $CIVILIAN_FIRE_INJURY
+##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+##  0.000000  0.000000  0.000000  0.001224  0.000000 12.000000 
+## 
+## $CIVILIAN_FIRE_FATALITY
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.00e+00 0.00e+00 0.00e+00 8.47e-05 0.00e+00 3.00e+00 
+## 
+## $RESCUED_CHILDREN
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.000000 0.000000 0.000000 0.000136 0.000000 6.000000 
+## 
+## $RESCUED_ADULTS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+## 0.0e+00 0.0e+00 0.0e+00 9.2e-04 0.0e+00 4.0e+01 
+## 
+## $RESCUED_SENIORS
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+## 0.00e+00 0.00e+00 0.00e+00 2.04e-04 0.00e+00 1.00e+01 
+## 
+## $PHYSICAL_CONDITION_1
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0    98.0    56.9    98.0    99.0  708041 
+## 
+## $PHYSICAL_CONDITION_2
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0    98.0    59.4    98.0    99.0  720323 
+## 
+## $PHYSICAL_CONDITION_3
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.5    99.0    57.1    99.0    99.0  720363 
+## 
+## $CIV_FIRE_CONTROL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       3       3       4       9  708041 
+## 
+## $CIV_EVACUATION
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     3.0     2.6     4.0     9.0  708041 
+## 
+## $CIV_EVACUATION_REASON_1
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     8.0     8.0     7.1     8.0     9.0  708041 
+## 
+## $CIV_EVACUATION_REASON_2
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       3       8       6       9       9  720265 
+## 
+## $OPP
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  719431 
+## 
+## $MOE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  719011 
+## 
+## $TSSA
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  719822 
+## 
+## $ESA
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  720080 
+## 
+## $MOL
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  720080 
+## 
+## $EMS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  720325 
+## 
+## $CANUTEC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  720138 
+## 
+## $GAS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  715150 
+## 
+## $HYDRO
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  715966 
+## 
+## $MUNICIPAL_BUILDING_OFFICE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  720142 
+## 
+## $MUNICIPAL_HEALTH_OFFICE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  719008 
+## 
+## $MUNICIPAL_POLICE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  718973 
+## 
+## $OTHER
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       1       1       1       1  717388 
+## 
+## $INITIAL_DETECTION
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     6.0     4.7     6.0     9.0  711584 
+## 
+## $EXTENT_FIRE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     2.0     2.9     2.0    99.0  711585 
+## 
+## $EXTENT_SMOKE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     2.0     2.0     4.0     9.5     7.0    99.0  711585 
+## 
+## $EST_NUM_PERSONS_DISPLACED
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##   0.0000   0.0000   0.0000   0.2167   0.0000 999.0000 
+## 
+## $POSSIBLE_BUSINESS_IMPACT
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     8.0     4.7     8.0     9.0  711585 
+## 
+## $COMPLEX
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     3.0    20.0    50.8    98.0    99.0  711589 
+## 
+## $OCC_STATUS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     1.9     1.0     9.0  711589 
+## 
+## $OCC_TYPE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     2.0     2.6     2.0     9.0  711589 
+## 
+## $BLD_STATUS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     1.6     1.0     9.0  711589 
+## 
+## $BLD_HEIGHT
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   0.000   0.000   0.746   0.000 999.000 
+## 
+## $LEVEL_OF_ORIGIN
+##           001    002    003    004    005    006    007    008    009 
+## 711589   3437   1095    503    233    178    177    140    105    108 
+##    010    011    012    013    014    015    016    017    018    019 
+##     91     79     90     16     62     62     46     49     30     30 
+##    020    021    022    023    024    025    026    027    029    030 
+##     24     18     11     13     17      9      9      7      6      7 
+##    033    035    038    041    046    996    997    998    999    B01 
+##      2      3      1      3      3    145    123     42    415   1226 
+##    B02    B03    B04    028    034    037    039    043    042    047 
+##    104     30      7      5      1      3      2      1      1      2 
+##    B07    B09    032    044    048    031    036    050 
+##      2      1      1      1      2      1      1      1 
+## 
+## $AGE_OF_STRUCTURE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     3.0     4.0     4.5     5.0     9.0  711589 
+## 
+## $SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     2.0     2.9     3.0     9.0  711589 
+## 
+## $SMOKE_ALARM_FAILURE_TO_OPERATE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     9.0    98.0    73.8    98.0    99.0  711589 
+## 
+## $SMOKE_ALARM_TYPE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     4.0     4.8     8.0     9.0  711589 
+## 
+## $SMOKE_ALARM_OTHER_FLOOR_PRESENCE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     3.0     4.8     8.0     9.0  711589 
+## 
+## $SMOKE_ALARM_ON_ALL_FLOORS
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     2.0     4.3     9.0     9.0  711589 
+## 
+## $SMOKE_ALARM_IMPACT_ON_EVAC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##       1       1       7       5       8       9  711589 
+## 
+## $SMOKE_ALARM_IMPACT_ON_NUM_EVAC
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.0000  0.0000  0.0000  0.2307  0.0000 99.0000 
+## 
+## $FIRE_ALARM_SYSTEM_PRESENCE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     1.0     3.3     8.0     9.0  711589 
+## 
+## $FIRE_ALARM_SYSTEM_OPERATION
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     1.0     2.0     4.5     8.0     9.0  711589 
+## 
+## $FIRE_ALARM_SYSTEM_IMPACT
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     7.0     5.7     8.0     9.0  711589 
+## 
+## $SPRINKLER_SYSTEM_PRESENCE
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     2.0     3.0     3.6     3.0     9.0  711589 
+## 
+## $SPRINKLER_SYSTEM_ACTIVATION
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##     1.0     3.0     8.0     6.3     8.0     9.0  711589
+\end{verbatim}
+
+
+\end{document}

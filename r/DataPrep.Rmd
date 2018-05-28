@@ -1,0 +1,41 @@
+---
+title: "CMTH642 Capstone"
+author: "Geoffrey Clark"
+date: "May 28, 2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Fire Incident Data Overview
+
+```{r}
+# Load & Combine Dataset from Yearwise .csv
+
+I <- read.csv("../csv/2011_i.csv", header=T)
+
+for(yr in (2012:2016)){
+  i_file <- paste("../csv/",yr, "_i.csv", sep="")
+  I <- rbind(I, read.csv(i_file, header=T))
+}
+
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #16802
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
+
+# I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),c('DISPATCH_DATE','ARRIVE_DATE')] <- NA
+# View(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) 
+
+
+# Cannot set to date type because of 16,802 Missing Values
+# I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
+# I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
+str(I)
+
+sapply(I, summary)
+```
+

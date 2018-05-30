@@ -39,16 +39,20 @@ nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !gre
 
 I$DISPATCH_DATE <- as.character(I$DISPATCH_DATE)
 I$ARRIVE_DATE <- as.character(I$ARRIVE_DATE)
+I$INCINCIDENT_DATE <- as.character(I$INCIDENT_DATE) 
+
 # I[,c('DISPATCH_DATE','ARRIVE_DATE')] <- as.character(I[,c('DISPATCH_DATE','ARRIVE_DATE')]) # Slow
 
 I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
 I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'ARRIVE_DATE'] <- NA
-# View(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) 
+
+nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),])
 
 
 # Cannot set to date type because of 16,802 Missing Values
 I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
 I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
+I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE)
 
 
 ```

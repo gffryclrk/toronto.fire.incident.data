@@ -23,19 +23,43 @@ for(yr in (2012:2016)){
   I <- rbind(I, read.csv(i_file, header=T))
 }
 
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #16802
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
 
-# I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),c('DISPATCH_DATE','ARRIVE_DATE')] <- NA
-# View(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) 
-
-
-# Cannot set to date type because of 16,802 Missing Values
-# I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
 # I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
 str(I)
 
 sapply(I, summary)
+
+```
+
+```{r}
+## Dates
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #16802
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
+nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
+
+I$DISPATCH_DATE <- as.character(I$DISPATCH_DATE)
+I$ARRIVE_DATE <- as.character(I$ARRIVE_DATE)
+# I[,c('DISPATCH_DATE','ARRIVE_DATE')] <- as.character(I[,c('DISPATCH_DATE','ARRIVE_DATE')]) # Slow
+
+I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
+I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'ARRIVE_DATE'] <- NA
+# View(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) 
+
+
+# Cannot set to date type because of 16,802 Missing Values
+I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
+I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
+
+
+```
+
+```{r}
+sapply(I, function(x) sum(is.na(x))/nrow(I))
+# apply(I, 2, function(x) sum(is.na(x))/nrow(I))
+# apply(I, 1, function(x) sum(is.na(x))/ncol(I))
+
+I$ROW_NAS <- apply(I, 1, function(x) sum(is.na(x)))
+
+summary(I$ROW_NAS)
 ```
 

@@ -16,18 +16,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # Load & Combine Dataset from Yearwise .csv
 
-I <- read.csv("../csv/2011_i.csv", header=T)
+I <- read.csv("../csv/2011_i.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
+# importSchema = c("character", "factor", "POSIXct", "POSIXct", "factor", "factor", "factor", "factor", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "factor", "factor", "character", "character", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "character", "character", "character", "character", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "factor", "factor", "factor")
+
+
+metadata <- data.frame('year'=c(2011), 'nrow'=nrow(I))
 
 for(yr in (2012:2016)){
   i_file <- paste("../csv/",yr, "_i.csv", sep="")
-  I <- rbind(I, read.csv(i_file, header=T))
+  
+  # I <- rbind(I, read.csv(i_file, header=T))
+  i_df <- read.csv(i_file, header=T, stringsAsFactors = F)
+  metadata <- rbind(metadata, c(yr, nrow(i_df)))
+  I <- rbind(I, i_df)
+  i_df <- NULL # keeps the environment tidy
 }
 
 
 # I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
-str(I)
+# str(I)
 
-sapply(I, summary)
+# sapply(I, summary)
 
 ```
 
@@ -37,14 +46,14 @@ nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #
 nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
 nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
 
-I$DISPATCH_DATE <- as.character(I$DISPATCH_DATE)
-I$ARRIVE_DATE <- as.character(I$ARRIVE_DATE)
-I$INCINCIDENT_DATE <- as.character(I$INCIDENT_DATE) 
+# I$DISPATCH_DATE <- as.character(I$DISPATCH_DATE)
+# I$ARRIVE_DATE <- as.character(I$ARRIVE_DATE)
+# I$INCINCIDENT_DATE <- as.character(I$INCIDENT_DATE) 
 
 # I[,c('DISPATCH_DATE','ARRIVE_DATE')] <- as.character(I[,c('DISPATCH_DATE','ARRIVE_DATE')]) # Slow
 
-I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
-I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'ARRIVE_DATE'] <- NA
+# I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
+# I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'ARRIVE_DATE'] <- NA
 
 nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),])
 
@@ -55,6 +64,16 @@ I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
 I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE)
 
 
+```
+## Factors
+
+```{r}
+factorSchema <- c("EVENT_TYPE","EVENT_TYPE_CD","MAIN_STREET","CROSS_STREET","FSA","ALARM_TO_FD","RESPONSE_TYPE","STATUS_ON_ARRIVAL","WATER","FIRE_CONTROL","PROPERTY","AREA_OF_ORIGIN","IGNITION_SOURCE","FUEL_OF_IGNITION_SOURCE","OBJECT_OR_MATERIAL_FIRST_IGNITED","POSSIBLE_CAUSE","VEH_PURPOSE","VEH_FUEL","INSURANCE_ESTIMATE","EST_VALUE_AT_RISK","PHYSICAL_CONDITION_1","PHYSICAL_CONDITION_2","PHYSICAL_CONDITION_3","CIV_FIRE_CONTROL","CIV_EVACUATION","CIV_EVACUATION_REASON_1","CIV_EVACUATION_REASON_2","OPP","MOE","TSSA","ESA","MOL","EMS","CANUTEC","GAS","HYDRO","MUNICIPAL_BUILDING_OFFICE","MUNICIPAL_HEALTH_OFFICE","MUNICIPAL_POLICE","OTHER","INITIAL_DETECTION","EXTENT_FIRE","EXTENT_SMOKE","POSSIBLE_BUSINESS_IMPACT","OCC_STATUS","OCC_TYPE","BLD_STATUS","BLD_HEIGHT","LEVEL_OF_ORIGIN","AGE_OF_STRUCTURE","SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR","SMOKE_ALARM_FAILURE_TO_OPERATE","SMOKE_ALARM_TYPE","SMOKE_ALARM_OTHER_FLOOR_PRESENCE","SMOKE_ALARM_ON_ALL_FLOORS","SMOKE_ALARM_IMPACT_ON_EVAC","FIRE_ALARM_SYSTEM_PRESENCE","FIRE_ALARM_SYSTEM_OPERATION","FIRE_ALARM_SYSTEM_IMPACT","SPRINKLER_SYSTEM_PRESENCE","SPRINKLER_SYSTEM_ACTIVATION")
+
+for(ft in factorSchema){
+  cat(ft, "\n")
+  I[,ft] <- addNA(I[,ft]) # creates factors with NA level
+}
 ```
 
 ```{r}

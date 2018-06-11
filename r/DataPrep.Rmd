@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Fire Incident Data Overview
 
 ```{r}
+## Incidents
 # Load & Combine Dataset from Yearwise .csv
 
 I <- read.csv("../csv/2011_i.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
@@ -41,11 +42,38 @@ for(yr in (2012:2016)){
 ```
 
 ```{r}
-## Dates
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #16802
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
-nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
+## Responding Units
+# Load & Combine Dataset from Yearwise .csv
 
+RU <- read.csv("../csv/2011_ru.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
+
+ru_metadata <- data.frame('year'=c(2011), 'nrow'=nrow(RU))
+
+for(yr in (2012:2016)){
+  r_file <- paste("../csv/",yr, "_ru.csv", sep="")
+  
+  r_df <- read.csv(r_file, header=T, stringsAsFactors = F)
+  ru_metadata <- rbind(ru_metadata, c(yr, nrow(r_df)))
+  RU <- rbind(RU, r_df)
+  r_df <- NULL # keeps the environment tidy
+}
+
+
+```
+
+```{r}
+## Dates
+# In this section I work with the three date features: DISPATCH_DATE, ARRIVE_DATE & INCIDENT_DATE
+# In fact, DISPATCH_DATE & ARRIVE_DATE are identical so I drop one (arbitrary choice: ARRIVE_DATE)
+
+# This is some of the initial exploring of the dates I did before noticing that DISPATCH & ARRIVE dates were identical.
+# I've left the code here for observation. It's commented out to save computation time & resources
+
+# nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),]) #16802
+# nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE),]) #16802
+# nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),])
+
+# Originally I was reading characters in from the .csv as factors. I changed this to reduce overhead. 
 # I$DISPATCH_DATE <- as.character(I$DISPATCH_DATE)
 # I$ARRIVE_DATE <- as.character(I$ARRIVE_DATE)
 # I$INCINCIDENT_DATE <- as.character(I$INCIDENT_DATE) 
@@ -54,20 +82,28 @@ nrow(I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !gre
 
 # I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
 # I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$ARRIVE_DATE) & !grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'ARRIVE_DATE'] <- NA
+# I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),'INCIDENT_DATE'] <- NA # Everyone obs. has a value
 
-nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),])
+# nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),]) # 0
 
+
+if(identical(I$DISPATCH_DATE, I$ARRIVE_DATE)){ I$ARRIVE_DATE <- NULL }
 
 # Cannot set to date type because of 16,802 Missing Values
 I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
-I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE)
-I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE)
+# I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE) # I set I$ARRIVE_DATE to null, above
+I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE, format="%d/%m/%Y")
+# td <- as.Date(I$INCIDENT_DATE, format="%d/%m/%Y")
 
-
+sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
+# sapply(I, function(x) sum(is.na(x))/nrow(I))
 ```
 ## Factors
 
 ```{r}
+# This was a tricky part of the data prep to handle. This is a relatively sparse dataset (see below for NA quantities!)
+# but also has a lot of factors. I decided to keep the NAs as a level in the factors to illustrate restrictions
+# in the analysis introduced by such sparse data. 
 factorSchema <- c("EVENT_TYPE","EVENT_TYPE_CD","MAIN_STREET","CROSS_STREET","FSA","ALARM_TO_FD","RESPONSE_TYPE","STATUS_ON_ARRIVAL","WATER","FIRE_CONTROL","PROPERTY","AREA_OF_ORIGIN","IGNITION_SOURCE","FUEL_OF_IGNITION_SOURCE","OBJECT_OR_MATERIAL_FIRST_IGNITED","POSSIBLE_CAUSE","VEH_PURPOSE","VEH_FUEL","INSURANCE_ESTIMATE","EST_VALUE_AT_RISK","PHYSICAL_CONDITION_1","PHYSICAL_CONDITION_2","PHYSICAL_CONDITION_3","CIV_FIRE_CONTROL","CIV_EVACUATION","CIV_EVACUATION_REASON_1","CIV_EVACUATION_REASON_2","OPP","MOE","TSSA","ESA","MOL","EMS","CANUTEC","GAS","HYDRO","MUNICIPAL_BUILDING_OFFICE","MUNICIPAL_HEALTH_OFFICE","MUNICIPAL_POLICE","OTHER","INITIAL_DETECTION","EXTENT_FIRE","EXTENT_SMOKE","POSSIBLE_BUSINESS_IMPACT","OCC_STATUS","OCC_TYPE","BLD_STATUS","BLD_HEIGHT","LEVEL_OF_ORIGIN","AGE_OF_STRUCTURE","SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR","SMOKE_ALARM_FAILURE_TO_OPERATE","SMOKE_ALARM_TYPE","SMOKE_ALARM_OTHER_FLOOR_PRESENCE","SMOKE_ALARM_ON_ALL_FLOORS","SMOKE_ALARM_IMPACT_ON_EVAC","FIRE_ALARM_SYSTEM_PRESENCE","FIRE_ALARM_SYSTEM_OPERATION","FIRE_ALARM_SYSTEM_IMPACT","SPRINKLER_SYSTEM_PRESENCE","SPRINKLER_SYSTEM_ACTIVATION")
 
 for(ft in factorSchema){
@@ -78,6 +114,7 @@ for(ft in factorSchema){
 
 ```{r}
 sapply(I, function(x) sum(is.na(x))/nrow(I))
+sapply(I, function(x) sum(is.na(x)))
 # apply(I, 2, function(x) sum(is.na(x))/nrow(I))
 # apply(I, 1, function(x) sum(is.na(x))/ncol(I))
 

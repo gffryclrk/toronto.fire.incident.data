@@ -1,0 +1,422 @@
+PROPERTY TYPE
+Group A Assembly
+Production/Viewing performing arts
+101 Theatre - Motion Picture
+102 Theatre - Concert Hall, Live
+103 TV, radio, motion picture studio
+104 Opera House
+Museum/Art gallery/Auditorium
+111 Museum
+112 Art Gallery
+113 Library
+114 Auditorium
+115 Lecture Hall
+Recreation/sports facility
+121 Bowling Alley, Billiard Centre, pool hall
+122 Dance Studio
+123 Community/Exhibition/Dance Hall
+124 Sports/Country/Social/Yacht Club
+125 Gymnasium
+126 Non Residential Club
+127 Casino
+128 Bingo Hall
+Education facility
+131 School - Pre-Elementary
+132 School – Elementary
+133 School - Secondary Junior High (Gr. 7 & 8)
+134 School - Secondary/Senior High (Gr. 9+)
+135 School - Technical, Industrial Trade
+136 School - Business, Commerce, Secretarial
+137 School - Post Secondary (University)
+138 School – Post Secondary (College)
+Transportation Facility
+141 Airport, Heliport
+142 Bus Terminal
+143 Railway Station
+144 Subway Station
+145 Marine Terminal
+Other assembly
+151 Restaurants (occupant load greater than 30 persons, licensed)
+152 Bar, Tavern, Night Club
+153 Church, Other Similar Place of Worship
+154 Funeral Facility
+155 Legislative Facility/Building
+156 Court Facility
+157 Day Care Centre
+158 Church Hall
+Arenas/Swimming pools
+161 Arena
+162 Ice Rink
+163 Indoor Swimming Facility
+Participating/Viewing open air facilities
+171 Theatre - Drive-In
+172 Stadium
+173 Exhibition or Amusement Park Structure
+174 Bleacher, Grandstand, Reviewing Stand
+175 Tent or temporary structure for assembly activity
+199 Other Assembly
+Group B Care and Detention
+Persons under restraint
+201 Jail, Prison, Penitentiary
+202 Reformatory (with detention quarters)
+203 Adult Detention Camp (minimum security)
+204 Police Station (with detention quarters)
+205 Young Offender Detention Facility
+206 Psych Hospital (with detention quarters)
+Persons under supervisory care
+211 Psychiatric Hospital (without detention
+quarters) 212
+Public/Private Hospital 216
+Convalescent Home or long term care (excluding senior care)
+217 Infirmary
+218 Hospice
+219 Children Custodial Home
+Care facility
+222 Institute for the blind, deaf
+223 Seniors long term car e facility, licensed
+229 Other care facility
+Transitional shelter
+231 Shelter for displaced/abused persons
+232 Halfway/transitional house
+Group/Retirement Home
+233 Group Home
+234 Retirement Home
+Other Care and Detention
+299 Other Care or Detention not classified
+Group C Residential
+Detached/semi/attached residential
+301 Detached Dwelling
+302 Semi-Detached Dwelling
+303 Attached Dwelling (e.g. rowhouse, townhouse, etc.)
+Dual Residential/Business
+331 Apartment/flat/tenement with Business
+332 Detached Dwelling with Business
+333 Semi-Detached Dwelling with Business
+334 Attached Dwelling with Business
+335 Detached/Semi/Attached residence with Accessory Apartment above grade
+336 Detached/Semi/Attached residence with Accessory Apartment below grade
+Rooming/Boarding
+311 Rooming/Boarding House
+Multi unit dwelling
+321 Multi-Unit Dwelling - 2 to 6 Units
+322 Multi-Unit Dwelling - 7 to 12 Units
+323 Multi-Unit Dwelling - Over 12 Units
+Seasonal dwelling/Mobile home
+341 Motor Home, Camper, Trailer
+342 Mobile Home
+343 Tent
+344 Houseboat
+345 Cottage
+Hotel/Motel/Lodging 355
+Hotel, Motel, Lodging - 4 or more guests or suites
+356 Hotel, Motel, Lodging - Less than 4 guests or suites (inc B&B)
+Other residential
+361 School/College Dormitory (detached from education facility)
+363 Military Barrack
+364 Bunkhouse, Workers Barrack
+365 Detached Garage
+366 Residential Club (inc sorority, fraternity)
+367 Hostel
+368 Residential Camp
+369 Convent, Monastery
+399 Other Residential
+Group D Business and Personal Services
+401 Bank
+402 Post Office
+403 Barber Shop, Hairdresser, Beauty Parlour, tanning salon
+404 Laundry, Dry Cleaner (inc self-service)
+405 General Business Office
+406 Police Station (without detention quarters)
+407 Dental/Medical Office
+408 Animal Hospital
+409 Radio Station
+410 Small Tool/Applianc e Rental/Service Establishment
+411 Fire Station
+412 Engineering, Architect or Tech office
+413 Mailing, photocopying office
+414 Document centre, record repository (inc archives)
+415 Computer, electronic data processing, records storage
+416 Furniture, upholstery repair without sales
+417 Shoe repair
+418 Tent or temporary structure for  business or personal service activity
+Other Business/personal services
+498 Garage: Genera l Auto parking - Structure
+499 Other Business or Personal Services
+Group E Mercantile
+Food/beverage sales
+501 Restaurant (occupant load less than 30 persons)
+502 Supermarket, Grocery Store
+503 Specialty Food Store (butcher, deli, etc.)
+504 Convenience/Variety Store
+505 Liquor/Wine/Beer Store
+506 Market - Outdoors (flowers, fruit, etc.)
+507 Market - Indoors (flowers, fruit, etc.)
+Department store/catalogue/mail outlet
+510 Mall - public area common to multi store facility
+511 Department Store
+PROPERTY TYPE CONTINUED
+512 Catalogue/Mail Order Outlet
+Specialty stores
+521 Clothing Store, Accessories, fur
+522 Fabric Store
+523 Furniture/Appliance Store
+524 Paint/Wallpaper Store
+525 Hardware Store
+526 Building Supply Store
+527 Lumber Yard
+528 Garden Supply
+529 Book/Stationery/Art Supply Store
+530 Pharmacy
+531 Florist
+532 Hobby Shop, Sporting Goods, music store
+533 Pet Shop
+534 Video Rental Shop
+535 Computer/electronics store, service or repair
+536 Fireworks sales
+537 Rug, floor covering store
+538 Newsstand, tobacco shop
+539 Gifts, jewellery, le ather goods, mixed gds.
+541 Tent or temporary structure for Mercantile activity
+Other mercantile
+543 Big Box Store
+599 Other Mercantile
+Group F Industrial
+Vehicle sales/service
+601 Motor Vehicle Sales
+602 Service Station
+603 Motor Vehicle Repair Garage
+604 Motor Vehicle Parts, Accessory Sales
+605 Car Wash
+606 Watercraft Sales
+607 Marina, Marine
+Service Station
+609 Other Vehicle Sales/Service
+Utilities
+611 Hydro Generating Plant
+612 Hydro Distribution Facility
+613 Gas Processing Plant
+614 Gas Distribution Facility
+615 Water Works
+616 Water Distribution Facility
+617 Sanitary Services (includes plant)
+618 Flammable Liquid Distribution Facility
+619 Other Utilities
+620 Heating plant - central/district heating plant, steam, etc.
+Manufacturing or processing (Mfg:)
+Chem/Petroleum /Paint/ Plastic products
+621 Mfg:Petroleum Products
+622 Mfg:Chemicals, inc hazardous chemicals
+623 Mfg:Plastics
+624 Mfg:Paint, Varnishes, Lacquers
+625 Mfg:Drugs, Cosmetics, Pharmaceutical
+626 Mfg:Rubber Goods
+627 Mfg:Asphalt Products
+628 Mfg:Coal Products
+629 Mfg:Other Chemical/Petroleum/ Paint/ Plasti c Products
+Mfg/process Agr/Food/Bev/Tobacco products
+631 Mfg:Meat/Poultry/Fish Products
+632 Mfg:Dairy Goods, Produce
+633 Mfg:Grain Products, Bakery Goods
+634 Mfg:Alcoholic Beverages
+635 Mfg:Soft Drinks
+636 Mfg:Tobacco Products
+637 Mfg:Vegetable/Animal Oil Products
+638 Mfg:Sugar Refining, Sugar Products
+639 Mfg:Other Agr/Food/ Beverage/Tabac
+640 Mfg:Canning, preserving, processing fruits vegetables
+Mfg/process textiles/cloth/leather products
+641 Mfg:Textile (e.g. preparing fibres, spinning, weaving)
+642 Mfg:Tannery
+643 Mfg:Footwear
+644 Mfg:Wearing Apparel
+645 Mfg:Dry Cleaning Plant
+646 Mfg:Floor covering and coated fabrics (exc rubber, ceramic)
+649 Mfg:Other Textiles, Clothing, Leather Goods
+Mfg/process Wood/Furn/Pa per/print products
+651 Mfg:Pulp/Paper
+652 Mfg:Primary Processing (e.g. sawmill, plywood manufacturer, etc)
+653 Mfg:Secondary Processing (e.g. finished goods, furniture, etc)
+654 Mfg:Printing, Publishing (e.g. newspapers, magazines, books)
+655 Mfg:Job Printing (e.g. forms, greeting cards, etc.)
+659 Mfg:Other Wood, Furniture, Paper Products, Printing
+Mfg/process vehicles parts
+661 Mfg:Road Vehicles, Parts
+662 Mfg:Rail Vehicles, Parts
+663 Mfg:Watercraft, Parts
+664 Mfg:Aircraft, Parts
+665 Mfg:Specialty Vehicles, Parts
+669 Mfg:Other Vehicles, Parts
+Mfg/process other metal/ elect/misc products
+671 Mfg:Primary Metal Processing (e.g. refining, melting, etc.)
+672 Mfg:Secondary Metal Processing (e.g. rolling , drawing, polishing)
+673 Mfg:Prec. Goods/Instruments (e.g. surgical instr., cameras, etc.)
+674 Mfg:Precious Metals, Jewellery
+675 Mfg:Sporting Goods, Toys, bicycles
+676 Mfg:Appliances, Appliance Parts
+677 Mfg:Photo film processing (inc motion and still)
+678 Mfg:Glass & glass products, china, pottery
+679 Mfg:Other metal/elect/misc. products
+Storage Chem/Petrol/Paint/Plastic products
+681 Sto:Petroleum Products
+682 Sto:Chemicals, inc hazardous chemicals
+683 Sto:Plastics
+684 Sto:Paint, Varnishes, Lacquers
+685 Sto:Drugs, Cosmetics, Pharmaceutical
+686 Sto:Rubber Goods
+687 Sto:Asphalt Products
+688 Sto:Coal Products
+689 Sto:Medical Supplies - Cold Storage
+690 Sto:Tank, Tank Farm - Flammable or Combustible liquids/gases
+691 Sto:Tank, Tank Farm - Other Liquids
+692 Sto:Tank, Tank Farm - Empty
+699 Sto:Other Chemical/Petroleum/Paint/Plastic Products
+Storage Agr/Food/Bev/Tobac products
+701 Sto:Meat/Poultry/Fish Products
+702 Sto:Dairy Goods, Produce
+703 Sto:Grain Products, Bakery Goods
+704 Sto:Alcoholic Beverages
+705 Sto:Soft Drinks
+706 Sto:Tobacco Products
+707 Sto:Vegetable/Anim al Oil Products
+708 Sto:Sugar Refining, Sugar Products
+709 Sto:Cold Storage - Processed Food
+710 Sto:Cold Storage - Beverages
+711 Sto:Tank, Tank Farm - Agricultural Products
+712 Sto:Tank, Tank Farm - Processed Food, Beverages
+713 Sto:Elevator – Seed, Bean, Grain, etc.
+714 Sto:Elevator - Other Goods
+715 Sto:Elevator - Empty
+716 Sto:Packed food stuffs (not classified by
+other codes)
+717 Sto:Fertilizers, peat moss
+719 Sto:Other Agricultu ral Products, Food, Beverages, Tobacco
+Storage Textile/clot h/leather products
+721 Sto:Textiles
+722 Sto:Footwear
+723 Sto:Wearing Apparel
+724 Sto:Dry Cleaning Plant
+725 Sto:Furs - Cold Storage
+729 Sto:Other Textile Goods Storage Wood/Furn/Pap er/print products
+731 Sto:Pulp, Paper
+732 Sto:Primary Products (e.g. plywood, banded lumber, etc.)
+733 Sto:Secondary Products (e.g. finished goods, furniture, etc.)
+734 Sto:Printing, Publishing
+735 Sto:Job Printing (e.g. forms, greeting cards, etc.)
+739 Sto:Other Wood, Furniture, Paper Products, Printing
+Storage vehicles, parts
+741 Sto:Road Vehicles, Parts
+742 Sto:Rail Vehicles, Parts
+743 Sto:Watercraft, Parts
+744 Sto:Aircraft, Parts
+745 Sto:Specialty Vehicles, Parts
+749 Sto:Other Vehicles, Parts
+Storage Metal/Elect/misc
+751 Sto:Primary Metal Products (e.g. ingots, bars, etc.)
+752 Sto:Secondary Metal Products
+753 Sto:Precision Goods/Instruments
+754 Sto:Precious Metals/Jewellery
+755 Sto:Sporting Goods/Toys
+756 Sto:Appliances, Appliance Parts
+759 Sto:Other Metal/Electrical/Miscellaneous Products
+760 Sto:Warehouse, vari ety of items, not classified by codes
+761 Sto:Glass & glass products, pottery, chinaware
+Other Industrial
+769 Sto:Tent or temporary structure for industrial storage
+791 Recycling Facility
+792 Waste Transfer Station
+793 Laboratory
+794 Aircraft Hangar
+796 Wind Turbine
+799 Other Industrial
+Structures/Properties not classified by the Ontario Building Code
+Mine/Well
+801 Mine
+802 Petroleum/Natural Gas Well
+803 Quarry
+Transportation facility
+811 Chair Lift, Cable Car, Ski Lift
+812 Bridge, Overpass, Trestl e, Tunnel, Underpass
+Communications facility
+821 Radio Transmission Site, Microwave Tower
+822 Telephone Exchange
+823 Weather Station, Lighthouse
+Open (outdoor) storage
+831 Agricultural Products
+832 Processed Food Beverages
+833 Flammable/Combustible Liquids, Gases
+834 Chemicals, Plastics, Rubber Products
+835 Textiles, Fibres, Clothing
+836 Metal Products, Machinery, Appliances
+837 Vehicles or Vehicle Parts
+838 General Goods
+Miscellaneous structure
+839 Tent or temporary stru cture not classified under other occupancy
+841 Mailbox
+842 Fence
+843 Shed, Children's Playhouse
+844 Privy
+845 Telephone Booth
+846 Hydro/Telephone Pole
+847 Toll Station, Weather/Bus Shelter
+848 Trash/Rubbish Container
+849 Tarpot
+850 Parking Lot Kiosk
+852 Clothing Drop Box, etc.
+853 Gazebo
+854 Sauna - Outdoors
+855 Outbuildings - structures not classified elsewhere
+856 Free standing deck
+Miscellaneous property
+860 Lawn around structure
+861 Open Land (e.g. light ground cover, bush, grass, etc.)
+862 Forest, Standing Timber
+863 Tree, Hedge
+864 Dump, Land Fill Site
+867 Crops
+Classed under National Farm Building Code
+866 Silo, Storage Facility
+868 Greenhouse
+869 Other farm building (e.g. curing shed, growing facility)
+870 Barn - containing equipment or produce only
+871 Barn - housing animals
+Other Miscellaneous property, structure
+872 Animal shelter - excluding barns
+890 Composting site (large scale, e.g.  municipal)
+891 Outdoor general auto parking
+893 Cemetery
+896 Sidewalk, street, roadway (do not use for fire incidents)
+897 Structure under 10 sq. metres not classified
+898 Other property non structure not classified
+Vehicles
+Road vehicles
+901 Automobile
+902 Small Truck (e.g. pi ck-up, van, etc.)
+903 Large Truck (Excluding Truck Trailer)
+904 Trailer Combin. (egg. auto trailer, small t&t, t&t,etc.)
+905 Motorcycle
+906 Bus, Trackless Trolley
+907 Emergency Vehicle
+909 Multiple road vehicles
+Rail vehicles
+911 Railway Train
+912 Subway Train
+914 Multiple rail vehicles
+Watercraft
+921 Private or Business Watercraft
+922 Commercial Watercraft
+923 Military Watercraft
+924 Multiple watercraft
+Aircraft
+931 Private or Business Aircraft
+932 Commercial Aircraft
+933 Military Aircraft
+934 Multiple aircraft
+Misc/specialty vehicle
+941 Construction
+942 Industrial
+943 Agricultural
+944 Multiple specialty vehicles
+945 Tank truck - Compressed or LP gas, flammable liquid, chemicals
+946 Other specialty vehicle
+994 Multiple vehicles - combination of types
+999 Other Vehicle

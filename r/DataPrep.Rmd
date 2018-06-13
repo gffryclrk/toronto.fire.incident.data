@@ -89,6 +89,7 @@ for(yr in (2012:2016)){
 
 if(identical(I$DISPATCH_DATE, I$ARRIVE_DATE)){ I$ARRIVE_DATE <- NULL }
 
+I[!grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", I$DISPATCH_DATE),'DISPATCH_DATE'] <- NA
 # Cannot set to date type because of 16,802 Missing Values
 I$DISPATCH_DATE <- as.POSIXct(I$DISPATCH_DATE)
 # I$ARRIVE_DATE <- as.POSIXct(I$ARRIVE_DATE) # I set I$ARRIVE_DATE to null, above
@@ -113,7 +114,21 @@ for(ft in factorSchema){
 ```
 
 ```{r}
-sapply(I, function(x) sum(is.na(x))/nrow(I))
+sapply(I, function(x){
+  per <- sum(is.na(x))/nrow(I)
+  if(per * 100 > 0.001) return(per*100)
+  return(0)
+})
+
+
+# outputs number of NAs per column as a percent
+# format & round because big floats being returned & hard to read.
+sapply(I, function(x){
+  
+  p <- sum(is.na(x))/nrow(I)
+  format(round(p*100, 2), nsmall=2)
+})
+
 sapply(I, function(x) sum(is.na(x)))
 # apply(I, 2, function(x) sum(is.na(x))/nrow(I))
 # apply(I, 1, function(x) sum(is.na(x))/ncol(I))
@@ -121,5 +136,18 @@ sapply(I, function(x) sum(is.na(x)))
 I$ROW_NAS <- apply(I, 1, function(x) sum(is.na(x)))
 
 summary(I$ROW_NAS)
+```
+
+```{r}
+# https://www.stat.berkeley.edu/~s133/dates.html
+# Some cool temporal breakdowns
+table(format(I$INCIDENT_DATE, '%Y')) 
+table(format(I$INCIDENT_DATE, '%A'))
+table(format(I$INCIDENT_DATE, '%B'))
+table(format(I$DISPATCH_DATE, '%H'))
+table(I$PROPERTY)
+# INCIDENT_NUMBER & FD_STATION have a lot of similarities...
+sum(I$INCIDENT_NUMBER == substr(I$FD_STATION,0,9), na.rm=T) #375456
+length(unique(I$FD_STATION)) #375478
 ```
 

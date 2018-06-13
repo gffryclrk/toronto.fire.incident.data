@@ -138,6 +138,7 @@ I$ROW_NAS <- apply(I, 1, function(x) sum(is.na(x)))
 summary(I$ROW_NAS)
 ```
 
+
 ```{r}
 # https://www.stat.berkeley.edu/~s133/dates.html
 # Some cool temporal breakdowns

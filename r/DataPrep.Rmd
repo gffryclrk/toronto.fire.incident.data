@@ -178,3 +178,21 @@ for(g in c(LETTERS[(1:6)],'O')){
 table(format(I$INCIDENT_DATE, '%A'), I$PROPERTY_GROUP) # This is Day of week vs Property Group
 ```
 
+```{r}
+MEDICAL <- I[I$EVENT_TYPE %in% 'Medical',]
+table(format(MEDICAL$INCIDENT_DATE, '%A'), MEDICAL$PROPERTY_GROUP)
+
+tta <- function(x){
+ # print(x);
+  # print(x$INITIAL_CALL_HOUR)
+  if(!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR){
+    
+  }else if(){
+    
+  }else{
+    
+  }
+}
+# I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,] #Rollover dispatch
+```
+

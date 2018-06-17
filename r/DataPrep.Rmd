@@ -114,11 +114,14 @@ for(ft in factorSchema){
 ```
 
 ```{r}
-sapply(I, function(x){
-  per <- sum(is.na(x))/nrow(I)
-  if(per * 100 > 0.001) return(per*100)
-  return(0)
-})
+# This sapply returns column NAs as percentage of total
+# but doesn't format the output as nicely as the below function which I kept. 
+# 
+# sapply(I, function(x){
+#   per <- sum(is.na(x))/nrow(I)
+#   if(per * 100 > 0.001) return(per*100)
+#   return(0)
+# })
 
 
 # outputs number of NAs per column as a percent
@@ -150,5 +153,28 @@ table(I$PROPERTY)
 # INCIDENT_NUMBER & FD_STATION have a lot of similarities...
 sum(I$INCIDENT_NUMBER == substr(I$FD_STATION,0,9), na.rm=T) #375456
 length(unique(I$FD_STATION)) #375478
+```
+
+```{r}
+# https://www.quora.com/How-do-I-get-a-frequency-count-based-on-two-columns-variables-in-an-R-dataframe?share=1
+
+# I'm trying to build a cross-table
+
+I$PROPERTY_GROUP <- vector(mode='character', length=nrow(I))
+# I[I$PROPERTY]
+PROPERTY_GROUP <- list()
+PROPERTY_GROUP$A <- (101:199)
+PROPERTY_GROUP$B <- (201:299)
+PROPERTY_GROUP$C <- (301:399)
+PROPERTY_GROUP$D <- (401:499)
+PROPERTY_GROUP$E <- (501:599)
+PROPERTY_GROUP$F <- (601:799)
+PROPERTY_GROUP$O <- (801:999)
+
+for(g in c(LETTERS[(1:6)],'O')){
+  I$PROPERTY_GROUP[I$PROPERTY %in% PROPERTY_GROUP[[g]]] <- g
+}
+
+table(format(I$INCIDENT_DATE, '%A'), I$PROPERTY_GROUP) # This is Day of week vs Property Group
 ```
 

@@ -3,8 +3,8 @@ title: "CMTH642 Capstone"
 author: "Geoffrey Clark"
 date: "May 28, 2018"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,18 +17,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Incidents
 # Load & Combine Dataset from Yearwise .csv
 
-I <- read.csv("../csv/2011_i.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
+I <- read.csv("../csv/2011_i.csv", header=T, stringsAsFactors = F, na.strings=c("","NA", " "))
 # importSchema = c("character", "factor", "POSIXct", "POSIXct", "factor", "factor", "factor", "factor", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "character", "factor", "factor", "character", "character", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "character", "character", "character", "character", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "factor", "character", "factor", "factor", "factor", "factor", "factor")
 
 
-metadata <- data.frame('year'=c(2011), 'nrow'=nrow(I))
+# metadata <- data.frame('year'=c(2011), 'nrow'=nrow(I))
 
 for(yr in (2012:2016)){
   i_file <- paste("../csv/",yr, "_i.csv", sep="")
   
   # I <- rbind(I, read.csv(i_file, header=T))
   i_df <- read.csv(i_file, header=T, stringsAsFactors = F)
-  metadata <- rbind(metadata, c(yr, nrow(i_df)))
+  # metadata <- rbind(metadata, c(yr, nrow(i_df)))
   I <- rbind(I, i_df)
   i_df <- NULL # keeps the environment tidy
 }
@@ -132,7 +132,7 @@ sapply(I, function(x){
   format(round(p*100, 2), nsmall=2)
 })
 
-sapply(I, function(x) sum(is.na(x)))
+# sapply(I, function(x) sum(is.na(x)))
 # apply(I, 2, function(x) sum(is.na(x))/nrow(I))
 # apply(I, 1, function(x) sum(is.na(x))/ncol(I))
 
@@ -187,38 +187,54 @@ table(format(MEDICAL$INCIDENT_DATE, '%A'), MEDICAL$PROPERTY_GROUP)
 # However, I later realized that the data itself is encoded to account for this: 
 # DISPATCH_DATE includes the date & time of ONSCENE whereas INCIDENT_DATE is the date of call. 
 
-tta <- function(x){
- # print(x);
-  # print(x$INITIAL_CALL_HOUR)
-  if(!is.na(x$INITIAL_CALL_HOUR) & !is.na(x$ONSCENE_HOUR)){
-    # if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){
-      # ic_time <- paste(x$INITIAL_CALL_HOUR, x$INITIAL_CALL_MIN, x$INITIAL_CALL_SEC, sep=" ")
-      ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
-      os_time <- paste(as.Date(x$DISPATCH_DATE)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
-      # os <- as.POSIXct()
-      # cat(os_time, ic_time)
-      return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
-    # }
+# tta <- function(x){
+#  # print(x);
+#   # print(x$INITIAL_CALL_HOUR)
+#   if(!is.na(x$INITIAL_CALL_HOUR) & !is.na(x$ONSCENE_HOUR)){
+#     # if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){
+#       # ic_time <- paste(x$INITIAL_CALL_HOUR, x$INITIAL_CALL_MIN, x$INITIAL_CALL_SEC, sep=" ")
+#       ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
+#       os_time <- paste(as.Date(x$DISPATCH_DATE)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+#       # os <- as.POSIXct()
+#       # cat(os_time, ic_time)
+#       return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
+#     # }
+# 
+#    
+#   # }else{
+#     
+#   # }else{
+#     
+#   }
+# }
 
-   
-  # }else{
-    
-  # }else{
-    
-  }
-}
+# This function works if you pass it a single row from the data.frame, such as I[1695,]
+# However, there are problems if you try to run it against the entire dataset. 
+# tta <- function(x){
+#   onscene_date <- x$INCIDENT_DATE
+#   if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){ onscene_date <- as.Date(x$INCIDENT_DATE) + 1 }
+#   ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
+#   os_time <- paste(as.Date(onscene_date)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+#   # cat(ic_time,"\n",os_time,"\n")
+#   return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
+# }
 
 tta <- function(x){
-  onscene_date <- x$INCIDENT_DATE
-  if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){ onscene_date <- as.Date(x$INCIDENT_DATE) + 1 }
-  ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
-  os_time <- paste(as.Date(onscene_date)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+
+  if(sum(is.na(c(x["INCIDENT_DATE"], x["INITIAL_CALL_HOUR"], x["INITIAL_CALL_MIN"], x["INITIAL_CALL_SEC"], x["ONSCENE_HOUR"],x["ONSCENE_MIN"],x["ONSCENE_SEC"]))) > 0) return(NA)
+  onscene_date <- as.Date(x["INCIDENT_DATE"])
+  if(x["ONSCENE_HOUR"] < x["INITIAL_CALL_HOUR"]){ onscene_date <- as.Date(x["INCIDENT_DATE"]) + 1 }
+  ic_time <- paste(as.Date(x["INCIDENT_DATE"]), " ",formatC(x["INITIAL_CALL_HOUR"], width=2, flag="0"), ":", formatC(x["INITIAL_CALL_MIN"], width=2,flag="0"), ":",formatC(x["INITIAL_CALL_SEC"], width=2, flag="0"), sep="")
+  os_time <- paste(as.Date(onscene_date)," ",formatC(x["ONSCENE_HOUR"], width=2, flag="0"), ":", formatC(x["ONSCENE_MIN"], width=2,flag="0"), ":",formatC(x["ONSCENE_SEC"], width=2, flag="0"), sep="")
   # cat(ic_time,"\n",os_time,"\n")
   return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
 }
 # I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,] #Rollover dispatch
 
-I$TTA <- tta(I[(1:nrow(I)),])
+# I$TTA <- apply(I, 1, tta) # This is how I obtained the TTA info... runtime: about 20 minutes
+TTA <- read.csv(file="../csv/TTA.csv", header = T)
+I <- cbind(I, TTA$TTA)
+
 
 # Trying to test the above: Boolean "is DISPATCH_DATE" time always ONSCENE time?
 testColumn <- function(x){
@@ -231,5 +247,11 @@ sum(testColumn(I[1:nrow(I),]), na.rm=T) #563070
 sum(is.na(testColumn(I[1:nrow(I),]))) #17275
 sum(I$DISPATCH_DATE > I$INCIDENT_DATE, na.rm=T) # 703568
 sum(is.na(I$DISPATCH_DATE > I$INCIDENT_DATE)) # 16802
+```
+
+```{r}
+aggregate(I$TTA, list(I$PROPERTY_GROUP), mean, na.rm=T)
+table(I$PROPERTY_GROUP)
+summary(I)
 ```
 

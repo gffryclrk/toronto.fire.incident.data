@@ -182,17 +182,54 @@ table(format(I$INCIDENT_DATE, '%A'), I$PROPERTY_GROUP) # This is Day of week vs 
 MEDICAL <- I[I$EVENT_TYPE %in% 'Medical',]
 table(format(MEDICAL$INCIDENT_DATE, '%A'), MEDICAL$PROPERTY_GROUP)
 
+# This below function calculates time difference between time call was received
+# and recorded onscene time. I accounted for cases where the date would roll over between call & arrival.
+# However, I later realized that the data itself is encoded to account for this: 
+# DISPATCH_DATE includes the date & time of ONSCENE whereas INCIDENT_DATE is the date of call. 
+
 tta <- function(x){
  # print(x);
   # print(x$INITIAL_CALL_HOUR)
-  if(!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR){
+  if(!is.na(x$INITIAL_CALL_HOUR) & !is.na(x$ONSCENE_HOUR)){
+    # if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){
+      # ic_time <- paste(x$INITIAL_CALL_HOUR, x$INITIAL_CALL_MIN, x$INITIAL_CALL_SEC, sep=" ")
+      ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
+      os_time <- paste(as.Date(x$DISPATCH_DATE)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+      # os <- as.POSIXct()
+      # cat(os_time, ic_time)
+      return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
+    # }
+
+   
+  # }else{
     
-  }else if(){
-    
-  }else{
+  # }else{
     
   }
 }
+
+tta <- function(x){
+  onscene_date <- x$INCIDENT_DATE
+  if(x$ONSCENE_HOUR < x$INITIAL_CALL_HOUR){ onscene_date <- as.Date(x$INCIDENT_DATE) + 1 }
+  ic_time <- paste(as.Date(x$INCIDENT_DATE), " ",formatC(x$INITIAL_CALL_HOUR, width=2, flag="0"), ":", formatC(x$INITIAL_CALL_MIN, width=2,flag="0"), ":",formatC(x$INITIAL_CALL_SEC, width=2, flag="0"), sep="")
+  os_time <- paste(as.Date(onscene_date)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+  # cat(ic_time,"\n",os_time,"\n")
+  return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") - as.POSIXct(ic_time, format="%Y-%m-%d %H:%M:%S"))
+}
 # I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,] #Rollover dispatch
+
+I$TTA <- tta(I[(1:nrow(I)),])
+
+# Trying to test the above: Boolean "is DISPATCH_DATE" time always ONSCENE time?
+testColumn <- function(x){
+  os_time <- paste(as.Date(x$DISPATCH_DATE)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
+  return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") == x$DISPATCH_DATE)
+  # cat(x$DISPATCH_DATE)
+}
+
+sum(testColumn(I[1:nrow(I),]), na.rm=T) #563070
+sum(is.na(testColumn(I[1:nrow(I),]))) #17275
+sum(I$DISPATCH_DATE > I$INCIDENT_DATE, na.rm=T) # 703568
+sum(is.na(I$DISPATCH_DATE > I$INCIDENT_DATE)) # 16802
 ```
 

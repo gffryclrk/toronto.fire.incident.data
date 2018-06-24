@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Fire Incident Data Overview
-
+### Input Data: Incidents
 ```{r}
 ## Incidents
 # Load & Combine Dataset from Yearwise .csv
@@ -41,25 +41,28 @@ for(yr in (2012:2016)){
 
 ```
 
+
+### Input Data: Responding Units
 ```{r}
 ## Responding Units
 # Load & Combine Dataset from Yearwise .csv
 
 RU <- read.csv("../csv/2011_ru.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
 
-ru_metadata <- data.frame('year'=c(2011), 'nrow'=nrow(RU))
 
 for(yr in (2012:2016)){
   r_file <- paste("../csv/",yr, "_ru.csv", sep="")
   
   r_df <- read.csv(r_file, header=T, stringsAsFactors = F)
-  ru_metadata <- rbind(ru_metadata, c(yr, nrow(r_df)))
   RU <- rbind(RU, r_df)
   r_df <- NULL # keeps the environment tidy
 }
 
 
 ```
+
+## Working with R Data Types
+### Dates
 
 ```{r}
 ## Dates
@@ -99,7 +102,7 @@ I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE, format="%d/%m/%Y")
 sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
 # sapply(I, function(x) sum(is.na(x))/nrow(I))
 ```
-## Factors
+### Factors
 
 ```{r}
 # This was a tricky part of the data prep to handle. This is a relatively sparse dataset (see below for NA quantities!)
@@ -113,6 +116,7 @@ for(ft in factorSchema){
 }
 ```
 
+### Counting NAs
 ```{r}
 # This sapply returns column NAs as percentage of total
 # but doesn't format the output as nicely as the below function which I kept. 
@@ -141,6 +145,7 @@ I$ROW_NAS <- apply(I, 1, function(x) sum(is.na(x)))
 summary(I$ROW_NAS)
 ```
 
+### Some preliminary cross-tables
 
 ```{r}
 # https://www.stat.berkeley.edu/~s133/dates.html
@@ -154,6 +159,8 @@ table(I$PROPERTY)
 sum(I$INCIDENT_NUMBER == substr(I$FD_STATION,0,9), na.rm=T) #375456
 length(unique(I$FD_STATION)) #375478
 ```
+
+### Grouping Property Type by Category
 
 ```{r}
 # https://www.quora.com/How-do-I-get-a-frequency-count-based-on-two-columns-variables-in-an-R-dataframe?share=1
@@ -178,6 +185,12 @@ for(g in c(LETTERS[(1:6)],'O')){
 I[I$PROPERTY_GROUP == "", 'PROPERTY_GROUP'] <- NA
 table(format(I$INCIDENT_DATE, '%A'), I$PROPERTY_GROUP) # This is Day of week vs Property Group
 ```
+
+### Response Time (Time-to-arrival)
+
+For this 'new' feature I subtracted response time, or Time-to-arrival, by subtracting the ONSCENE_TIME from the INITIAL_CALL_TIME, both of which were fairly complete in the dataset. I found that the dataset was encoded such that INCIDENT_DATE was always the date of the initial call. For cases where the call was received late at night, say 11:59pm, and the Responding Units didn't arrive until the next day I added one day (24 * 60 * 60 seconds) to the INCIDENT_DATE used for ONSCENE TIME.
+
+I wrote a function to make this calculation, below, and passed it the rows of the dataset, one at a time, using apply. This process took some time to compute on my mid 2009 MacBook. Originally approximately 25 minutes, I was able to reduce it to 15 minutes by simplifying the function a bit and also only passing the relevant columns to apply.
 
 ```{r}
 MEDICAL <- I[I$EVENT_TYPE %in% 'Medical',]
@@ -207,12 +220,14 @@ tta <- function(x){
 
 
 # I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,] #Rollover dispatch
-# nrow(I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,])
+# nrow(I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,]) #2519
+
+# Below is the code to actually create the 'TTA' column: First an empty numeric vector, later populated with the call to apply(). This call took about 15 minutes to run. I used pbapply, from the pabbly package, for the progress bar  (very handy!)
+#
 # I$TTA <- vector(length=nrow(I), mode="numeric")
-
-# I$TTA <- pbapply(I[,c('INCIDENT_DATE','INITIAL_CALL_HOUR','INITIAL_CALL_MIN','INITIAL_CALL_SEC','ONSCENE_HOUR','ONSCENE_MIN','ONSCENE_SEC')], 1, tta) # This takes about 15 minutes.. down from 25. I used pbapply for the progress bar.
-
-# I$TTA <- apply(I, 1, tta) # This is how I obtained the TTA info... runtime: about 20 minutes
+# I$TTA <- pbapply(I[,c('INCIDENT_DATE','INITIAL_CALL_HOUR','INITIAL_CALL_MIN','INITIAL_CALL_SEC','ONSCENE_HOUR','ONSCENE_MIN','ONSCENE_SEC')], 1, tta)
+# 
+# Since I have already calculated the TTA values I save I save time when loading the project by either saving the .RData or writing the columns as a .csv and re-loading the TTA feature back into I. 
 # TTA <- read.csv(file="../csv/TTA.csv", header = T)
 # I <- cbind(I, TTA$TTA)
 
@@ -220,17 +235,27 @@ tta <- function(x){
 tapply(I$TTA, I$PROPERTY_GROUP, mean, na.rm=T)
 
 # Trying to test the above: Boolean "is DISPATCH_DATE" time always ONSCENE time?
-testColumn <- function(x){
-  os_time <- paste(as.Date(x$DISPATCH_DATE)," ",formatC(x$ONSCENE_HOUR, width=2, flag="0"), ":", formatC(x$ONSCENE_MIN, width=2,flag="0"), ":",formatC(x$ONSCENE_SEC, width=2, flag="0"), sep="")
-  return(as.POSIXct(os_time, format="%Y-%m-%d %H:%M:%S") == x$DISPATCH_DATE)
-  # cat(x$DISPATCH_DATE)
-}
+sum(format(I$DISPATCH_DATE, format='%Y-%m-%d') == I$INCIDENT_DATE, na.rm=T) # 701044
+sum(I$INITIAL_CALL_HOUR > I$ONSCENE_HOUR, na.rm=T) # 2519
+nrow(I[!is.na(I$DISPATCH_DATE) & format(I$DISPATCH_DATE, format='%Y-%m-%d') != I$INCIDENT_DATE,]) # 2524
 
-sum(testColumn(I[1:nrow(I),]), na.rm=T) #563070
-sum(is.na(testColumn(I[1:nrow(I),]))) #17275
+# There seem to be a few observations (17) that don't fit the pattern:
+# Incident Date: Date initial call was received
+# Dispatch Date: Date & Time first responders arrive on scene
+# I'm guessing that these cases are a result of a data input error. After browsing them
+# Some of the fields don't match up: Control date, when inputted, close to incident or dispach date.. Also the times used tend to be all over the place and don't correspond to other columns. 
+# I might remove these observations entirely. 
+
+nrow(I[!is.na(I$DISPATCH_DATE) & format(I$DISPATCH_DATE, format='%Y-%m-%d') != I$INCIDENT_DATE & I$INITIAL_CALL_HOUR <= I$ONSCENE_HOUR,]) # 17
+# total obs - (# dispatch date = incident date) - (#edge cases) - (Dispatch Date NAs) 
+# = 720370 - 701044 - 2519 - 16802  
+
+# The below lines are to calculate edge cases. A Date is said to be "less than" another date if it occurred before the date being compared to. Example: January 1st, 1980 < January 2nd, 1980. This is easier to remember if you think of dates in terms of 'Unix seconds' wheras the integer value equality holds. 
+# 
 sum(I$DISPATCH_DATE > I$INCIDENT_DATE, na.rm=T) # 703568
 sum(is.na(I$DISPATCH_DATE > I$INCIDENT_DATE)) # 16802
-
+sum(I[!is.na(I$DISPATCH_DATE), 'DISPATCH_DATE'] > I[!is.na(I$DISPATCH_DATE), 'INCIDENT_DATE'])
+sum(is.na(I$DISPATCH_DATE)) + sum(I[!is.na(I$DISPATCH_DATE), 'DISPATCH_DATE'] > I[!is.na(I$DISPATCH_DATE), 'INCIDENT_DATE']) == nrow(I)
 
 ```
 

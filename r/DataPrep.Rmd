@@ -103,6 +103,7 @@ sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
 # sapply(I, function(x) sum(is.na(x))/nrow(I))
 ```
 ### Factors
+There are many categorical features in this dataset. I decided to encode them as factors. Empty & blank values are treated as NA. 
 
 ```{r}
 # This was a tricky part of the data prep to handle. This is a relatively sparse dataset (see below for NA quantities!)
@@ -110,8 +111,10 @@ sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
 # in the analysis introduced by such sparse data. 
 factorSchema <- c("EVENT_TYPE","EVENT_TYPE_CD","MAIN_STREET","CROSS_STREET","FSA","ALARM_TO_FD","RESPONSE_TYPE","STATUS_ON_ARRIVAL","WATER","FIRE_CONTROL","PROPERTY","AREA_OF_ORIGIN","IGNITION_SOURCE","FUEL_OF_IGNITION_SOURCE","OBJECT_OR_MATERIAL_FIRST_IGNITED","POSSIBLE_CAUSE","VEH_PURPOSE","VEH_FUEL","INSURANCE_ESTIMATE","EST_VALUE_AT_RISK","PHYSICAL_CONDITION_1","PHYSICAL_CONDITION_2","PHYSICAL_CONDITION_3","CIV_FIRE_CONTROL","CIV_EVACUATION","CIV_EVACUATION_REASON_1","CIV_EVACUATION_REASON_2","OPP","MOE","TSSA","ESA","MOL","EMS","CANUTEC","GAS","HYDRO","MUNICIPAL_BUILDING_OFFICE","MUNICIPAL_HEALTH_OFFICE","MUNICIPAL_POLICE","OTHER","INITIAL_DETECTION","EXTENT_FIRE","EXTENT_SMOKE","POSSIBLE_BUSINESS_IMPACT","OCC_STATUS","OCC_TYPE","BLD_STATUS","BLD_HEIGHT","LEVEL_OF_ORIGIN","AGE_OF_STRUCTURE","SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR","SMOKE_ALARM_FAILURE_TO_OPERATE","SMOKE_ALARM_TYPE","SMOKE_ALARM_OTHER_FLOOR_PRESENCE","SMOKE_ALARM_ON_ALL_FLOORS","SMOKE_ALARM_IMPACT_ON_EVAC","FIRE_ALARM_SYSTEM_PRESENCE","FIRE_ALARM_SYSTEM_OPERATION","FIRE_ALARM_SYSTEM_IMPACT","SPRINKLER_SYSTEM_PRESENCE","SPRINKLER_SYSTEM_ACTIVATION")
 
+# grepl(".*\\S.*", "   ") # True if there's anything besides whitespace. 
+
 for(ft in factorSchema){
-  # cat(ft, "\n")
+  I[!grepl(".*\\S.*", I[,ft]),ft] <- NA
   I[,ft] <- addNA(I[,ft]) # creates factors with NA level
 }
 ```
@@ -143,7 +146,63 @@ sapply(I, function(x){
 I$ROW_NAS <- apply(I, 1, function(x) sum(is.na(x)))
 
 summary(I$ROW_NAS)
+summary(I)
+# I[!grepl(".*\\S.*", I[,ft]),ft] <- NA
+# sum(!grepl(".*\\S.*", I$FD_STATION))
 ```
+### More work on NAs
+One thing I have noticed is that quite a few columns have exactly the same number of NAs.
+What types of incidents are these?
+
+After an initial glance these incidents seem to be mostly fires. 
+
+```{r}
+NA_cols <- c('COMPLEX','OCC_STATUS','OCC_type','BLD_STATUS','BLD_HEIGHT','LEVEL_OF_ORIGIN','AGE_OF_STRUCTURE','SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR','SMOKE_ALARM_FAILURE_TO_OPERATE','SMOKE_ALARM_TYPE','SMOKE_ALARM_OTHER_FLOOR_PRESENCE','SMOKE_ALARM_ON_ALL_FLOORS','SMOKE_ALARM_IMPACT_ON_EVAC','FIRE_ALARM_SYSTEM_PRESENCE','FIRE_ALARM_SYSTEM_OPERATION','FIRE_ALARM_SYSTEM_IMPACT','SPRINKLER_SYSTEM_PRESENCE','SPRINKLER_SYSTEM_ACTIVATION')
+
+FIRES <- I[
+  !is.na(I$COMPLEX) &
+  !is.na(I$OCC_STATUS) &
+  !is.na(I$OCC_TYPE) &
+  !is.na(I$BLD_STATUS) &
+  !is.na(I$BLD_HEIGHT) & 
+  !is.na(I$LEVEL_OF_ORIGIN) &
+  !is.na(I$AGE_OF_STRUCTURE) &
+  !is.na(I$SMOKE_ALARM_PRESENCE_AND_OPERATION_MAIN_FLOOR) &
+  !is.na(I$SMOKE_ALARM_FAILURE_TO_OPERATE) &
+  !is.na(I$SMOKE_ALARM_TYPE) &
+  !is.na(I$SMOKE_ALARM_ON_ALL_FLOORS) &
+  !is.na(I$SMOKE_ALARM_IMPACT_ON_EVAC) &
+  !is.na(I$FIRE_ALARM_SYSTEM_PRESENCE) &
+  !is.na(I$FIRE_ALARM_SYSTEM_IMPACT) &
+  !is.na(I$SPRINKLER_SYSTEM_PRESENCE) &
+  !is.na(I$SPRINKLER_SYSTEM_ACTIVATION)
+,]
+
+table(FIRES$PROPERTY_GROUP)/length(FIRES$PROPERTY_GROUP)
+table(I$PROPERTY_GROUP)/length(I$PROPERTY_GROUP)
+
+
+```
+
+## Feature Selection
+### INCIDENT_NUMBER & FD_STATION
+As I continue my exploratory data analysis I keep finding features that appear, at first glance, to be completely redundant. A prime example of such a feature is FD_STATION: The below call to pbapply returns 720340. Only 30 entries don't correspond to this pattern! Of that 30, 6 are NA and the other 24 are simply blank strings in the INCIDENT_NUMBER field.
+
+
+```{r}
+sum(substring(I$FD_STATION, 0, nchar(I$INCIDENT_NUMBER)) == I$INCIDENT_NUMBER | I$FD_STATION == '0', na.rm=T) #720364
+
+# sum(as.numeric(gsub(I$INCIDENT_NUMBER, "", I$FD_STATION)) == 0, na.rm=T)
+sum(pbapply(I[,c('INCIDENT_NUMBER','FD_STATION')],1, function(x){
+  as.numeric(gsub(x['INCIDENT_NUMBER'],'',x['FD_STATION'])) == 0
+}), na.rm=T) #returns 720340
+
+in_eq_fdstn <- pbapply(I[,c('INCIDENT_NUMBER','FD_STATION')],1, function(x){
+  as.numeric(gsub(x['INCIDENT_NUMBER'],'',x['FD_STATION'])) == 0
+})
+
+```
+
 
 ### Some preliminary cross-tables
 
@@ -203,19 +262,19 @@ table(format(MEDICAL$INCIDENT_DATE, '%A'), MEDICAL$PROPERTY_GROUP)
 
 
 tta <- function(x){
-  
   if(sum(is.na(c(x["INCIDENT_DATE"], x["INITIAL_CALL_HOUR"], x["INITIAL_CALL_MIN"], x["INITIAL_CALL_SEC"], x["ONSCENE_HOUR"],x["ONSCENE_MIN"],x["ONSCENE_SEC"]))) > 0) return(NA)
   # onscene_date <- x["INCIDENT_DATE"]
   ic <- as.POSIXct(paste0(
     x["INCIDENT_DATE"], " ", x["INITIAL_CALL_HOUR"], ":", x["INITIAL_CALL_MIN"], ":", x["INITIAL_CALL_SEC"] 
-  ), format="%Y-%m-%d %H:%M:%S")
+  ), format="%Y-%m-%d %H:%M:%S", tz="EST")
   os <- as.POSIXct(paste0(
     x["INCIDENT_DATE"], " ", x["ONSCENE_HOUR"], ":", x["ONSCENE_MIN"], ":", x["ONSCENE_SEC"]
-  ), format="%Y-%m-%d %H:%M:%S")
+  ), format="%Y-%m-%d %H:%M:%S", tz="EST")
   if(x["ONSCENE_HOUR"] < x["INITIAL_CALL_HOUR"]){ os <- os + (24 * 60 * 60) }
   return(as.numeric(os) - as.numeric(ic))
   
 }
+
 
 
 
@@ -224,12 +283,15 @@ tta <- function(x){
 
 # Below is the code to actually create the 'TTA' column: First an empty numeric vector, later populated with the call to apply(). This call took about 15 minutes to run. I used pbapply, from the pabbly package, for the progress bar  (very handy!)
 #
+# library(pbapply)
 # I$TTA <- vector(length=nrow(I), mode="numeric")
 # I$TTA <- pbapply(I[,c('INCIDENT_DATE','INITIAL_CALL_HOUR','INITIAL_CALL_MIN','INITIAL_CALL_SEC','ONSCENE_HOUR','ONSCENE_MIN','ONSCENE_SEC')], 1, tta)
 # 
 # Since I have already calculated the TTA values I save I save time when loading the project by either saving the .RData or writing the columns as a .csv and re-loading the TTA feature back into I. 
+# write.csv(x=I[,c('INCIDENT_NUMBER','TTA')], file="TTA.csv")
 # TTA <- read.csv(file="../csv/TTA.csv", header = T)
 # I <- cbind(I, TTA$TTA)
+# names(I)[101] <- "TTA"
 
 # Now that we have TTA we can do some cool cross-tables
 tapply(I$TTA, I$PROPERTY_GROUP, mean, na.rm=T)
@@ -242,8 +304,8 @@ nrow(I[!is.na(I$DISPATCH_DATE) & format(I$DISPATCH_DATE, format='%Y-%m-%d') != I
 # There seem to be a few observations (17) that don't fit the pattern:
 # Incident Date: Date initial call was received
 # Dispatch Date: Date & Time first responders arrive on scene
-# I'm guessing that these cases are a result of a data input error. After browsing them
-# Some of the fields don't match up: Control date, when inputted, close to incident or dispach date.. Also the times used tend to be all over the place and don't correspond to other columns. 
+# I'm guessing that these cases are a result of a data input error. After briefly browsing aforementioned 17 records, 
+# I noticed some of the fields don't match up: Control date, when inputted, close to incident or dispach date.. Also the times used tend to be all over the place and don't correspond to other columns. 
 # I might remove these observations entirely. 
 
 nrow(I[!is.na(I$DISPATCH_DATE) & format(I$DISPATCH_DATE, format='%Y-%m-%d') != I$INCIDENT_DATE & I$INITIAL_CALL_HOUR <= I$ONSCENE_HOUR,]) # 17
@@ -264,5 +326,11 @@ aggregate(I$TTA, list(I$PROPERTY_GROUP), mean, na.rm=T)
 table(I$PROPERTY_GROUP)
 summary(I)
 sum(I$TTA == 0, na.rm = T)
+```
+### More Cross Tables
+
+```{r}
+et_vs_atofd <- addmargins(table(I$EVENT_TYPE, I$ALARM_TO_FD), 2)
+
 ```
 

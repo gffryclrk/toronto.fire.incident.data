@@ -334,3 +334,10 @@ et_vs_atofd <- addmargins(table(I$EVENT_TYPE, I$ALARM_TO_FD), 2)
 
 ```
 
+## Some Graphics
+```{r}
+# png('out.png')
+barplot(table(format(I$INCIDENT_DATE, '%Y')), main="Incidents by Year", xlab="Year", ylab="Number of Incidents")
+#dev.off() # saves the file. Important!
+```
+

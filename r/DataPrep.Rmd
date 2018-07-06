@@ -30,7 +30,9 @@ for(yr in (2012:2016)){
   i_df <- read.csv(i_file, header=T, stringsAsFactors = F)
   # metadata <- rbind(metadata, c(yr, nrow(i_df)))
   I <- rbind(I, i_df)
-  i_df <- NULL # keeps the environment tidy
+  
+  # i_df <- NULL # keeps the environment tidy
+  rm(i_df)
 }
 
 
@@ -89,6 +91,9 @@ for(yr in (2012:2016)){
 
 # nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),]) # 0
 
+# INCIDENT_DAY is a useful feature for graphing & summary statistics. Convenient to have
+# the levels in order. 
+I$INCIDENT_DAY <- factor(x = format(I$INCIDENT_DATE, '%A'), levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"))
 
 if(identical(I$DISPATCH_DATE, I$ARRIVE_DATE)){ I$ARRIVE_DATE <- NULL }
 
@@ -242,8 +247,35 @@ for(g in c(LETTERS[(1:6)],'O')){
 }
 
 I[I$PROPERTY_GROUP == "", 'PROPERTY_GROUP'] <- NA
+# Would you like this feature as a factor?
+I$PROPERTY_GROUP <- addNA(I$PROPERTY_GROUP)
+# Would you like it to be descriptively named?
+levels(I$PROPERTY_GROUP) <- c('Assembly','Care & Detention','Residential','Business & Personal Services','Mercantile','Industrial','Not Classified',NA)
+
+
+
 table(format(I$INCIDENT_DATE, '%A'), I$PROPERTY_GROUP) # This is Day of week vs Property Group
 ```
+### Event type & group
+The approach here was to combine similar-seeming event types into their own, larger group category. 
+```{r}
+# Firstly, EVENT_TYPE has at least 3 mistakes: 31 & 33 aren't listed as possibilities so I'm setting them to NA
+I[I$ALARM_TO_FD %in% 33, "ALARM_TO_FD"] <- NA
+I[I$ALARM_TO_FD %in% 31, "ALARM_TO_FD"] <- NA
+# levels(I$ALARM_TO_FD) <- c(as.character(1:11), NA)
+I$ALARM_TO_FD <- droplevels(I$ALARM_TO_FD)
+
+event_typ_grp <- read.csv(file="../csv/event_type.csv", header=T)
+# Below dirty one-liner doesn't seem to work... perhaps a mystery for another day.
+# I$EVENT_GROUP <- merge(I, event_typ_grp, by="EVENT_TYPE")[,'EVENT_GROUP'] # Lefts inner join
+
+# the slower, less l33t approach:
+I <- merge(I, event_typ_grp, by="EVENT_TYPE")
+# I <- cbind(I, It[,'EVENT_GROUP'])
+# I$EVENT_GROUP <- factor(It$EVENT_GROUP)
+
+```
+
 
 ### Response Time (Time-to-arrival)
 
@@ -333,11 +365,49 @@ sum(I$TTA == 0, na.rm = T)
 et_vs_atofd <- addmargins(table(I$EVENT_TYPE, I$ALARM_TO_FD), 2)
 
 ```
+### Low Variance Filter
+```{r}
+sum(I$FF_FATALITIES > 0) # 0
+I$FF_FATALITIES <- NULL
+
+uum(I$EST_LOSS > 0)
+I$EST_LOSS_BINS <- cut(I$EST_LOSS, c(0,5000,10000,max(I$EST_LOSS)), include.lowest=T)
+
+```
+## Estimated Loss
+```{r}
+
+```
+
 
 ## Some Graphics
 ```{r}
 # png('out.png')
 barplot(table(format(I$INCIDENT_DATE, '%Y')), main="Incidents by Year", xlab="Year", ylab="Number of Incidents")
 #dev.off() # saves the file. Important!
+
+ggplot(data = I, mapping=aes(x = format(I$INCIDENT_DATE, '%Y'))) + geom_bar() + labs(x = "Year", y = 'Total Incidents', title = 'Incident Count by Year')
+
+# Courly Coxwell plot of Event count 
+ggplot(data = I, mapping=aes(x=INITIAL_CALL_HOUR)) + geom_bar() + labs(x = NULL, y = NULL, title="All Event Hours") + scale_x_continuous(breaks = 0:23) + coord_polar() + theme(plot.title = element_text(hjust = 0.5))
+
+# Hourly Coxwell faceted by day of week 
+ggplot(data = I, mapping=aes(x = INITIAL_CALL_HOUR)) + geom_bar() + facet_wrap( ~ INCIDENT_DAY, nrow=2) + coord_polar() + labs(x = NULL, y = NULL, title="Daily breakdown of event hours")
+
+# Vertical barplot of Incidents by Event Group. Requires scales
+# library(scales)
+ggplot(data = I, mapping=aes(x = EVENT_GROUP)) + geom_bar() + scale_x_discrete(limits = rev(levels(I$EVENT_GROUP))) + scale_y_continuous(labels = comma) + coord_flip() + labs(x = "Incident Count", y = "Event Group", title="Incident Count by Event Group")
+
+# Event Group portions of call source
+ggplot(data = I, mapping=aes(x = EVENT_GROUP, fill=ALARM_TO_FD)) + geom_bar(position="fill") + theme_minimal()
+
+# Incident Count by Property Group
+# Note that this was created after renaming levels in I$PROPERTY_GROUP
+ggplot(data = I[!I$PROPERTY_GROUP %in% NA,], mapping=aes(x = PROPERTY_GROUP)) + geom_bar() + scale_y_continuous(labels = comma)+ theme(axis.text.x = element_text(angle = 45, hjust=1)) + scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) + labs(x = "Property Group", y = "Total Incidents", title="Incident Count by Property Group")
+
+# Having Event Group on the X Axis provides a bit more information (I think?)
+levels(I$ALARM_TO_FD) <- c('911','Civilian Telephone','Ambulance','Police Services','Monitoring Agency','Direct Connection','In Person','FD Radio','Other','No Alarm','FD Discovery', NA)
+ggplot(I[!is.na(I$EVENT_GROUP) & !is.na(I$ALARM_TO_FD), ], mapping=aes(x = EVENT_GROUP, fill=ALARM_TO_FD)) + geom_bar(position = "fill") + scale_y_continuous(labels = comma) + theme(axis.text.x = element_text(angle = 45, hjust=1)) + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+
 ```
 

@@ -91,9 +91,7 @@ for(yr in (2012:2016)){
 
 # nrow(I[!grepl("\\d{2}/\\d{2}/\\d{4}", I$INCIDENT_DATE),]) # 0
 
-# INCIDENT_DAY is a useful feature for graphing & summary statistics. Convenient to have
-# the levels in order. 
-I$INCIDENT_DAY <- factor(x = format(I$INCIDENT_DATE, '%A'), levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"))
+
 
 if(identical(I$DISPATCH_DATE, I$ARRIVE_DATE)){ I$ARRIVE_DATE <- NULL }
 
@@ -107,6 +105,21 @@ I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE, format="%d/%m/%Y")
 sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
 # sapply(I, function(x) sum(is.na(x))/nrow(I))
 ```
+
+### More Dates
+The above date & time section was among the first aspects of this data set that I explored. I discovered some relationships among the dates that were useful for my circular Coxwell plots. I also used that information to develop the 'TTA' continuous attribute (among the few continuous features in this data set). However, later on I found a good use for inididual units of date-time variables (such as having hour, minutes and seconds their own features): Association Rules. I hope to incorporate temporal data into my final model because it is one reliable datum available at call time. 
+```{r}
+# INCIDENT_DAY is a useful feature for graphing & summary statistics. Convenient to have
+# the levels in order. 
+I$INCIDENT_DAY <- factor(x = format(I$INCIDENT_DATE, '%A'), levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"))
+
+I$INCIDENT_MONTH <- factor(x = format(I$INCIDENT_DATE, '%B'),
+                           levels = c('January','February','March','April','May','June','July',
+                                      'August', 'September','November','December'))
+
+```
+
+
 ### Factors
 There are many categorical features in this dataset. I decided to encode them as factors. Empty & blank values are treated as NA. 
 
@@ -206,6 +219,8 @@ in_eq_fdstn <- pbapply(I[,c('INCIDENT_NUMBER','FD_STATION')],1, function(x){
   as.numeric(gsub(x['INCIDENT_NUMBER'],'',x['FD_STATION'])) == 0
 })
 
+# As FD_STATION is a bit pointless I'm dropping it.
+I$FD_STATION <- NULL
 ```
 
 
@@ -271,10 +286,30 @@ event_typ_grp <- read.csv(file="../csv/event_type.csv", header=T)
 
 # the slower, less l33t approach:
 I <- merge(I, event_typ_grp, by="EVENT_TYPE")
+I$Freq <- NULL
 # I <- cbind(I, It[,'EVENT_GROUP'])
 # I$EVENT_GROUP <- factor(It$EVENT_GROUP)
 
 ```
+
+### Response Group
+As with EVENT_TYPE and PROPERTY_TYPE, I believe grouping RESPONSE_TYPE would be useful.
+```{r}
+I$RESPONSE_GROUP <- vector(mode="character", length=nrow(I))
+
+I[I$RESPONSE_TYPE %in% 1:3, 'RESPONSE_GROUP'] <- "A"
+I[I$RESPONSE_TYPE %in% 11:13, 'RESPONSE_GROUP'] <- "B"
+I[I$RESPONSE_TYPE %in% 21:29, 'RESPONSE_GROUP'] <- "C"
+I[I$RESPONSE_TYPE %in% c(23,36), 'RESPONSE_GROUP'] <- "D"
+I[I$RESPONSE_TYPE %in% c(31:35, 39), 'RESPONSE_GROUP'] <- "E"
+I[I$RESPONSE_TYPE %in% 37:38, 'RESPONSE_GROUP'] <- "F"
+I[I$RESPONSE_TYPE %in% c(53,41:51,54,57:59), 'RESPONSE_GROUP'] <- "G"
+I[I$RESPONSE_TYPE %in% c(61:69, 601:605,698,699), 'RESPONSE_GROUP'] <- "H"
+I[I$RESPONSE_TYPE %in% c(701:703,71,73:76,82,84,85,86,88,89,898,899), 'RESPONSE_GROUP'] <- "I"
+I[I$RESPONSE_TYPE %in% c(921,922,910:913,92:99), 'RESPONSE_GROUP'] <- "J"
+
+```
+
 
 
 ### Response Time (Time-to-arrival)
@@ -360,23 +395,72 @@ summary(I)
 sum(I$TTA == 0, na.rm = T)
 ```
 ### More Cross Tables
-
+I am interested in the relationship between EVENT_TYPE & ALARM TO FD
 ```{r}
+# https://stats.stackexchange.com/questions/81483/warning-in-r-chi-squared-approximation-may-be-incorrect
+# chisq.test below gives warning "Chi-squared approximation may be incorrect" which is a bit
+# disheartening. The above post on stackexchange advises to set simulate.p.value = T in the call to the test function. 
+
 et_vs_atofd <- addmargins(table(I$EVENT_TYPE, I$ALARM_TO_FD), 2)
+# table(I[!I$ALARM_TO_FD %in% NA, 'EVENT_GROUP'], droplevels(I[!I$ALARM_TO_FD %in% NA, 'ALARM_TO_FD']))
+EVENT_GROUP <- droplevels(I[!I$ALARM_TO_FD %in% NA & !I$EVENT_GROUP %in% NA, 'EVENT_GROUP'])
+ALARM_TO_FD <- droplevels(I[!I$ALARM_TO_FD %in% NA & !I$EVENT_GROUP %in% NA, 'ALARM_TO_FD'])
+table(EVENT_GROUP, ALARM_TO_FD)
+# I think that having so many 0s in ALARM_TO_FD 10 & 11 is giving me df = NA for chisq.test. 
+# As a result I have opted to merge them and run the test again...
+# Merging makes sense because the OFM Code List has both 10 & 11 as "No alarm received"
+
+levels(ALARM_TO_FD) <- c(as.character(1:10),10)
+
+# chisq.test(table(I$EVENT_GROUP, I$ALARM_TO_FD), simulate.p.value = T) # returns df = NA
+chisq.test(table(I[!I$ALARM_TO_FD %in% NA, 'EVENT_GROUP'], droplevels(I[!I$ALARM_TO_FD %in% NA, 'ALARM_TO_FD'])), simulate.p.value = T) # Also has df = NA. I believe there were some NAs that weren't removed from EVENT_GROUP
+chisq.test(table(EVENT_GROUP, ALARM_TO_FD), simulate.p.value = T)
 
 ```
+
 ### Low Variance Filter
 ```{r}
 sum(I$FF_FATALITIES > 0) # 0
 I$FF_FATALITIES <- NULL
 
-uum(I$EST_LOSS > 0)
+sum(I$EST_LOSS > 0)
 I$EST_LOSS_BINS <- cut(I$EST_LOSS, c(0,5000,10000,max(I$EST_LOSS)), include.lowest=T)
 
 ```
-## Estimated Loss
-```{r}
 
+## Association Rules
+```{r}
+# library(arules)
+# below won't run because apriori() only appreciataes factors or logical...
+rules <- apriori(I[,c('EVENT_GROUP','ALARM_TO_FD','RESPONSE_GROUP','PROPERTY_GROUP','INCIDENT_MONTH','INCIDENT_DAY','INITIAL_CALL_HOUR','EVENT_TYPE_CD')], parameter = list(supp = 0.5, conf = 0.9, target="rules"))
+
+rules <- apriori(data.frame(
+  EVENT_GROUP = I$EVENT_GROUP,
+  ALARM_TO_FD = I$ALARM_TO_FD,
+  RESPONSE_GROUP = addNA(I$RESPONSE_GROUP),
+  PROPERTY_GROUP = addNA(I$PROPERTY_GROUP),
+  MONTH = I$INCIDENT_MONTH,
+  DAY = I$INCIDENT_DAY,
+  HOUR = addNA(I$INITIAL_CALL_HOUR),
+  EVENT_TYPE_CD = I$EVENT_TYPE_CD
+ ),
+ parameter = list(supp = 0.1, conf = 0.1, target = "rules")
+ )
+
+rules <- apriori(data.frame(
+  EVENT_TYPE = I$EVENT_TYPE,
+  ALARM_TO_FD = I$ALARM_TO_FD,
+  # RESPONSE_GROUP = addNA(I$RESPONSE_GROUP),
+  # PROPERTY_GROUP = addNA(I$PROPERTY_GROUP),
+  RESPONSE_TYPE = I$RESPONSE_TYPE,
+  PROPERTY_TYPE = I$PROPERTY,
+  MONTH = I$INCIDENT_MONTH,
+  DAY = I$INCIDENT_DAY,
+  HOUR = addNA(I$INITIAL_CALL_HOUR),
+  EVENT_TYPE_CD = I$EVENT_TYPE_CD
+ ),
+ parameter = list(supp = 0.5, conf = 0.5, target = "rules")
+ )
 ```
 
 

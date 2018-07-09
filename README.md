@@ -8,7 +8,7 @@ The goal of this project is to mine the Open Toronto Fire Services Incident Data
 
 ## Timeline & Deliverables
 
-This project has been undertaken as a Capstone Project for Ryerson's [https://ce-online.ryerson.ca/ce/calendar/default.aspx?id=5&section=course&mode=course&ccode=CKME%20136](CKME136) and is a requisition for completion of the [https://ce-online.ryerson.ca/ce/calendar/default.aspx?section=program&sub=cert&cert=DATANA00&mode=program](Big Data Analytics and Predictive Analytics Certificate). As this is a University course certain timeframes, deadlines and expectations must be met. Below are some of the important dates of submission. Relevant documents can be found in [https://github.com/gffryclrk/toronto.fire.incident.data/tree/master/docs](/docs). 
+This project has been undertaken as a Capstone Project for Ryerson's [CKME136](https://ce-online.ryerson.ca/ce/calendar/default.aspx?id=5&section=course&mode=course&ccode=CKME%20136) and is a requisition for completion of the [Big Data Analytics and Predictive Analytics Certificate](https://ce-online.ryerson.ca/ce/calendar/default.aspx?section=program&sub=cert&cert=DATANA00&mode=program). As this is a University course certain timeframes, deadlines and expectations must be met. Below are some of the important dates of submission. Relevant documents can be found in [/docs](https://github.com/gffryclrk/toronto.fire.incident.data/tree/master/docs). 
 
 |Date|Objective|Deliverable|
 |---|---|---|
@@ -23,9 +23,9 @@ This project has been undertaken as a Capstone Project for Ryerson's [https://ce
 The data used in this project is the Toronto Fire Services Incident Data published on the Toronto Open Data Catalog. The data set is published as XML and, initially retrieved in May 2018, contains incident and responding unit data pertaining to approximately 720,000 Fire Services Incidents which occurred between the years of 2011 and 2016. In order to better explore the data the nested XML structure is converted to tabular .csv documents and imported into an R data.frame. 
 
 Tools Used:
-*XQuery
-*Bash Scripting
-*R
+* XQuery
+* Bash Scripting
+* R
 
 ## Initial Analysis
 
@@ -35,11 +35,11 @@ Tools Used:
 * Statistical test: Chi-square test of independence (Pearson)
 * Association Rules (Apriori)
 * R Packages:
-..* base
-..* stats
-..* ggplot2
-..* tidyverse
-..* arules
+    * base
+    * stats
+    * ggplot2
+    * tidyverse
+    * arules
 
 ## Initial Results
 

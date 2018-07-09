@@ -1,5 +1,5 @@
 # Mining Toronto Fire Services Incident Data
-## CKME 136 Capstone Project
+CKME 136 Capstone Project
 By Geoffrey Clark
 
 ## Overview

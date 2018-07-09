@@ -104,6 +104,14 @@ I$INCIDENT_DATE <- as.POSIXct(I$INCIDENT_DATE, format="%d/%m/%Y")
 
 sapply(I[,c('DISPATCH_DATE','INCIDENT_DATE')], function(x) sum(is.na(x)))
 # sapply(I, function(x) sum(is.na(x))/nrow(I))
+
+
+# Control Date
+# I$CONTROL_DATE has many empty values that should probably be set to NA
+# sum(nchar(I$CONTROL_DATE) == 0, na.rm=T) #335564
+I$CONTROL_DATE[I$CONTROL_DATE == ""] <- NA
+
+
 ```
 
 ### More Dates
@@ -135,6 +143,11 @@ for(ft in factorSchema){
   I[!grepl(".*\\S.*", I[,ft]),ft] <- NA
   I[,ft] <- addNA(I[,ft]) # creates factors with NA level
 }
+
+# Additional factors which I didn't originally encode properly: (I don't feel like re-ininitalizing my environment right now...)
+I$OFM_INVESTIGATIONS_CONTACTED <- addNA(I$OFM_INVESTIGATIONS_CONTACTED)
+I$AID_TO_FROM_OTHER_DEPTS <- addNA(I$AID_TO_FROM_OTHER_DEPTS)
+I$COMPLEX <- addNA(I$COMPLEX)
 ```
 
 ### Counting NAs

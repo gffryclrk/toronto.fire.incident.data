@@ -33,6 +33,7 @@ for(yr in (2012:2016)){
   
   # i_df <- NULL # keeps the environment tidy
   rm(i_df)
+  rm(i_file)
 }
 
 
@@ -217,7 +218,7 @@ table(I$PROPERTY_GROUP)/length(I$PROPERTY_GROUP)
 
 ## Feature Selection
 ### INCIDENT_NUMBER & FD_STATION
-As I continue my exploratory data analysis I keep finding features that appear, at first glance, to be completely redundant. A prime example of such a feature is FD_STATION: The below call to pbapply returns 720340. Only 30 entries don't correspond to this pattern! Of that 30, 6 are NA and the other 24 are simply blank strings in the INCIDENT_NUMBER field.
+As I continue my exploratory data analysis I seem to discover features that appear, at first glance, to be completely redundant. A prime example of such a feature is FD_STATION: The below call to pbapply returns 720340. Only 30 entries don't correspond to this pattern! Of that 30, 6 are NA and the other 24 are simply blank strings in the INCIDENT_NUMBER field.
 
 
 ```{r}
@@ -355,9 +356,6 @@ tta <- function(x){
   
 }
 
-
-
-
 # I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,] #Rollover dispatch
 # nrow(I[!is.na(I$INITIAL_CALL_HOUR) & !is.na(I$ONSCENE_HOUR) & I$ONSCENE_HOUR < I$INITIAL_CALL_HOUR,]) #2519
 
@@ -401,13 +399,21 @@ sum(is.na(I$DISPATCH_DATE)) + sum(I[!is.na(I$DISPATCH_DATE), 'DISPATCH_DATE'] > 
 
 ```
 
+
+# Some TTA Metrics. 
+
 ```{r}
 aggregate(I$TTA, list(I$PROPERTY_GROUP), mean, na.rm=T)
 table(I$PROPERTY_GROUP)
 summary(I)
 sum(I$TTA == 0, na.rm = T)
+sum(I$TTA < 0, na.rm = T)
+
+tta_eg_mdl <- lm(TTA ~ EVENT_GROUP, data = I)
+summary(tta_eg_mdl)
 ```
-### More Cross Tables
+
+### EVENT_TYPE vs ALARM_TO_FD
 I am interested in the relationship between EVENT_TYPE & ALARM TO FD
 ```{r}
 # https://stats.stackexchange.com/questions/81483/warning-in-r-chi-squared-approximation-may-be-incorrect
@@ -461,19 +467,42 @@ rules <- apriori(data.frame(
  )
 
 rules <- apriori(data.frame(
-  EVENT_TYPE = I$EVENT_TYPE,
+  EVENT_GROUP = I$EVENT_GROUP,
   ALARM_TO_FD = I$ALARM_TO_FD,
-  # RESPONSE_GROUP = addNA(I$RESPONSE_GROUP),
-  # PROPERTY_GROUP = addNA(I$PROPERTY_GROUP),
-  RESPONSE_TYPE = I$RESPONSE_TYPE,
-  PROPERTY_TYPE = I$PROPERTY,
-  MONTH = I$INCIDENT_MONTH,
+  RESPONSE_GROUP = addNA(I$RESPONSE_GROUP),
+  PROPERTY_GROUP = addNA(I$PROPERTY_GROUP),
+  MONTH = format(I$INCIDENT_DATE, '%B'),
   DAY = I$INCIDENT_DAY,
   HOUR = addNA(I$INITIAL_CALL_HOUR),
-  EVENT_TYPE_CD = I$EVENT_TYPE_CD
+  EVENT_TYPE_CD = I$EVENT_TYPE_CD,
+  STATUS_ON_ARRIVAL = I$STATUS_ON_ARRIVAL,
+  INITIAL_DETECTION = I$INITIAL_DETECTION,
+  EXTENT_FIRE = I$EXTENT_FIRE,
+  EXTENT_SMOKE = I$EXTENT_SMOKE,
+  FIRE_CONTROL = I$FIRE_CONTROL,
+  FIRE_CLASS = I$FIRE_CLASS
  ),
- parameter = list(supp = 0.5, conf = 0.5, target = "rules")
+ parameter = list(supp = 0.1, conf = 0.1, target = "rules")
  )
+
+# Write rules to .csv
+write(rules, file ="arules_14f.csv", sep=",", quote=T, row.names=F)
+
+rules.df <- as(rules, "data.frame")
+write.csv(rules.df[order(rules.df$lift, decreasing = T), ], file="arules_14.csv")
+```
+
+### Fire Severity Level
+```{r}
+I$FIRE_CLASS <- factor(x = character(length = nrow(I)), levels=c('VL','L','M','H','VH'))
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS < 5000, 'FIRE_CLASS'] <- 'VL'
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS >= 5000 & I$EST_LOSS < 10000, 'FIRE_CLASS'] <- 'L'
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS >= 10000 & I$EST_LOSS < 50000, 'FIRE_CLASS'] <- 'M'
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) <= 1 & I$EST_LOSS >= 50000 & I$EST_LOSS < 100000, 'FIRE_CLASS'] <- 'H'
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) > 1 & I$EST_LOSS < 100000, 'FIRE_CLASS'] <- 'H'
+I[I$CIVILIAN_FIRE_FATALITY > 1 | I$EST_LOSS >= 100000, 'FIRE_CLASS'] <- 'VH'
+
+table(format(I$INCIDENT_DATE, '%Y'), addNA(I$FIRE_CLASS))
 ```
 
 
@@ -505,6 +534,13 @@ ggplot(data = I[!I$PROPERTY_GROUP %in% NA,], mapping=aes(x = PROPERTY_GROUP)) + 
 # Having Event Group on the X Axis provides a bit more information (I think?)
 levels(I$ALARM_TO_FD) <- c('911','Civilian Telephone','Ambulance','Police Services','Monitoring Agency','Direct Connection','In Person','FD Radio','Other','No Alarm','FD Discovery', NA)
 ggplot(I[!is.na(I$EVENT_GROUP) & !is.na(I$ALARM_TO_FD), ], mapping=aes(x = EVENT_GROUP, fill=ALARM_TO_FD)) + geom_bar(position = "fill") + scale_y_continuous(labels = comma) + theme(axis.text.x = element_text(angle = 45, hjust=1)) + scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+
+# Black & White version of Event Group vs Alarm to FD (proportional)
+# Note, renaming levels was used prior (as in above)
+ggplot(I[!I$EVENT_GROUP %in% NA & !I$ALARM_TO_FD %in% NA, ], mapping = aes(x = ALARM_TO_FD, fill = EVENT_GROUP)) + geom_bar(position = "fill") + scale_y_continuous(labels = comma) + theme(axis.text.x = element_text(angle = 45, hjust = 1)) + scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) + scale_fill_grey() + labs(x = "Alarm to FD", fill = "Event Group", y = "Portion of Event Group", title = "Event Group Portion by Alarm to FD")
+
+# Density of TTA
+ggplot(data = I, mapping=aes(x = TTA)) + geom_density() + xlim(0,1000)
 
 ```
 

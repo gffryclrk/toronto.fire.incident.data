@@ -493,16 +493,37 @@ write.csv(rules.df[order(rules.df$lift, decreasing = T), ], file="arules_14.csv"
 ```
 
 ### Fire Severity Level
+
+Very Low: 0 Fatalities, 0 Injuries, Damage < \$5000
+Low: 0 Fatalities, 0 Injuries, \$5000 <= Damage < \$10,000
+Moderate: 0 Fatalities, 0 Injuries, \$10,000 <= Damage < \$50,000 or 0 Fatalities, 1 Injury, Damage < \$50,000
+High: 0 Fatalities, Injuries <= 1, \$50,000 <= Damage < \$100,000 or Injuries > 1, Damage < \$100,000
+Very High: Fatalities > 0 or Damage >= \$100,000
+
 ```{r}
 I$FIRE_CLASS <- factor(x = character(length = nrow(I)), levels=c('VL','L','M','H','VH'))
 I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS < 5000, 'FIRE_CLASS'] <- 'VL'
 I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS >= 5000 & I$EST_LOSS < 10000, 'FIRE_CLASS'] <- 'L'
 I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 0 & I$EST_LOSS >= 10000 & I$EST_LOSS < 50000, 'FIRE_CLASS'] <- 'M'
+I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) == 1 & I$EST_LOSS < 50000, 'FIRE_CLASS'] <- 'M'
 I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) <= 1 & I$EST_LOSS >= 50000 & I$EST_LOSS < 100000, 'FIRE_CLASS'] <- 'H'
 I[I$CIVILIAN_FIRE_FATALITY == 0 & (I$FF_INJURIES + I$CIVILIAN_FIRE_INJURY) > 1 & I$EST_LOSS < 100000, 'FIRE_CLASS'] <- 'H'
-I[I$CIVILIAN_FIRE_FATALITY > 1 | I$EST_LOSS >= 100000, 'FIRE_CLASS'] <- 'VH'
+I[I$CIVILIAN_FIRE_FATALITY > 0 | I$EST_LOSS >= 100000, 'FIRE_CLASS'] <- 'VH'
 
 table(format(I$INCIDENT_DATE, '%Y'), addNA(I$FIRE_CLASS))
+```
+
+## Critical Incidents
+The above Fire classification creates a severe (99.2/0.8) class imbalance problem. By reducing the class levels to binary and adding features we are able to investigate alternatives.
+```{r}
+I$CRITICAL <- factor(integer(length = nrow(I)), levels=c(0,1))
+I[!I$FIRE_CLASS %in% 'VL', 'CRITICAL'] <- 1
+I[I$EST_LOSS > 0, 'CRITICAL'] <- 1
+I[!is.na(I$RESPONDING_UNITS) & I$RESPONDING_UNITS >= 7, 'CRITICAL'] <- 1
+I[I$RESCUES > 0, 'CRITICAL'] <- 1
+I[I$OFM_INVESTIGATIONS_CONTACTED %in% 1, 'CRITICAL'] <- 1
+I[I$EST_VALUE_AT_RISK %in% 2:10, 'CRITICAL'] <- 1
+# I[, 'CRITICAL'] <- 1
 ```
 
 

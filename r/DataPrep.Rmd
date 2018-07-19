@@ -563,5 +563,110 @@ ggplot(I[!I$EVENT_GROUP %in% NA & !I$ALARM_TO_FD %in% NA, ], mapping = aes(x = A
 # Density of TTA
 ggplot(data = I, mapping=aes(x = TTA)) + geom_density() + xlim(0,1000)
 
+# This is an interesting Coxwell breakdown of incidents by month, faceted by year
+ggplot(data = I, mapping = aes(x = MONTH) ) + geom_bar() + facet_wrap( ~ YEAR) + coord_polar()
+
+
+```
+
+## Initial Model
+My plan is to work with fires only for the time being.
+Train/CV/Test
+```{r}
+set.seed(42)
+# FIRE.SET <- list()
+idx <- list()
+idx$fire.idx <- which(I$EVENT_GROUP %in% 'Fire')
+idx$train <- sample(idx$fire.idx, 0.6*length(idx$fire.idx))
+idx$cv <- sample(idx$fire.idx[!idx$fire.idx %in% idx$train], length(idx$fire.idx[!idx$fire.idx %in% idx$train]) * 0.5)
+idx$test <- idx$fire.idx[!idx$fire.idx %in% idx$train & !idx$fire.idx %in% idx$cv]
+
+# c.model <- glm(CRITICAL ~ ., family = binomial(link='logit'), data=I[idx$train,])  
+# Below Model uses: EVENT_TYPE_CD, ALARM_TO_FD, AID_TO_FROM_OTHER_DEPTS, INITIAL CALL HOUR, MIN, SEC, RESPONDING UNITS
+c.model <- glm(CRITICAL ~ ., family = binomial(link='logit'), data=I[idx$train, c(4, 24, 10, 23, 21, 12:14, 8, 105)])
+# anova(c.model)
+
+y <- data.frame(prob=vector(mode='numeric',length=length(idx$cv)))
+y$prob <- predict(c.model, newdata=I[idx$cv, c(4,24,10,23,21,12:14,8)])
+y$pred <- ifelse(y$prob > 0.5,1,0)
+y$CRITICAL <- I[idx$cv, 'CRITICAL']
+sum(y$pred == y$CRITICAL)/nrow(y) # Accuracy: 89%
+sum(y$CRITICAL == 0)/nrow(y) # Had we simply predicted 0 for everything: 79%
+(idx$cf <- as.matrix(table(y$pred, y$CRITICAL))) #confusion matrix
+idx$cf[1,2]/(idx$cf[1,2] + idx$cf[2,2]) # FN Rate: 0.4890068
+idx$cf[2,2]/(idx$cf[2,2] + idx$cf[2,1]) # Precision: 0.9732852
+idx$cf[2,2]/(idx$cf[2,2] + idx$cf[1,2]) # Recall: 0.5109932
+(2 * idx$cf[2,2]) / ((2 * idx$cf[2,2]) + idx$cf[2,1] + idx$cf[1,2]) # F1-Score: 0.5109932
+
+
+d.model <- glm(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + MONTH + YEAR, family=binomial(link='logit'), data = I[idx$train,])
+y <- data.frame(prob=vector(mode='numeric',length=length(idx$cv)))
+y$prob <- predict(d.model, newdata=I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')])
+y$pred <- ifelse(y$prob > 0.5,1,0)
+y$CRITICAL <- I[idx$cv, 'CRITICAL']
+sum(y$pred == y$CRITICAL)/nrow(y) # Accuracy: 89%
+sum(y$CRITICAL == 0)/nrow(y) # Had we simply predicted 0 for everything: 79%
+(idx$cf <- as.matrix(table(y$pred, y$CRITICAL))) #confusion matrix
+idx$cf[1,2]/(idx$cf[1,2] + idx$cf[2,2]) # FN Rate: 0.3112206
+idx$cf[2,2]/(idx$cf[2,2] + idx$cf[2,1]) # Precision: 0.9057827
+idx$cf[2,2]/(idx$cf[2,2] + idx$cf[1,2]) # Recall: 0.6887794
+(2 * idx$cf[2,2]) / ((2 * idx$cf[2,2]) + idx$cf[2,1] + idx$cf[1,2]) # F1-Score: 0.7825151
+
+```
+## Summaries
+I keep copy/pasting the above FN, Precision, Recall summaries and it's driving me bonkers.
+
+```{r}
+custom.summaries <- function(cm){
+  # This will only work (properly) with a 2 way confusion matrix
+  cm <- as.matrix(cm)
+  if(mean(c(2,2) == dim(cm)) != 1) stop("This function presently only works with 2x2 Confusion Matrix (sorry!)")
+  summaries <- list()
+  summaries$FNR <- cm[1,2]/(cm[1,2] + cm[2,2]) # FN Rate
+  summaries$PRECISION <- cm[2,2]/(cm[2,2] + cm[2,1]) # Precision
+  summaries$RECALL <- cm[2,2]/(cm[2,2] + cm[1,2]) # Recall
+  summaries$F1Score <- (2 * cm[2,2]) / ((2 * cm[2,2]) + cm[2,1] + cm[1,2]) # F1-Score
+  return(summaries)
+}
+```
+
+
+### KNN 
+Doesn't work because of categorical variables (duh?)
+Maybe Naive Bayes or Decision Tree
+```{r}
+# library(class)
+d.model.knn <- knn(
+  train=I[idx$train, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')],
+  test=I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')],
+  cl=as.numeric(I[idx$train, 'CRITICAL']),
+  k=3
+)
+```
+
+### Naive Bayes
+```{r}
+# install.packages("e1071")
+# library(e1071)
+I$EST_KM.f <- as.factor(I$EST_KM)
+I$INITIAL_UNIT_PERSONNEL.f <- as.factor(I$INITIAL_UNIT_PERSONNEL)
+I$YEAR <- as.factor(I$YEAR)
+I$MONTH <- as.factor(I$MONTH)
+
+model.nb <- naiveBayes(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + MONTH + YEAR, data = I[idx$train, ])
+
+nb <- list()
+
+nb$cf <- table(predict(
+  model.nb,
+  I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','MONTH','YEAR')]), I[idx$cv, 'CRITICAL'])
+nb$cf <- as.matrix(nb$cf)
+
+nb$cf[1,2]/(nb$cf[1,2] +nb$cf[2,2]) # FN Rate: 0.2892343
+nb$cf[2,2]/(nb$cf[2,2] +nb$cf[2,1]) # Precision: 0.8434
+nb$cf[2,2]/(nb$cf[2,2] +nb$cf[1,2]) # Recall: 0.710
+(2 *nb$cf[2,2]) / ((2 *nb$cf[2,2]) +nb$cf[2,1] +nb$cf[1,2]) # F1-Score: 0.7714462
+
+
 ```
 

@@ -125,7 +125,7 @@ I$INCIDENT_DAY <- factor(x = format(I$INCIDENT_DATE, '%A'), levels=c("Sunday","M
 I$INCIDENT_MONTH <- factor(x = format(I$INCIDENT_DATE, '%B'),
                            levels = c('January','February','March','April','May','June','July',
                                       'August', 'September','November','December'))
-
+I$INCIDENT_YEAR <- factor(x = format(I$INCIDENT_DATE, '%Y'), levels=c(2011,2012,2013,2014,2015,2016))
 ```
 
 
@@ -144,6 +144,8 @@ for(ft in factorSchema){
   I[!grepl(".*\\S.*", I[,ft]),ft] <- NA
   I[,ft] <- addNA(I[,ft]) # creates factors with NA level
 }
+
+rm(factorSchema) # Trying to keep my environment somewhat tidy...
 
 # Additional factors which I didn't originally encode properly: (I don't feel like re-ininitalizing my environment right now...)
 I$OFM_INVESTIGATIONS_CONTACTED <- addNA(I$OFM_INVESTIGATIONS_CONTACTED)
@@ -593,13 +595,15 @@ y$CRITICAL <- I[idx$cv, 'CRITICAL']
 sum(y$pred == y$CRITICAL)/nrow(y) # Accuracy: 89%
 sum(y$CRITICAL == 0)/nrow(y) # Had we simply predicted 0 for everything: 79%
 (idx$cf <- as.matrix(table(y$pred, y$CRITICAL))) #confusion matrix
-idx$cf[1,2]/(idx$cf[1,2] + idx$cf[2,2]) # FN Rate: 0.4890068
-idx$cf[2,2]/(idx$cf[2,2] + idx$cf[2,1]) # Precision: 0.9732852
-idx$cf[2,2]/(idx$cf[2,2] + idx$cf[1,2]) # Recall: 0.5109932
-(2 * idx$cf[2,2]) / ((2 * idx$cf[2,2]) + idx$cf[2,1] + idx$cf[1,2]) # F1-Score: 0.5109932
+(custom.summaries(idx$cf))
+# Accuray: 0.895
+# FNR: 0.489
+# PRECISION: 0.973
+# RECALL: 0.510
+# F1Score: 0.670
 
 
-d.model <- glm(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + MONTH + YEAR, family=binomial(link='logit'), data = I[idx$train,])
+d.model <- glm(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, family=binomial(link='logit'), data = I[idx$train,])
 y <- data.frame(prob=vector(mode='numeric',length=length(idx$cv)))
 y$prob <- predict(d.model, newdata=I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')])
 y$pred <- ifelse(y$prob > 0.5,1,0)
@@ -612,7 +616,95 @@ idx$cf[2,2]/(idx$cf[2,2] + idx$cf[2,1]) # Precision: 0.9057827
 idx$cf[2,2]/(idx$cf[2,2] + idx$cf[1,2]) # Recall: 0.6887794
 (2 * idx$cf[2,2]) / ((2 * idx$cf[2,2]) + idx$cf[2,1] + idx$cf[1,2]) # F1-Score: 0.7825151
 
+
+predict.logistic <- function(model, test, prob=0.5){
+  y <- data.frame(prob=vector(mode='numeric',length=nrow(test)))
+  y$prob <- predict(model, newdata=test)
+  y$pred <- ifelse(y$prob > prob,1,0)
+  # y$CRITICAL <- I[idx$cv, 'CRITICAL']
+  return(y)
+}
+
+# I was curious as to whether or not EVENT_TYPE would make a difference: Nope. 
+e.model <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + MONTH + YEAR, family=binomial(link='logit'), data = I[idx$train,])
+
+e.model.cm <- table(predict.logistic(d.model, I[idx$cv, c('EVENT_TYPE','EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')])$pred, I[idx$cv, 'CRITICAL'])
+
+table(predict.logistic(d.model, I[idx$cv, c('EVENT_TYPE','EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[idx$cv, 'CRITICAL'])
+
+# I am having a somewhat ambitious moment wondering if I can train logistic regression
+# on the entire dataset. First I should probably remove NAs...
+
+nrow(na.omit(I[,c('EVENT_TYPE','EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')])) # 0
+
+full_idx <- list()
+full_idx$train <- sample(1:nrow(I), 0.6*nrow(I))
+full_idx$cv <- sample((1:nrow(I))[-(full_idx$train)], 0.2*nrow(I))
+full_idx$test <- (1:nrow(I))[-c(full_idx$train, full_idx$cv)]
+
+(length(full_idx$train) + length(full_idx$test) + length(full_idx$cv)) == nrow(I) # TRUE
+
+f.model <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, family=binomial(link='logit'), data = I[full_idx$train,])
+
+full.logistic.cm <- table(predict.logistic(f.model, I[full_idx$cv, c('EVENT_TYPE', 'EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[full_idx$cv, 'CRITICAL'])
+
+## There's an issue with my above sampling method:
+## The training set didn't have all factor levels
+## and so you can't then use the model for predictions
+## if they exist in the test set. 
+
+table(I[full_idx$train, 'EVENT_TYPE'])[table(I[full_idx$train, 'EVENT_TYPE']) ==0]
+sum(I$EVENT_TYPE %in% 'Mutual Aid Assist - Medical') # 1
+sum(I$EVENT_TYPE %in% 'Police Assist - Bomb Standby - Non Emergency') # 1
+sum(I$EVENT_TYPE %in% 'Rescue - Elevator - Non Emergency') # 2
+
+# I need to add the above indexes to the trianing set so that they are available to be used in train or cv
+
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE %in% 'Mutual Aid Assist - Medical'))
+full_idx$cv <- full_idx$cv[full_idx$cv != which(I$EVENT_TYPE %in% 'Mutual Aid Assist - Medical')]
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE %in% 'Police Assist - Bomb Standby - Non Emergency'))
+full_idx$test <- full_idx$test[full_idx$test != which(I$EVENT_TYPE %in% 'Police Assist - Bomb Standby - Non Emergency')]
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE %in% 'Rescue - Elevator - Non Emergency')[1])
+full_idx$cv <- full_idx$cv[full_idx$cv != which(I$EVENT_TYPE %in% 'Rescue - Elevator - Non Emergency')[1]]
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE %in% 'Police Assist - Joint Operations - Non Emergency'))
+full_idx$cv <- full_idx$cv[full_idx$cv != which(I$EVENT_TYPE %in% 'Police Assist - Joint Operations - Non Emergency')]
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE %in% 'Vehicle Fire - Natural Gas'))
+full_idx$cv <- full_idx$cv[full_idx$cv != which(I$EVENT_TYPE %in% 'Vehicle Fire - Natural Gas')]
+
+(length(full_idx$train) + length(full_idx$test) + length(full_idx$cv)) == nrow(I) # TRUE
+length(duplicated(c(full_idx$train, full_idx$test, full_idx$cv))) == length(c(full_idx$train, full_idx$test, full_idx$cv))
+
+table(I[full_idx$train, 'EVENT_TYPE_CD'])[table(I[full_idx$train, 'EVENT_TYPE_CD']) ==0]
+
+full_idx$train <- c(full_idx$train, which(I$EVENT_TYPE_CD %in% 'MEPACP'))
+full_idx$cv <- full_idx$cv[full_idx$cv != which(I$EVENT_TYPE_CD %in% 'MEPACP')]
+
+
+table(I[full_idx$train, 'INCIDENT_YEAR'])[table(I[full_idx$train, 'INCIDENT_YEAR']) ==0]
+
+
 ```
+
+### Logistic Regression with Interaction
+
+```{r}
+# Trying some interaction terms.
+lr.i.model_a <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_TYPE:ALARM_TO_FD, family=binomial(link='logit'), data = I[idx$train,])
+
+table(predict.logistic(lr.i.model_a, I[idx$cv, c('EVENT_TYPE','EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[idx$cv, 'CRITICAL'])
+
+lr.i.model_b <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_TYPE:ALARM_TO_FD + EVENT_TYPE:RESPONSE_TYPE, family=binomial(link='logit'), data = I[idx$train,])
+
+full_lr.i.model_c <- glm(CRITICAL ~ EVENT_GROUP + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_GROUP + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_GROUP:ALARM_TO_FD + EVENT_GROUP:RESPONSE_GROUP, family=binomial(link='logit'), data = I[full_idx$train,])
+
+full.logistic.i_c.cm <- table(predict.logistic(full_lr.i.model_c, I[full_idx$cv, c('EVENT_GROUP', 'EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[full_idx$cv[-which(full_idx$cv %in% which(I$EVENT_TYPE_CD %in% c('ISPCF',NA)))], 'CRITICAL'])
+
+I[full_idx$cv[-which(full_idx$cv %in% which(I$EVENT_TYPE_CD %in% c('ISPCF',NA)))], 'EVENT_TYPE_CD']
+
+
+df.ROC <- rbind(data.frame(predictor = predict(d.model, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=1), data.frame(predictor = predict(lr.i.model_a, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=2), data.frame(predictor = predict(lr.i.model_b, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=3))
+```
+
 ## Summaries
 I keep copy/pasting the above FN, Precision, Recall summaries and it's driving me bonkers.
 
@@ -622,6 +714,7 @@ custom.summaries <- function(cm){
   cm <- as.matrix(cm)
   if(mean(c(2,2) == dim(cm)) != 1) stop("This function presently only works with 2x2 Confusion Matrix (sorry!)")
   summaries <- list()
+  summaries$ACCURACY <- (cm[1,1] + cm[2,2]) / sum(cm) # Accuracy
   summaries$FNR <- cm[1,2]/(cm[1,2] + cm[2,2]) # FN Rate
   summaries$PRECISION <- cm[2,2]/(cm[2,2] + cm[2,1]) # Precision
   summaries$RECALL <- cm[2,2]/(cm[2,2] + cm[1,2]) # Recall
@@ -650,23 +743,30 @@ d.model.knn <- knn(
 # library(e1071)
 I$EST_KM.f <- as.factor(I$EST_KM)
 I$INITIAL_UNIT_PERSONNEL.f <- as.factor(I$INITIAL_UNIT_PERSONNEL)
-I$YEAR <- as.factor(I$YEAR)
-I$MONTH <- as.factor(I$MONTH)
+# I$YEAR <- as.factor(I$YEAR)
+# I$MONTH <- as.factor(I$MONTH)
 
 model.nb <- naiveBayes(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + MONTH + YEAR, data = I[idx$train, ])
 
 nb <- list()
 
-nb$cf <- table(predict(
+nb$cm <- table(predict(
   model.nb,
   I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','MONTH','YEAR')]), I[idx$cv, 'CRITICAL'])
-nb$cf <- as.matrix(nb$cf)
+# nb$cf <- as.matrix(nb$cf)
 
-nb$cf[1,2]/(nb$cf[1,2] +nb$cf[2,2]) # FN Rate: 0.2892343
-nb$cf[2,2]/(nb$cf[2,2] +nb$cf[2,1]) # Precision: 0.8434
-nb$cf[2,2]/(nb$cf[2,2] +nb$cf[1,2]) # Recall: 0.710
-(2 *nb$cf[2,2]) / ((2 *nb$cf[2,2]) +nb$cf[2,1] +nb$cf[1,2]) # F1-Score: 0.7714462
+(custom.summaries(nb$cm))
+# ACCURACY: 0.912
+# FNR: 0.289
+# PRECISION: 0.843
+# RECALL: 0.71
+# F1-SCORE: 0.771
 
+## Full Naive Bayes?
+f.model.nb <- naiveBayes(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, data = I[full_idx$train, ])
 
+nb$cm <- table(predict(
+  f.model.nb,
+  I[full_idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')]), I[full_idx$cv, 'CRITICAL'])
 ```
 

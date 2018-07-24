@@ -1,0 +1,1400 @@
+
+Call:
+glm(formula = CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + 
+    RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + 
+    INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_TYPE:ALARM_TO_FD, 
+    family = binomial(link = "logit"), data = I[idx$train, ])
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-3.5220  -0.4475  -0.1439  -0.0731   3.6541  
+
+Coefficients: (139 not defined because of singularities)
+                                                                 Estimate
+(Intercept)                                                     2.236e+00
+EVENT_TYPEFire - Alarm Waterfront                               7.307e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise                     -1.467e+01
+EVENT_TYPEFire - Commercial/Industrial                          9.993e-02
+EVENT_TYPEFire - Grass/Rubbish                                 -2.660e+00
+EVENT_TYPEFire - Highrise Commercial                            7.880e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown                 2.947e-01
+EVENT_TYPEFire - Highrise Residential - Downtown                5.949e-01
+EVENT_TYPEFire - Hydro Vault                                    4.268e-01
+EVENT_TYPEFire - Institution                                    8.635e-01
+EVENT_TYPEFire - Institution - Downtown                         3.688e+00
+EVENT_TYPEFire - Institution - School                           6.227e-01
+EVENT_TYPEFire - Other                                         -1.444e-01
+EVENT_TYPEFire - Outside Storage                                1.195e+00
+EVENT_TYPEFire - Residential                                    1.906e-03
+EVENT_TYPEFire - Subway                                         3.122e+00
+EVENT_TYPEFire - Subway - Downtown                              2.996e+00
+EVENT_TYPEFire - Transformer/Pole                              -2.252e+00
+EVENT_TYPEFire - Waterfront                                     3.323e+00
+EVENT_TYPEFire - Waterfront - Highrise                          2.009e+00
+EVENT_TYPEFire Alarm - Check Call                              -2.899e+00
+EVENT_TYPEFire Waterfront Marina/Industrial                     1.761e+01
+EVENT_TYPE_CDFAW                                                       NA
+EVENT_TYPE_CDFAWH                                                      NA
+EVENT_TYPE_CDFICI                                                      NA
+EVENT_TYPE_CDFIG                                                       NA
+EVENT_TYPE_CDFIHC                                                      NA
+EVENT_TYPE_CDFIHCD                                                     NA
+EVENT_TYPE_CDFIHR                                                      NA
+EVENT_TYPE_CDFIHRD                                                     NA
+EVENT_TYPE_CDFIHV                                                      NA
+EVENT_TYPE_CDFII                                                       NA
+EVENT_TYPE_CDFIID                                                      NA
+EVENT_TYPE_CDFIIS                                                      NA
+EVENT_TYPE_CDFIO                                                       NA
+EVENT_TYPE_CDFIOS                                                      NA
+EVENT_TYPE_CDFIR                                                       NA
+EVENT_TYPE_CDFIS                                                       NA
+EVENT_TYPE_CDFISD                                                      NA
+EVENT_TYPE_CDFITP                                                      NA
+EVENT_TYPE_CDFIW                                                       NA
+EVENT_TYPE_CDFIWH                                                      NA
+EVENT_TYPE_CDFIWMI                                                     NA
+ALARM_TO_FD2                                                   -5.757e-02
+ALARM_TO_FD3                                                    3.589e-01
+ALARM_TO_FD4                                                    4.506e-01
+ALARM_TO_FD5                                                   -4.000e-01
+ALARM_TO_FD6                                                   -1.423e+01
+ALARM_TO_FD7                                                   -8.282e-01
+ALARM_TO_FD8                                                    1.375e+00
+ALARM_TO_FD9                                                   -1.500e+00
+ALARM_TO_FD10                                                  -2.010e+01
+ALARM_TO_FD11                                                  -1.127e+01
+RESPONSE_TYPE2                                                  4.296e-01
+RESPONSE_TYPE3                                                 -4.721e+00
+RESPONSE_TYPE11                                                -4.396e+00
+RESPONSE_TYPE12                                                -1.916e+01
+RESPONSE_TYPE13                                                -2.320e+00
+RESPONSE_TYPE21                                                -4.814e+00
+RESPONSE_TYPE22                                                -4.817e+00
+RESPONSE_TYPE23                                                -5.396e+00
+RESPONSE_TYPE24                                                -5.105e+00
+RESPONSE_TYPE25                                                -5.088e+00
+RESPONSE_TYPE26                                                -5.257e+00
+RESPONSE_TYPE29                                                -4.743e+00
+RESPONSE_TYPE31                                                -5.370e+00
+RESPONSE_TYPE32                                                -5.223e+00
+RESPONSE_TYPE33                                                -4.950e+00
+RESPONSE_TYPE34                                                -4.985e+00
+RESPONSE_TYPE35                                                -4.857e+00
+RESPONSE_TYPE36                                                -4.584e+00
+RESPONSE_TYPE37                                                -5.197e+00
+RESPONSE_TYPE38                                                -5.384e+00
+RESPONSE_TYPE39                                                -5.030e+00
+RESPONSE_TYPE41                                                -3.601e+00
+RESPONSE_TYPE42                                                -1.790e+01
+RESPONSE_TYPE43                                                -1.736e+00
+RESPONSE_TYPE44                                                -1.700e+01
+RESPONSE_TYPE45                                                -3.618e+00
+RESPONSE_TYPE46                                                -1.678e+01
+RESPONSE_TYPE47                                                -3.007e+00
+RESPONSE_TYPE49                                                -4.600e+00
+RESPONSE_TYPE50                                                -5.308e+00
+RESPONSE_TYPE51                                                -1.986e+01
+RESPONSE_TYPE53                                                -4.217e+00
+RESPONSE_TYPE54                                                 1.342e+01
+RESPONSE_TYPE57                                                -4.305e+00
+RESPONSE_TYPE58                                                -1.764e+01
+RESPONSE_TYPE59                                                -4.517e+00
+RESPONSE_TYPE62                                                -4.326e+00
+RESPONSE_TYPE64                                                -1.999e+01
+RESPONSE_TYPE65                                                -1.786e+01
+RESPONSE_TYPE66                                                -2.125e+00
+RESPONSE_TYPE67                                                -2.015e+01
+RESPONSE_TYPE69                                                 1.545e+01
+RESPONSE_TYPE89                                                -5.198e+00
+RESPONSE_TYPE92                                                -3.994e+00
+RESPONSE_TYPE93                                                -4.729e+00
+RESPONSE_TYPE94                                                -5.714e+00
+RESPONSE_TYPE96                                                -5.442e+00
+RESPONSE_TYPE97                                                -5.310e+00
+RESPONSE_TYPE98                                                -5.567e+00
+RESPONSE_TYPE99                                                -5.130e+00
+RESPONSE_TYPE698                                               -3.806e+00
+RESPONSE_TYPE910                                                1.307e+01
+RESPONSE_TYPE911                                               -1.992e+01
+RESPONSE_TYPE912                                                1.318e+01
+RESPONSE_TYPE913                                               -1.956e+01
+RESPONSE_TYPE921                                                1.357e+01
+AID_TO_FROM_OTHER_DEPTS4                                        1.971e-02
+EST_KM                                                          2.724e-02
+INITIAL_UNIT_PERSONNEL                                         -8.488e-02
+INCIDENT_DAYMonday                                             -1.742e-02
+INCIDENT_DAYTuesday                                             4.580e-02
+INCIDENT_DAYWednesday                                           8.126e-02
+INCIDENT_DAYThursday                                            1.843e-02
+INCIDENT_DAYFriday                                              3.360e-02
+INCIDENT_DAYSaturday                                           -1.696e-02
+INCIDENT_MONTHFebruary                                          2.152e-02
+INCIDENT_MONTHMarch                                            -5.941e-02
+INCIDENT_MONTHApril                                            -1.966e-01
+INCIDENT_MONTHMay                                              -7.938e-02
+INCIDENT_MONTHJune                                             -9.349e-02
+INCIDENT_MONTHJuly                                              2.131e-01
+INCIDENT_MONTHAugust                                            1.044e-01
+INCIDENT_MONTHSeptember                                         2.003e-01
+INCIDENT_MONTHNovember                                          3.511e-01
+INCIDENT_MONTHDecember                                          9.366e-02
+INCIDENT_YEAR2012                                               5.311e-01
+INCIDENT_YEAR2013                                               1.109e+00
+INCIDENT_YEAR2014                                               1.124e+00
+INCIDENT_YEAR2015                                               1.160e+00
+INCIDENT_YEAR2016                                               1.203e+00
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD2                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD2                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2             8.935e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                    -7.636e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2              -1.491e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2    2.520e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2   1.718e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                      -2.142e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                      -1.248e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2            1.529e+01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2             -2.208e-02
+EVENT_TYPEFire - Other:ALARM_TO_FD2                             4.051e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                  -1.571e+01
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                      -1.832e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                           -5.240e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                 1.550e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                  2.318e-01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD2                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD2                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                  7.629e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2        7.623e-01
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD3                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD3                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3             1.288e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                     1.015e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3               1.718e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3    1.749e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3  -1.475e+01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD3                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                      -2.532e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD3                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD3                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD3                            -1.450e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD3                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                      -1.573e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                            3.534e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                -2.240e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                 -1.263e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD3                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD3                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                 -1.180e+01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD3               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD4                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD4                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4            -6.462e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                    -5.061e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD4                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4    1.730e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4  -6.279e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                      -7.760e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                      -2.226e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD4                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4             -1.850e+00
+EVENT_TYPEFire - Other:ALARM_TO_FD4                             1.187e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                  -1.678e+01
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                      -2.453e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                           -1.085e+00
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                 9.985e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                 -7.435e-01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD4                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD4                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                  2.679e-03
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4        4.614e-01
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD5                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5         1.480e+01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5             1.471e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                    -1.343e+01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5              -7.466e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5    3.482e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5  -4.636e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                      -1.011e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                       1.214e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5           -6.948e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5              5.188e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD5                            -1.298e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD5                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                       7.247e-02
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                           -3.298e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                 6.312e-02
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                 -1.214e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD5                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5            -1.656e+01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                  6.356e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5        6.275e-01
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD6                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD6                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6             1.606e+01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                     1.425e+01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD6                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD6           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD6          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD6                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD6                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD6                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD6                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD6                                    NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD6                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                       1.401e+01
+EVENT_TYPEFire - Subway:ALARM_TO_FD6                                   NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD6                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                  2.323e+00
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD6                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD6                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                  2.656e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD6               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD7                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD7                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7             2.531e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                     1.471e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD7                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD7           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD7          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD7                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD7                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD7                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD7                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD7                            -1.355e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD7                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                       1.767e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD7                                   NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD7                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                 -1.149e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD7                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD7                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                 -1.077e+01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7        2.413e+00
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD8                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD8                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD8                    NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                    -2.696e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD8                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD8           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD8          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                      -1.695e+01
+EVENT_TYPEFire - Institution:ALARM_TO_FD8                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD8                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD8                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD8                            -1.626e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD8                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                      -6.871e-02
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                           -2.593e+00
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD8                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                 -1.367e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD8                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD8                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                 -5.314e-02
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD8               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD9                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD9                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9             3.783e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                     1.117e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD9                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD9           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD9          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD9                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                       1.520e+01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD9                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD9                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD9                            -1.329e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD9                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                       1.783e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                            1.657e+01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD9                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                 -1.086e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD9                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD9                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                 -1.013e+01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD9               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD10                        NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD10               NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD10                   NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                    9.694e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD10                     NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD10          NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD10         NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD10                  NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD10                    NA
+EVENT_TYPEFire - Other:ALARM_TO_FD10                                   NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD10                         NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD10                                  NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD10                       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD10                        NA
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD10                              NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD10                   NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD10                        NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD10              NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD11                        NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD11               NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD11                   NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                    1.074e+01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD11                     NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD11          NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD11         NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD11                  NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD11                    NA
+EVENT_TYPEFire - Other:ALARM_TO_FD11                                   NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD11                         NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD11                                  NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD11                       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                 1.276e+01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD11                              NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD11                   NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                        NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD11              NA
+                                                               Std. Error
+(Intercept)                                                     2.803e-01
+EVENT_TYPEFire - Alarm Waterfront                               8.321e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise                      1.385e+03
+EVENT_TYPEFire - Commercial/Industrial                          8.963e-02
+EVENT_TYPEFire - Grass/Rubbish                                  9.716e-02
+EVENT_TYPEFire - Highrise Commercial                            3.553e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown                 2.721e-01
+EVENT_TYPEFire - Highrise Residential - Downtown                1.419e-01
+EVENT_TYPEFire - Hydro Vault                                    2.132e-01
+EVENT_TYPEFire - Institution                                    1.727e-01
+EVENT_TYPEFire - Institution - Downtown                         4.551e-01
+EVENT_TYPEFire - Institution - School                           3.005e-01
+EVENT_TYPEFire - Other                                          2.411e-01
+EVENT_TYPEFire - Outside Storage                                5.955e-01
+EVENT_TYPEFire - Residential                                    6.491e-02
+EVENT_TYPEFire - Subway                                         1.035e-01
+EVENT_TYPEFire - Subway - Downtown                              2.341e-01
+EVENT_TYPEFire - Transformer/Pole                               2.062e-01
+EVENT_TYPEFire - Waterfront                                     1.261e+00
+EVENT_TYPEFire - Waterfront - Highrise                          1.435e+00
+EVENT_TYPEFire Alarm - Check Call                               3.463e-01
+EVENT_TYPEFire Waterfront Marina/Industrial                     7.847e+02
+EVENT_TYPE_CDFAW                                                       NA
+EVENT_TYPE_CDFAWH                                                      NA
+EVENT_TYPE_CDFICI                                                      NA
+EVENT_TYPE_CDFIG                                                       NA
+EVENT_TYPE_CDFIHC                                                      NA
+EVENT_TYPE_CDFIHCD                                                     NA
+EVENT_TYPE_CDFIHR                                                      NA
+EVENT_TYPE_CDFIHRD                                                     NA
+EVENT_TYPE_CDFIHV                                                      NA
+EVENT_TYPE_CDFII                                                       NA
+EVENT_TYPE_CDFIID                                                      NA
+EVENT_TYPE_CDFIIS                                                      NA
+EVENT_TYPE_CDFIO                                                       NA
+EVENT_TYPE_CDFIOS                                                      NA
+EVENT_TYPE_CDFIR                                                       NA
+EVENT_TYPE_CDFIS                                                       NA
+EVENT_TYPE_CDFISD                                                      NA
+EVENT_TYPE_CDFITP                                                      NA
+EVENT_TYPE_CDFIW                                                       NA
+EVENT_TYPE_CDFIWH                                                      NA
+EVENT_TYPE_CDFIWMI                                                     NA
+ALARM_TO_FD2                                                    2.673e-01
+ALARM_TO_FD3                                                    5.514e-01
+ALARM_TO_FD4                                                    3.171e-01
+ALARM_TO_FD5                                                    1.158e-01
+ALARM_TO_FD6                                                    1.371e+03
+ALARM_TO_FD7                                                    1.711e+00
+ALARM_TO_FD8                                                    1.141e+00
+ALARM_TO_FD9                                                    1.285e+00
+ALARM_TO_FD10                                                   2.400e+03
+ALARM_TO_FD11                                                   1.060e+03
+RESPONSE_TYPE2                                                  6.708e-01
+RESPONSE_TYPE3                                                  9.761e-02
+RESPONSE_TYPE11                                                 3.580e-01
+RESPONSE_TYPE12                                                 1.282e+03
+RESPONSE_TYPE13                                                 1.248e+00
+RESPONSE_TYPE21                                                 9.084e-02
+RESPONSE_TYPE22                                                 8.190e-02
+RESPONSE_TYPE23                                                 1.723e-01
+RESPONSE_TYPE24                                                 1.074e-01
+RESPONSE_TYPE25                                                 1.057e+00
+RESPONSE_TYPE26                                                 5.298e-01
+RESPONSE_TYPE29                                                 1.080e-01
+RESPONSE_TYPE31                                                 2.362e-01
+RESPONSE_TYPE32                                                 1.923e-01
+RESPONSE_TYPE33                                                 1.765e-01
+RESPONSE_TYPE34                                                 7.906e-02
+RESPONSE_TYPE35                                                 2.368e-01
+RESPONSE_TYPE36                                                 6.189e-01
+RESPONSE_TYPE37                                                 1.068e+00
+RESPONSE_TYPE38                                                 1.045e+00
+RESPONSE_TYPE39                                                 1.609e-01
+RESPONSE_TYPE41                                                 6.029e-01
+RESPONSE_TYPE42                                                 1.324e+03
+RESPONSE_TYPE43                                                 1.615e+00
+RESPONSE_TYPE44                                                 2.400e+03
+RESPONSE_TYPE45                                                 1.428e+00
+RESPONSE_TYPE46                                                 1.657e+03
+RESPONSE_TYPE47                                                 1.379e+00
+RESPONSE_TYPE49                                                 2.608e-01
+RESPONSE_TYPE50                                                 2.112e-01
+RESPONSE_TYPE51                                                 2.400e+03
+RESPONSE_TYPE53                                                 5.840e-01
+RESPONSE_TYPE54                                                 2.400e+03
+RESPONSE_TYPE57                                                 5.287e-01
+RESPONSE_TYPE58                                                 4.090e+02
+RESPONSE_TYPE59                                                 3.379e-01
+RESPONSE_TYPE62                                                 8.293e-01
+RESPONSE_TYPE64                                                 1.697e+03
+RESPONSE_TYPE65                                                 1.662e+03
+RESPONSE_TYPE66                                                 6.668e-01
+RESPONSE_TYPE67                                                 2.400e+03
+RESPONSE_TYPE69                                                 2.400e+03
+RESPONSE_TYPE89                                                 5.113e-01
+RESPONSE_TYPE92                                                 8.477e-01
+RESPONSE_TYPE93                                                 1.290e+00
+RESPONSE_TYPE94                                                 6.690e-01
+RESPONSE_TYPE96                                                 3.635e-01
+RESPONSE_TYPE97                                                 3.575e-01
+RESPONSE_TYPE98                                                 7.525e-01
+RESPONSE_TYPE99                                                 3.236e-01
+RESPONSE_TYPE698                                                1.624e+00
+RESPONSE_TYPE910                                                1.364e+03
+RESPONSE_TYPE911                                                2.400e+03
+RESPONSE_TYPE912                                                2.400e+03
+RESPONSE_TYPE913                                                1.041e+03
+RESPONSE_TYPE921                                                2.400e+03
+AID_TO_FROM_OTHER_DEPTS4                                        2.010e-01
+EST_KM                                                          9.398e-03
+INITIAL_UNIT_PERSONNEL                                          3.912e-02
+INCIDENT_DAYMonday                                              7.966e-02
+INCIDENT_DAYTuesday                                             7.913e-02
+INCIDENT_DAYWednesday                                           7.932e-02
+INCIDENT_DAYThursday                                            7.937e-02
+INCIDENT_DAYFriday                                              7.803e-02
+INCIDENT_DAYSaturday                                            7.804e-02
+INCIDENT_MONTHFebruary                                          1.043e-01
+INCIDENT_MONTHMarch                                             1.023e-01
+INCIDENT_MONTHApril                                             1.028e-01
+INCIDENT_MONTHMay                                               1.002e-01
+INCIDENT_MONTHJune                                              1.030e-01
+INCIDENT_MONTHJuly                                              9.771e-02
+INCIDENT_MONTHAugust                                            1.016e-01
+INCIDENT_MONTHSeptember                                         1.009e-01
+INCIDENT_MONTHNovember                                          1.000e-01
+INCIDENT_MONTHDecember                                          1.002e-01
+INCIDENT_YEAR2012                                               8.446e-02
+INCIDENT_YEAR2013                                               8.160e-02
+INCIDENT_YEAR2014                                               8.161e-02
+INCIDENT_YEAR2015                                               8.139e-02
+INCIDENT_YEAR2016                                               8.140e-02
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD2                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD2                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2             4.042e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                     4.388e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2               1.685e+03
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2    1.171e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2   5.916e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                       1.044e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                       7.281e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2            1.170e+03
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2              1.191e+00
+EVENT_TYPEFire - Other:ALARM_TO_FD2                             8.412e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                   2.400e+03
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                       3.479e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                            6.718e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                 2.400e+03
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                  1.009e+00
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD2                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD2                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                  6.432e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2        2.525e+03
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD3                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD3                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3             1.051e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                     1.263e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3               2.400e+03
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3    2.400e+03
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3   2.400e+03
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD3                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                       2.115e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD3                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD3                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD3                             1.689e+03
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD3                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                       6.980e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                            9.598e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                 1.376e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                  6.826e+02
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD3                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD3                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                  5.560e+02
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD3               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD4                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD4                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4             5.799e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                     4.552e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD4                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4    2.400e+03
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4   1.123e+00
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                       1.082e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                       1.116e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD4                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4              2.952e+00
+EVENT_TYPEFire - Other:ALARM_TO_FD4                             8.657e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                   1.692e+03
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                       4.100e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                            9.066e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                 2.400e+03
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                  8.623e-01
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD4                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD4                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                  1.108e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4        2.525e+03
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD5                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5         1.385e+03
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5             2.546e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                     3.311e+02
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5               8.930e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5    5.442e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5   3.116e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                       1.730e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                       3.429e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5            6.504e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5              6.519e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD5                             2.400e+03
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD5                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                       2.394e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                            1.060e+00
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                 1.275e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                  1.374e+03
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD5                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5             1.693e+03
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                  4.227e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5        1.456e+03
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD6                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD6                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6             1.371e+03
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                     1.371e+03
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD6                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD6           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD6          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD6                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD6                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD6                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD6                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD6                                    NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD6                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                       1.371e+03
+EVENT_TYPEFire - Subway:ALARM_TO_FD6                                   NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD6                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                  1.725e+03
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD6                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD6                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                  1.518e+03
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD6               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD7                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD7                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7             2.199e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                     1.797e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD7                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD7           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD7          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD7                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD7                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD7                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD7                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD7                             2.400e+03
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD7                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                       1.840e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD7                                   NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD7                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                  1.196e+03
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD7                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD7                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                  3.039e+02
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7        2.525e+03
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD8                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD8                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD8                    NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                     1.340e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD8                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD8           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD8          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                       2.400e+03
+EVENT_TYPEFire - Institution:ALARM_TO_FD8                              NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD8                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD8                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD8                             2.400e+03
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD8                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                       1.447e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                            1.831e+00
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD8                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                  8.390e+02
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD8                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD8                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                  1.567e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD8               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD9                         NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD9                NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9             1.510e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                     1.702e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD9                      NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD9           NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD9          NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD9                              NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                       2.400e+03
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD9                   NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD9                     NA
+EVENT_TYPEFire - Other:ALARM_TO_FD9                             2.400e+03
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD9                          NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                       1.393e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                            2.400e+03
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD9                        NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                  1.694e+03
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD9                               NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD9                    NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                  5.933e+02
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD9               NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD10                        NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD10               NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD10                   NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                    3.393e+03
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD10                     NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD10          NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD10         NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD10                  NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD10                    NA
+EVENT_TYPEFire - Other:ALARM_TO_FD10                                   NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD10                         NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD10                             NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD10                                  NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD10                       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD10                        NA
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD10                              NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD10                   NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD10                        NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD10              NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD11                        NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD11               NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD11                   NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                    1.060e+03
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD11                     NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD11          NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD11         NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD11                  NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD11                    NA
+EVENT_TYPEFire - Other:ALARM_TO_FD11                                   NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD11                         NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD11                             NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD11                                  NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD11                       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                 1.060e+03
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD11                              NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD11                   NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                        NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD11              NA
+                                                               z value Pr(>|z|)
+(Intercept)                                                      7.979 1.47e-15
+EVENT_TYPEFire - Alarm Waterfront                                0.878 0.379848
+EVENT_TYPEFire - Alarm Waterfront Highrise                      -0.011 0.991548
+EVENT_TYPEFire - Commercial/Industrial                           1.115 0.264880
+EVENT_TYPEFire - Grass/Rubbish                                 -27.381  < 2e-16
+EVENT_TYPEFire - Highrise Commercial                             2.218 0.026572
+EVENT_TYPEFire - Highrise Commercial - Downtown                  1.083 0.278719
+EVENT_TYPEFire - Highrise Residential - Downtown                 4.192 2.76e-05
+EVENT_TYPEFire - Hydro Vault                                     2.002 0.045321
+EVENT_TYPEFire - Institution                                     5.000 5.73e-07
+EVENT_TYPEFire - Institution - Downtown                          8.105 5.27e-16
+EVENT_TYPEFire - Institution - School                            2.072 0.038244
+EVENT_TYPEFire - Other                                          -0.599 0.549161
+EVENT_TYPEFire - Outside Storage                                 2.007 0.044729
+EVENT_TYPEFire - Residential                                     0.029 0.976575
+EVENT_TYPEFire - Subway                                         30.177  < 2e-16
+EVENT_TYPEFire - Subway - Downtown                              12.795  < 2e-16
+EVENT_TYPEFire - Transformer/Pole                              -10.918  < 2e-16
+EVENT_TYPEFire - Waterfront                                      2.636 0.008388
+EVENT_TYPEFire - Waterfront - Highrise                           1.400 0.161461
+EVENT_TYPEFire Alarm - Check Call                               -8.372  < 2e-16
+EVENT_TYPEFire Waterfront Marina/Industrial                      0.022 0.982094
+EVENT_TYPE_CDFAW                                                    NA       NA
+EVENT_TYPE_CDFAWH                                                   NA       NA
+EVENT_TYPE_CDFICI                                                   NA       NA
+EVENT_TYPE_CDFIG                                                    NA       NA
+EVENT_TYPE_CDFIHC                                                   NA       NA
+EVENT_TYPE_CDFIHCD                                                  NA       NA
+EVENT_TYPE_CDFIHR                                                   NA       NA
+EVENT_TYPE_CDFIHRD                                                  NA       NA
+EVENT_TYPE_CDFIHV                                                   NA       NA
+EVENT_TYPE_CDFII                                                    NA       NA
+EVENT_TYPE_CDFIID                                                   NA       NA
+EVENT_TYPE_CDFIIS                                                   NA       NA
+EVENT_TYPE_CDFIO                                                    NA       NA
+EVENT_TYPE_CDFIOS                                                   NA       NA
+EVENT_TYPE_CDFIR                                                    NA       NA
+EVENT_TYPE_CDFIS                                                    NA       NA
+EVENT_TYPE_CDFISD                                                   NA       NA
+EVENT_TYPE_CDFITP                                                   NA       NA
+EVENT_TYPE_CDFIW                                                    NA       NA
+EVENT_TYPE_CDFIWH                                                   NA       NA
+EVENT_TYPE_CDFIWMI                                                  NA       NA
+ALARM_TO_FD2                                                    -0.215 0.829449
+ALARM_TO_FD3                                                     0.651 0.515133
+ALARM_TO_FD4                                                     1.421 0.155312
+ALARM_TO_FD5                                                    -3.453 0.000554
+ALARM_TO_FD6                                                    -0.010 0.991718
+ALARM_TO_FD7                                                    -0.484 0.628428
+ALARM_TO_FD8                                                     1.205 0.228360
+ALARM_TO_FD9                                                    -1.168 0.242983
+ALARM_TO_FD10                                                   -0.008 0.993317
+ALARM_TO_FD11                                                   -0.011 0.991516
+RESPONSE_TYPE2                                                   0.640 0.521866
+RESPONSE_TYPE3                                                 -48.365  < 2e-16
+RESPONSE_TYPE11                                                -12.280  < 2e-16
+RESPONSE_TYPE12                                                 -0.015 0.988077
+RESPONSE_TYPE13                                                 -1.859 0.063060
+RESPONSE_TYPE21                                                -52.987  < 2e-16
+RESPONSE_TYPE22                                                -58.819  < 2e-16
+RESPONSE_TYPE23                                                -31.328  < 2e-16
+RESPONSE_TYPE24                                                -47.547  < 2e-16
+RESPONSE_TYPE25                                                 -4.813 1.49e-06
+RESPONSE_TYPE26                                                 -9.923  < 2e-16
+RESPONSE_TYPE29                                                -43.934  < 2e-16
+RESPONSE_TYPE31                                                -22.732  < 2e-16
+RESPONSE_TYPE32                                                -27.166  < 2e-16
+RESPONSE_TYPE33                                                -28.038  < 2e-16
+RESPONSE_TYPE34                                                -63.056  < 2e-16
+RESPONSE_TYPE35                                                -20.514  < 2e-16
+RESPONSE_TYPE36                                                 -7.406 1.30e-13
+RESPONSE_TYPE37                                                 -4.867 1.14e-06
+RESPONSE_TYPE38                                                 -5.153 2.56e-07
+RESPONSE_TYPE39                                                -31.257  < 2e-16
+RESPONSE_TYPE41                                                 -5.973 2.33e-09
+RESPONSE_TYPE42                                                 -0.014 0.989210
+RESPONSE_TYPE43                                                 -1.075 0.282497
+RESPONSE_TYPE44                                                 -0.007 0.994348
+RESPONSE_TYPE45                                                 -2.533 0.011303
+RESPONSE_TYPE46                                                 -0.010 0.991921
+RESPONSE_TYPE47                                                 -2.181 0.029156
+RESPONSE_TYPE49                                                -17.641  < 2e-16
+RESPONSE_TYPE50                                                -25.132  < 2e-16
+RESPONSE_TYPE51                                                 -0.008 0.993396
+RESPONSE_TYPE53                                                 -7.221 5.18e-13
+RESPONSE_TYPE54                                                  0.006 0.995539
+RESPONSE_TYPE57                                                 -8.144 3.84e-16
+RESPONSE_TYPE58                                                 -0.043 0.965595
+RESPONSE_TYPE59                                                -13.370  < 2e-16
+RESPONSE_TYPE62                                                 -5.216 1.82e-07
+RESPONSE_TYPE64                                                 -0.012 0.990598
+RESPONSE_TYPE65                                                 -0.011 0.991427
+RESPONSE_TYPE66                                                 -3.187 0.001437
+RESPONSE_TYPE67                                                 -0.008 0.993301
+RESPONSE_TYPE69                                                  0.006 0.994862
+RESPONSE_TYPE89                                                -10.167  < 2e-16
+RESPONSE_TYPE92                                                 -4.712 2.46e-06
+RESPONSE_TYPE93                                                 -3.665 0.000247
+RESPONSE_TYPE94                                                 -8.540  < 2e-16
+RESPONSE_TYPE96                                                -14.969  < 2e-16
+RESPONSE_TYPE97                                                -14.852  < 2e-16
+RESPONSE_TYPE98                                                 -7.398 1.38e-13
+RESPONSE_TYPE99                                                -15.853  < 2e-16
+RESPONSE_TYPE698                                                -2.344 0.019099
+RESPONSE_TYPE910                                                 0.010 0.992352
+RESPONSE_TYPE911                                                -0.008 0.993377
+RESPONSE_TYPE912                                                 0.005 0.995618
+RESPONSE_TYPE913                                                -0.019 0.985006
+RESPONSE_TYPE921                                                 0.006 0.995487
+AID_TO_FROM_OTHER_DEPTS4                                         0.098 0.921869
+EST_KM                                                           2.899 0.003746
+INITIAL_UNIT_PERSONNEL                                          -2.170 0.030005
+INCIDENT_DAYMonday                                              -0.219 0.826925
+INCIDENT_DAYTuesday                                              0.579 0.562769
+INCIDENT_DAYWednesday                                            1.024 0.305602
+INCIDENT_DAYThursday                                             0.232 0.816398
+INCIDENT_DAYFriday                                               0.431 0.666721
+INCIDENT_DAYSaturday                                            -0.217 0.827917
+INCIDENT_MONTHFebruary                                           0.206 0.836624
+INCIDENT_MONTHMarch                                             -0.581 0.561543
+INCIDENT_MONTHApril                                             -1.913 0.055809
+INCIDENT_MONTHMay                                               -0.793 0.428052
+INCIDENT_MONTHJune                                              -0.908 0.364074
+INCIDENT_MONTHJuly                                               2.181 0.029155
+INCIDENT_MONTHAugust                                             1.027 0.304217
+INCIDENT_MONTHSeptember                                          1.986 0.047073
+INCIDENT_MONTHNovember                                           3.510 0.000448
+INCIDENT_MONTHDecember                                           0.934 0.350107
+INCIDENT_YEAR2012                                                6.288 3.21e-10
+INCIDENT_YEAR2013                                               13.586  < 2e-16
+INCIDENT_YEAR2014                                               13.776  < 2e-16
+INCIDENT_YEAR2015                                               14.255  < 2e-16
+INCIDENT_YEAR2016                                               14.776  < 2e-16
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD2                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD2             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2              2.210 0.027080
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                     -1.740 0.081807
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2               -0.009 0.992939
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2     0.215 0.829581
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2    0.290 0.771534
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                       -2.051 0.040247
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                       -0.171 0.863921
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2             0.013 0.989568
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2              -0.019 0.985201
+EVENT_TYPEFire - Other:ALARM_TO_FD2                              0.482 0.630067
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                   -0.007 0.994775
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                       -0.527 0.598446
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                            -0.780 0.435379
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                  0.006 0.994846
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                   0.230 0.818336
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD2                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD2                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                   1.186 0.235575
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2         0.000 0.999759
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD3                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD3             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3              1.226 0.220156
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                      0.080 0.935924
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                0.007 0.994288
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3     0.007 0.994184
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3   -0.006 0.995096
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD3                           NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                       -1.198 0.231070
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD3                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD3                  NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD3                             -0.009 0.993150
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD3                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                       -0.225 0.821751
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                             0.368 0.712734
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                 -0.163 0.870720
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                  -0.019 0.985236
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD3                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD3                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                  -0.021 0.983072
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD3            NA       NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD4                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD4             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4             -1.114 0.265161
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                     -1.112 0.266242
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD4                   NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4     0.007 0.994249
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4   -0.559 0.576063
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                       -0.717 0.473246
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                       -1.994 0.046109
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD4                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4              -0.627 0.530959
+EVENT_TYPEFire - Other:ALARM_TO_FD4                              0.137 0.890902
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                   -0.010 0.992085
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                       -0.598 0.549598
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                            -1.197 0.231460
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                  0.004 0.996680
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                  -0.862 0.388548
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD4                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD4                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                   0.002 0.998070
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4         0.000 0.999854
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD5                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5          0.011 0.991477
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5              0.578 0.563363
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                     -0.041 0.967645
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5               -0.836 0.403131
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5     0.640 0.522222
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5   -1.488 0.136860
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                       -0.585 0.558800
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                        0.354 0.723264
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5            -1.068 0.285383
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5               0.796 0.426122
+EVENT_TYPEFire - Other:ALARM_TO_FD5                             -0.005 0.995683
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD5                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                        0.303 0.762104
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                            -0.311 0.755835
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                  0.050 0.960508
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                  -0.009 0.992952
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD5                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5             -0.010 0.992198
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                   1.503 0.132734
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5         0.000 0.999656
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD6                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD6             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6              0.012 0.990653
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                      0.010 0.991706
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD6                   NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD6        NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD6       NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD6                           NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD6                           NA       NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD6                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD6                  NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD6                                 NA       NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD6                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                        0.010 0.991845
+EVENT_TYPEFire - Subway:ALARM_TO_FD6                                NA       NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD6                     NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                   0.001 0.998925
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD6                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD6                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                   0.002 0.998604
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD6            NA       NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD7                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD7             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7              1.151 0.249625
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                      0.818 0.413097
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD7                   NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD7        NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD7       NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD7                           NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD7                           NA       NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD7                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD7                  NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD7                             -0.006 0.995494
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD7                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                        0.960 0.336951
+EVENT_TYPEFire - Subway:ALARM_TO_FD7                                NA       NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD7                     NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                  -0.010 0.992334
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD7                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD7                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                  -0.035 0.971721
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7         0.001 0.999237
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD8                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD8             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD8                 NA       NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                     -2.012 0.044211
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD8                   NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD8        NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD8       NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                       -0.007 0.994362
+EVENT_TYPEFire - Institution:ALARM_TO_FD8                           NA       NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD8                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD8                  NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD8                             -0.007 0.994594
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD8                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                       -0.047 0.962138
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                            -1.417 0.156584
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD8                     NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                  -0.016 0.987004
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD8                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD8                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                  -0.034 0.972950
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD8            NA       NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD9                      NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD9             NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9              2.506 0.012213
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                      0.656 0.511757
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD9                   NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD9        NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD9       NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD9                           NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                        0.006 0.994946
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD9                NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD9                  NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD9                             -0.006 0.995581
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD9                       NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                        1.280 0.200437
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                             0.007 0.994491
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD9                     NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                  -0.006 0.994884
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD9                            NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD9                 NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                  -0.017 0.986377
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD9            NA       NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD10                     NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD10            NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD10                NA       NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                     0.003 0.997721
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD10                  NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD10       NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD10      NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD10                          NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD10                          NA       NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD10               NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD10                 NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD10                                NA       NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD10                      NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD10                          NA       NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD10                               NA       NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD10                    NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD10                     NA       NA
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD10                           NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD10                NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD10                     NA       NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD10           NA       NA
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD11                     NA       NA
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD11            NA       NA
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD11                NA       NA
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                     0.010 0.991915
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD11                  NA       NA
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD11       NA       NA
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD11      NA       NA
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD11                          NA       NA
+EVENT_TYPEFire - Institution:ALARM_TO_FD11                          NA       NA
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD11               NA       NA
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD11                 NA       NA
+EVENT_TYPEFire - Other:ALARM_TO_FD11                                NA       NA
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD11                      NA       NA
+EVENT_TYPEFire - Residential:ALARM_TO_FD11                          NA       NA
+EVENT_TYPEFire - Subway:ALARM_TO_FD11                               NA       NA
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD11                    NA       NA
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                  0.012 0.990392
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD11                           NA       NA
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD11                NA       NA
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                     NA       NA
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD11           NA       NA
+                                                                  
+(Intercept)                                                    ***
+EVENT_TYPEFire - Alarm Waterfront                                 
+EVENT_TYPEFire - Alarm Waterfront Highrise                        
+EVENT_TYPEFire - Commercial/Industrial                            
+EVENT_TYPEFire - Grass/Rubbish                                 ***
+EVENT_TYPEFire - Highrise Commercial                           *  
+EVENT_TYPEFire - Highrise Commercial - Downtown                   
+EVENT_TYPEFire - Highrise Residential - Downtown               ***
+EVENT_TYPEFire - Hydro Vault                                   *  
+EVENT_TYPEFire - Institution                                   ***
+EVENT_TYPEFire - Institution - Downtown                        ***
+EVENT_TYPEFire - Institution - School                          *  
+EVENT_TYPEFire - Other                                            
+EVENT_TYPEFire - Outside Storage                               *  
+EVENT_TYPEFire - Residential                                      
+EVENT_TYPEFire - Subway                                        ***
+EVENT_TYPEFire - Subway - Downtown                             ***
+EVENT_TYPEFire - Transformer/Pole                              ***
+EVENT_TYPEFire - Waterfront                                    ** 
+EVENT_TYPEFire - Waterfront - Highrise                            
+EVENT_TYPEFire Alarm - Check Call                              ***
+EVENT_TYPEFire Waterfront Marina/Industrial                       
+EVENT_TYPE_CDFAW                                                  
+EVENT_TYPE_CDFAWH                                                 
+EVENT_TYPE_CDFICI                                                 
+EVENT_TYPE_CDFIG                                                  
+EVENT_TYPE_CDFIHC                                                 
+EVENT_TYPE_CDFIHCD                                                
+EVENT_TYPE_CDFIHR                                                 
+EVENT_TYPE_CDFIHRD                                                
+EVENT_TYPE_CDFIHV                                                 
+EVENT_TYPE_CDFII                                                  
+EVENT_TYPE_CDFIID                                                 
+EVENT_TYPE_CDFIIS                                                 
+EVENT_TYPE_CDFIO                                                  
+EVENT_TYPE_CDFIOS                                                 
+EVENT_TYPE_CDFIR                                                  
+EVENT_TYPE_CDFIS                                                  
+EVENT_TYPE_CDFISD                                                 
+EVENT_TYPE_CDFITP                                                 
+EVENT_TYPE_CDFIW                                                  
+EVENT_TYPE_CDFIWH                                                 
+EVENT_TYPE_CDFIWMI                                                
+ALARM_TO_FD2                                                      
+ALARM_TO_FD3                                                      
+ALARM_TO_FD4                                                      
+ALARM_TO_FD5                                                   ***
+ALARM_TO_FD6                                                      
+ALARM_TO_FD7                                                      
+ALARM_TO_FD8                                                      
+ALARM_TO_FD9                                                      
+ALARM_TO_FD10                                                     
+ALARM_TO_FD11                                                     
+RESPONSE_TYPE2                                                    
+RESPONSE_TYPE3                                                 ***
+RESPONSE_TYPE11                                                ***
+RESPONSE_TYPE12                                                   
+RESPONSE_TYPE13                                                .  
+RESPONSE_TYPE21                                                ***
+RESPONSE_TYPE22                                                ***
+RESPONSE_TYPE23                                                ***
+RESPONSE_TYPE24                                                ***
+RESPONSE_TYPE25                                                ***
+RESPONSE_TYPE26                                                ***
+RESPONSE_TYPE29                                                ***
+RESPONSE_TYPE31                                                ***
+RESPONSE_TYPE32                                                ***
+RESPONSE_TYPE33                                                ***
+RESPONSE_TYPE34                                                ***
+RESPONSE_TYPE35                                                ***
+RESPONSE_TYPE36                                                ***
+RESPONSE_TYPE37                                                ***
+RESPONSE_TYPE38                                                ***
+RESPONSE_TYPE39                                                ***
+RESPONSE_TYPE41                                                ***
+RESPONSE_TYPE42                                                   
+RESPONSE_TYPE43                                                   
+RESPONSE_TYPE44                                                   
+RESPONSE_TYPE45                                                *  
+RESPONSE_TYPE46                                                   
+RESPONSE_TYPE47                                                *  
+RESPONSE_TYPE49                                                ***
+RESPONSE_TYPE50                                                ***
+RESPONSE_TYPE51                                                   
+RESPONSE_TYPE53                                                ***
+RESPONSE_TYPE54                                                   
+RESPONSE_TYPE57                                                ***
+RESPONSE_TYPE58                                                   
+RESPONSE_TYPE59                                                ***
+RESPONSE_TYPE62                                                ***
+RESPONSE_TYPE64                                                   
+RESPONSE_TYPE65                                                   
+RESPONSE_TYPE66                                                ** 
+RESPONSE_TYPE67                                                   
+RESPONSE_TYPE69                                                   
+RESPONSE_TYPE89                                                ***
+RESPONSE_TYPE92                                                ***
+RESPONSE_TYPE93                                                ***
+RESPONSE_TYPE94                                                ***
+RESPONSE_TYPE96                                                ***
+RESPONSE_TYPE97                                                ***
+RESPONSE_TYPE98                                                ***
+RESPONSE_TYPE99                                                ***
+RESPONSE_TYPE698                                               *  
+RESPONSE_TYPE910                                                  
+RESPONSE_TYPE911                                                  
+RESPONSE_TYPE912                                                  
+RESPONSE_TYPE913                                                  
+RESPONSE_TYPE921                                                  
+AID_TO_FROM_OTHER_DEPTS4                                          
+EST_KM                                                         ** 
+INITIAL_UNIT_PERSONNEL                                         *  
+INCIDENT_DAYMonday                                                
+INCIDENT_DAYTuesday                                               
+INCIDENT_DAYWednesday                                             
+INCIDENT_DAYThursday                                              
+INCIDENT_DAYFriday                                                
+INCIDENT_DAYSaturday                                              
+INCIDENT_MONTHFebruary                                            
+INCIDENT_MONTHMarch                                               
+INCIDENT_MONTHApril                                            .  
+INCIDENT_MONTHMay                                                 
+INCIDENT_MONTHJune                                                
+INCIDENT_MONTHJuly                                             *  
+INCIDENT_MONTHAugust                                              
+INCIDENT_MONTHSeptember                                        *  
+INCIDENT_MONTHNovember                                         ***
+INCIDENT_MONTHDecember                                            
+INCIDENT_YEAR2012                                              ***
+INCIDENT_YEAR2013                                              ***
+INCIDENT_YEAR2014                                              ***
+INCIDENT_YEAR2015                                              ***
+INCIDENT_YEAR2016                                              ***
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD2                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD2           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2            *  
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                    .  
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                      *  
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2                
+EVENT_TYPEFire - Other:ALARM_TO_FD2                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD2                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD2               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD3                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD3           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD3                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD3              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD3                
+EVENT_TYPEFire - Other:ALARM_TO_FD3                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD3                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD3                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD3               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD3          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD4                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD4           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD4                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                      *  
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD4              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4                
+EVENT_TYPEFire - Other:ALARM_TO_FD4                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD4                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD4               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD5                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5                
+EVENT_TYPEFire - Other:ALARM_TO_FD5                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD5                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD5                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD6                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD6           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD6                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD6      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD6     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD6                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD6                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD6              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD6                
+EVENT_TYPEFire - Other:ALARM_TO_FD6                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD6                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD6                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD6                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD6                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD6               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD6          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD7                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD7           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD7                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD7      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD7     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD7                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD7                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD7              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD7                
+EVENT_TYPEFire - Other:ALARM_TO_FD7                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD7                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD7                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD7                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD7                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD7               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD8                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD8           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD8               
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                    *  
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD8                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD8      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD8     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD8                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD8              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD8                
+EVENT_TYPEFire - Other:ALARM_TO_FD8                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD8                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD8                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD8                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD8               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD8          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD9                    
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD9           
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9            *  
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                       
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD9                 
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD9      
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD9     
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD9                         
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                         
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD9              
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD9                
+EVENT_TYPEFire - Other:ALARM_TO_FD9                               
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD9                     
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                         
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                              
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD9                   
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                    
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD9                          
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD9               
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                    
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD9          
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD10                   
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD10          
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD10              
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                      
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD10                
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD10     
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD10    
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD10                        
+EVENT_TYPEFire - Institution:ALARM_TO_FD10                        
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD10             
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD10               
+EVENT_TYPEFire - Other:ALARM_TO_FD10                              
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD10                    
+EVENT_TYPEFire - Residential:ALARM_TO_FD10                        
+EVENT_TYPEFire - Subway:ALARM_TO_FD10                             
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD10                  
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD10                   
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD10                         
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD10              
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD10                   
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD10         
+EVENT_TYPEFire - Alarm Waterfront:ALARM_TO_FD11                   
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD11          
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD11              
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                      
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD11                
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD11     
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD11    
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD11                        
+EVENT_TYPEFire - Institution:ALARM_TO_FD11                        
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD11             
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD11               
+EVENT_TYPEFire - Other:ALARM_TO_FD11                              
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD11                    
+EVENT_TYPEFire - Residential:ALARM_TO_FD11                        
+EVENT_TYPEFire - Subway:ALARM_TO_FD11                             
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD11                  
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                   
+EVENT_TYPEFire - Waterfront:ALARM_TO_FD11                         
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD11              
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                   
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD11         
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 36291  on 35161  degrees of freedom
+Residual deviance: 15419  on 34958  degrees of freedom
+  (2778 observations deleted due to missingness)
+AIC: 15827
+
+Number of Fisher Scoring iterations: 15
+

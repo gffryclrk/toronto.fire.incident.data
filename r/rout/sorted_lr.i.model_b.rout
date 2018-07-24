@@ -1,0 +1,2248 @@
+                                                                      Estimate
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE12                   -4.503600e+15
+RESPONSE_TYPE22                                                  -4.214553e+00
+RESPONSE_TYPE34                                                  -4.150750e+00
+RESPONSE_TYPE24                                                  -4.515590e+00
+RESPONSE_TYPE3                                                   -3.918598e+00
+RESPONSE_TYPE21                                                  -3.758807e+00
+RESPONSE_TYPE29                                                  -4.105599e+00
+RESPONSE_TYPE33                                                  -4.708359e+00
+INCIDENT_YEAR2016                                                 1.170840e+00
+INCIDENT_YEAR2015                                                 1.118585e+00
+INCIDENT_YEAR2014                                                 1.094579e+00
+EVENT_TYPEFire - Grass/Rubbish                                   -1.788086e+00
+INCIDENT_YEAR2013                                                 1.076307e+00
+RESPONSE_TYPE32                                                  -4.622580e+00
+RESPONSE_TYPE39                                                  -3.936966e+00
+RESPONSE_TYPE31                                                  -4.820989e+00
+RESPONSE_TYPE35                                                  -4.950720e+00
+RESPONSE_TYPE49                                                  -3.199762e+00
+EVENT_TYPEFire - Residential                                      1.116115e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE34                     -1.424984e+00
+RESPONSE_TYPE23                                                  -5.130568e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE21                     -1.646898e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE22                     -1.156028e+00
+RESPONSE_TYPE99                                                  -3.928994e+00
+INCIDENT_YEAR2012                                                 4.913903e-01
+(Intercept)                                                       1.678432e+00
+RESPONSE_TYPE11                                                  -3.556533e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE3                    -1.517478e+00
+RESPONSE_TYPE96                                                  -5.414950e+00
+RESPONSE_TYPE41                                                  -5.525824e+00
+RESPONSE_TYPE89                                                  -3.952417e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE3                      -1.430175e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE24                     -1.211403e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE34                4.073261e+00
+RESPONSE_TYPE97                                                  -3.649654e+00
+RESPONSE_TYPE26                                                  -4.576096e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE39                     -1.863946e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE34                   -1.903350e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE3                            2.781469e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE24                           3.081734e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE29                           2.694779e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE29                     -1.152582e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE22  1.233335e+00
+RESPONSE_TYPE59                                                  -4.041411e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE21                3.986243e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE29                3.820837e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE33                           3.620354e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE49                     -2.975218e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE34                           2.137492e+00
+INCIDENT_MONTHNovember                                            3.265776e-01
+RESPONSE_TYPE57                                                  -3.649783e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE34  1.011497e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE21                           1.856345e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE21           -7.380432e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9               3.727193e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE32                           2.889799e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE39                           1.958043e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE39                3.842713e+00
+INITIAL_UNIT_PERSONNEL                                           -9.462997e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE34           -5.785773e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE29                   -2.450972e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE49           -1.723406e+00
+INCIDENT_MONTHApril                                              -2.367405e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE41            3.857378e+00
+EST_KM                                                            2.281317e-02
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                        -2.807792e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2               9.031261e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE96                           3.301849e+00
+EVENT_TYPEFire - Commercial/Industrial                            3.783066e-01
+RESPONSE_TYPE66                                                  -1.617238e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE32                3.657860e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE29                      1.817902e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE29                      1.644912e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                      -2.686308e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE11                      3.124256e+00
+INCIDENT_MONTHJuly                                                1.992741e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE89                     -2.657487e+00
+ALARM_TO_FD5                                                     -2.146611e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE31                     -1.769055e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE3   1.048311e+00
+ALARM_TO_FD4                                                      5.855883e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE11                     -1.874130e+00
+INCIDENT_MONTHSeptember                                           1.786593e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE24              2.959032e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE34                      1.289786e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE23                   -1.418231e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE33                      1.340259e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE39  1.378322e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE21                      1.221018e+00
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE31                 2.828983e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE39           -8.916439e-01
+EVENT_TYPEFire - Subway - Downtown                               -1.336772e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE57                      2.566932e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE35  1.613516e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE97                     -1.638409e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                             -2.798706e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE99                     -1.394490e+00
+EVENT_TYPEFire - Hydro Vault                                     -9.305395e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE31  1.393023e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE22             1.844267e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE24  7.588209e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE33                     -6.861280e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE32                     -7.653433e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                             -1.247742e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                         1.704304e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5             -1.181364e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE99           -1.463467e+00
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE57                -2.068454e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE34  -1.612731e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3               1.374302e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE35                      1.453794e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                    8.490368e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                        -2.096007e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE33  1.099568e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown                   1.276271e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE21  -1.354054e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7               2.346827e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE59                     -1.556255e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                    5.039220e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE3                       1.056616e+00
+ALARM_TO_FD9                                                     -1.280389e+00
+EVENT_TYPEFire - Highrise Residential - Downtown                 -3.060214e-01
+EVENT_TYPEFire - Subway                                           6.805545e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4              -6.373443e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE22           -4.677784e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5                -1.060288e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE96                      1.999032e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE97           -1.571092e+00
+INCIDENT_DAYWednesday                                             8.738256e-02
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                      -5.241530e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE3              1.062443e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE23            9.747686e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE24             1.301088e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE32                      1.074716e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE24  -1.566982e+00
+ALARM_TO_FD8                                                      1.166017e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE59             2.032595e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE35                           1.460401e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE96   2.085868e+00
+INCIDENT_MONTHMay                                                -1.007413e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE99                -1.262180e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                         1.575482e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE3   -1.475938e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE34                      5.084948e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                       1.492898e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE33             1.384174e+00
+INCIDENT_MONTHJune                                               -9.599468e-02
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                             -6.448569e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE97                           1.244489e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                      -4.149066e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2     -1.802742e+00
+EVENT_TYPEFire - Institution                                      3.672183e-01
+INCIDENT_MONTHAugust                                              8.095802e-02
+INCIDENT_MONTHMarch                                              -7.957949e-02
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                        -3.198240e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE29  5.497893e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                        -7.065564e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE26                     -1.150307e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE26                           1.299147e+00
+EVENT_TYPEFire - Other:RESPONSE_TYPE29                            7.579024e-01
+INCIDENT_MONTHDecember                                            7.198009e-02
+EVENT_TYPEFire - Other:RESPONSE_TYPE3                            -5.273781e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE97                           -1.021366e+00
+EVENT_TYPEFire - Other:RESPONSE_TYPE21                           -8.460983e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5                4.885052e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE29  -1.058789e+00
+EVENT_TYPEFire - Transformer/Pole                                -2.908552e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE59                    8.986386e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE29           -2.404422e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE21  3.402013e-01
+INCIDENT_DAYFriday                                                5.227551e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE31            4.918551e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                        -6.241528e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE31                      6.563153e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE59                      9.255013e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5    -1.670693e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4    -6.409057e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE39                      5.080800e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE26            9.505786e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                   -6.881764e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE49                            9.651887e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                       9.126463e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE24            1.943047e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE23                     -4.328407e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5      3.501742e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE34                           -3.522692e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE57                     -8.620864e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE11           -6.944439e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE99                           6.485721e-01
+EVENT_TYPEFire - Alarm Waterfront                                -6.037382e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE22                      3.054011e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE35           -6.031245e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                        -1.243043e-01
+INCIDENT_DAYTuesday                                               3.927791e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE3            -1.530835e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                              4.643419e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE35                     -3.962103e-01
+ALARM_TO_FD2                                                     -1.192979e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE39                      5.973090e-01
+ALARM_TO_FD3                                                      2.395932e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE21              5.337717e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE11                     -5.799651e-01
+ALARM_TO_FD7                                                     -5.729915e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD2                               3.650137e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE89                   -5.001632e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE33       -7.489543e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE62                -1.409884e+14
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE62           -1.409884e+14
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE62                   -1.409884e+14
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE62                -1.409884e+14
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE62                     -1.409884e+14
+EVENT_TYPEFire - Residential:RESPONSE_TYPE62                     -1.409884e+14
+RESPONSE_TYPE62                                                   1.409884e+14
+EVENT_TYPEFire - Other:RESPONSE_TYPE23                           -4.996935e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4               -9.222629e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                        -2.632901e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                  -5.698718e+13
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                     -5.698718e+13
+ALARM_TO_FD11                                                     5.698718e+13
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                  -5.698718e+13
+EVENT_TYPEFire - Institution:RESPONSE_TYPE3                      -2.684670e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE33  -5.365533e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE22  -5.030512e-01
+EVENT_TYPEFire - Other                                            1.685675e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE32            1.718925e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE39  -5.454116e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE33           -1.822695e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5               6.850024e-02
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE31  -4.404496e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                        -3.347713e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                    4.167126e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE21             2.317874e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2    -1.609007e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE53                -3.035650e+13
+EVENT_TYPEFire - Residential:RESPONSE_TYPE53                     -3.035650e+13
+RESPONSE_TYPE53                                                   3.035650e+13
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE53           -3.035650e+13
+EVENT_TYPEFire - Institution - School                            -1.924857e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE49 -2.958352e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2                3.265869e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                   3.191720e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                       3.140288e-01
+AID_TO_FROM_OTHER_DEPTS4                                          4.806400e-02
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE11  -3.924832e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE39             2.734388e-01
+INCIDENT_DAYThursday                                              1.509731e-02
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                         1.133988e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE24                      1.203705e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE21                     -7.506141e-02
+EVENT_TYPEFire - Highrise Commercial                              1.693135e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD4                              -1.186387e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE35  -2.138786e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                         1.661991e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                    1.674557e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                         3.570302e-02
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                        -3.367812e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE96                     -1.110983e-01
+INCIDENT_DAYMonday                                                7.554854e-03
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE34            -7.762653e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE49              1.115548e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE59            8.394645e-02
+INCIDENT_MONTHFebruary                                           -6.181184e-03
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                  -7.443284e-02
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                             -3.995904e-02
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                    3.941933e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE34              4.798228e-02
+INCIDENT_DAYSaturday                                             -2.317774e-03
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE97                -1.728072e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE24                   -2.252261e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE97                   -2.342227e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE34                -2.440657e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE39                   -2.307852e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE96                   -2.213925e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE99                   -2.255912e+01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                      -2.361372e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE29                -2.447171e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE33                   -2.237518e+01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                   -2.060713e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE21                -2.480847e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE3                 -2.450207e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE21                   -2.334592e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE59                -2.455490e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE26                   -5.788733e-04
+EVENT_TYPEFire - Outside Storage                                  2.432220e+01
+EVENT_TYPEFire - Institution - Downtown                           2.506860e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE32 -2.384692e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE96                -2.341557e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE96                 -2.130659e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE29          -2.263805e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE39                -2.449359e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE21          -2.157392e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE22          -2.155347e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE32          -2.133981e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE34          -2.094608e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE3                  -4.931420e+01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                   -2.141338e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE35          -2.038852e+01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE3                 2.940234e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE32       -2.679084e+01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                   -1.971675e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                   -2.044989e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE57                   -2.339171e+01
+RESPONSE_TYPE50                                                  -2.916932e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE22                   -2.260375e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE50                           2.732012e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE23                           2.852751e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                   -2.276958e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE50                      2.619634e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE50                      2.605227e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE25            7.358060e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE50            2.487640e+01
+RESPONSE_TYPE43                                                  -2.757031e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE23                -2.353993e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE50                    2.447475e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE89                -2.447497e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE49                -4.947159e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE33          -4.899029e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE22                -4.802679e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE50                      2.354872e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE96                -4.745633e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE89                -4.835431e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE21                -4.911022e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE24                -4.549638e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE32  -2.608518e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE59                -4.873461e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE97                -4.933836e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE29                -4.853370e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE11                -4.867155e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE50                 2.187509e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE38                -7.631935e+01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE24                3.028661e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE31       -2.668399e+01
+RESPONSE_TYPE25                                                  -5.243895e+01
+RESPONSE_TYPE93                                                  -5.194279e+01
+RESPONSE_TYPE94                                                  -2.923678e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE93            7.609791e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE2                 -2.494953e+01
+RESPONSE_TYPE913                                                 -2.998519e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE24                           -2.443073e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE96           -2.453339e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE2            -2.437406e+01
+RESPONSE_TYPE2                                                    2.419046e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE57                -4.891578e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE43              5.717770e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE2                      -2.350727e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE24                     -2.327581e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE94                           2.642943e+01
+RESPONSE_TYPE58                                                  -5.210412e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE94                    2.620146e+01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2              2.446190e+01
+RESPONSE_TYPE92                                                  -2.940425e+01
+RESPONSE_TYPE98                                                  -2.926273e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE66                -5.114464e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE50  5.389369e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE39                           -2.521708e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE29             -2.522851e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE38                     -5.412487e+01
+RESPONSE_TYPE42                                                  -2.728876e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE94            2.490638e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE97                 -4.976855e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE3                 -4.871387e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE99          -5.015927e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE29                 -4.925743e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE92                    2.719981e+01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE98                5.455651e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE24                 -4.756976e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE98                           2.615655e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE34                 -4.802243e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE92                      2.614518e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                   -1.999301e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE31                   -2.219291e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE99                     -2.526516e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE3              -2.516281e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE11 -2.501652e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE38                -5.246213e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE22             -2.409979e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE32             -2.391076e+01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2                -2.661262e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE98                      2.395701e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5           2.532569e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE99                     -2.434440e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE38                   -5.100670e+01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6               2.607484e+01
+RESPONSE_TYPE46                                                  -2.820787e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE13           -5.133482e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE26                -4.810381e+01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                       2.459170e+01
+ALARM_TO_FD6                                                     -2.454926e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE23                -4.736563e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE49  -2.736604e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE39                -2.708909e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE31                -2.708668e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE99                -2.681097e+01
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                         2.411805e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE89                           -2.466672e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE34                -2.650374e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise                       -2.265189e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE38           -5.323997e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE32                -2.629463e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE26  -2.583615e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE31                -2.422222e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE32                -2.375861e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE89           -2.554303e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE35                -2.505421e+01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE29            -2.507352e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE33                -2.475246e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE97                     -2.440034e+01
+EVENT_TYPEFire - Other:ALARM_TO_FD3                              -2.276780e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE26                           -2.471446e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE33                           -2.412189e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE47            5.324545e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE96 -2.381798e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE33                     -2.360363e+01
+EVENT_TYPEFire Alarm - Check Call                                 2.339993e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE96                     -2.333052e+01
+RESPONSE_TYPE910                                                  2.285217e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE32                   -2.167048e+01
+RESPONSE_TYPE67                                                  -3.064897e+01
+RESPONSE_TYPE51                                                  -3.035610e+01
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                              2.576960e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE97                      2.948713e+01
+RESPONSE_TYPE13                                                   2.296722e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE45                      5.813218e+01
+RESPONSE_TYPE911                                                 -3.046958e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE99   2.920460e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE41                      2.912554e+01
+RESPONSE_TYPE37                                                  -2.897168e+01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                        -2.874288e+01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE31             2.867123e+01
+RESPONSE_TYPE44                                                  -2.787300e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                   -1.954675e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE50                -2.350857e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE59                      2.852387e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE99  2.823578e+01
+RESPONSE_TYPE36                                                  -2.834649e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE41   2.832529e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE31                           2.804173e+01
+RESPONSE_TYPE64                                                  -3.101839e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE49                      2.827614e+01
+EVENT_TYPEFire - Other:ALARM_TO_FD8                              -2.609681e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE89                           2.756869e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE49                      2.792635e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4      2.706884e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE99              2.760741e+01
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE21            5.367715e+01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3      2.757928e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE11              2.744033e+01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                 2.692678e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE22       -2.724094e+01
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                         2.599060e+01
+RESPONSE_TYPE47                                                  -2.976324e+01
+EVENT_TYPEFire Waterfront Marina/Industrial                       2.335218e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE25                    2.620397e+01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE21       -2.665112e+01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                   -2.085320e+01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                   2.627784e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE92                 2.542504e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE36            2.564448e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE94                -2.274355e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE36                            2.541847e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE66              2.520229e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE57                          -2.551978e+01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE66            2.517286e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE99                           -2.541936e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE25                 2.391696e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE26                     -2.509045e+01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE23                     -2.439886e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE57                           -2.514016e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE93                    2.505245e+01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE32            -2.466920e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE24                -2.329259e+01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                   2.481322e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE26                -2.317630e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3    -2.435590e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE58                    2.494953e+01
+RESPONSE_TYPE45                                                  -3.262058e+01
+EVENT_TYPEFire - Other:RESPONSE_TYPE96                           -2.437641e+01
+RESPONSE_TYPE38                                                   2.406120e+01
+EVENT_TYPEFire - Waterfront                                       2.380502e+01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE35                -2.367450e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE23 -2.366334e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE37                      2.352866e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE25                      2.252280e+01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE32                -2.352091e+01
+EVENT_TYPEFire - Other:ALARM_TO_FD7                              -2.405246e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE32                     -2.344049e+01
+RESPONSE_TYPE69                                                   2.417623e+01
+EVENT_TYPEFire - Other:ALARM_TO_FD5                              -2.337101e+01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE23            -2.330620e+01
+RESPONSE_TYPE65                                                  -2.815068e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE58                 2.382853e+01
+RESPONSE_TYPE921                                                  2.297076e+01
+EVENT_TYPEFire - Other:ALARM_TO_FD9                              -2.348920e+01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE59 -2.310068e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE36                      2.300414e+01
+ALARM_TO_FD10                                                    -2.402585e+01
+RESPONSE_TYPE912                                                  2.268562e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE92                -2.326117e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE31                     -2.235704e+01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE31             -2.209019e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE35                   -2.144044e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE50                 -2.334571e+01
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE34                      -2.148073e+01
+RESPONSE_TYPE54                                                   2.395752e+01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE910                -2.313438e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE37                -2.159169e+01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE93                 2.298505e+01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE93                           2.332584e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE98                -2.326063e+01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE58                      2.462763e+01
+RESPONSE_TYPE12                                                  -2.209534e+03
+EVENT_TYPEFire - Residential:RESPONSE_TYPE93                      2.143152e+01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE36                -2.436154e+01
+EVENT_TYPEFire - Waterfront - Highrise                           -2.515485e+01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE58                      2.215017e+01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE24           3.838040e+00
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE31           4.709232e+00
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE23                  5.103307e+00
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE3            3.349133e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                    3.857827e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                    3.268602e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE3        5.328222e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE21       6.082267e+00
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE59           4.242375e+00
+RESPONSE_TYPE698                                                  2.887924e+01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE98                    2.320894e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE39       4.480337e+00
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE21                       4.927915e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4          4.944565e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE65                      3.776326e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2          4.338781e+00
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE66           2.819175e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE2                     2.079912e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE92                      2.766631e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7         -2.280451e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE2                      -1.194337e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE42                   -1.936201e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                     -2.961561e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE50                2.093399e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE47                    2.663964e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE64            2.286518e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE94                     -1.022741e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE913           1.962108e+00
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                    -1.545560e+00
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE24       -2.057684e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE36                    1.563566e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE50  -1.222465e+00
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5          1.097862e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE98                      1.072901e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE36                      1.058513e+00
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE22            7.218146e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE2                      -6.393260e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE94                 4.630204e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE98                 4.663513e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE698                    -5.968673e+01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                     2.916669e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE913                           1.803340e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE92            1.374669e-01
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5               3.799540e-02
+EVENT_TYPEFire - Other:RESPONSE_TYPE50                           -1.454781e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE50             -5.706250e-03
+                                                                   Std. Error
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE12                   8.219124e+07
+RESPONSE_TYPE22                                                  1.232532e-01
+RESPONSE_TYPE34                                                  1.407608e-01
+RESPONSE_TYPE24                                                  1.841378e-01
+RESPONSE_TYPE3                                                   2.026888e-01
+RESPONSE_TYPE21                                                  2.000868e-01
+RESPONSE_TYPE29                                                  2.514892e-01
+RESPONSE_TYPE33                                                  3.200788e-01
+INCIDENT_YEAR2016                                                8.196072e-02
+INCIDENT_YEAR2015                                                8.215858e-02
+INCIDENT_YEAR2014                                                8.202936e-02
+EVENT_TYPEFire - Grass/Rubbish                                   1.360242e-01
+INCIDENT_YEAR2013                                                8.213159e-02
+RESPONSE_TYPE32                                                  3.847364e-01
+RESPONSE_TYPE39                                                  3.299955e-01
+RESPONSE_TYPE31                                                  5.346555e-01
+RESPONSE_TYPE35                                                  6.115801e-01
+RESPONSE_TYPE49                                                  4.043527e-01
+EVENT_TYPEFire - Residential                                     1.571019e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE34                     2.016622e-01
+RESPONSE_TYPE23                                                  7.410726e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE21                     2.571134e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE22                     1.884956e-01
+RESPONSE_TYPE99                                                  6.517597e-01
+INCIDENT_YEAR2012                                                8.455381e-02
+(Intercept)                                                      2.938618e-01
+RESPONSE_TYPE11                                                  6.802321e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE3                    2.903471e-01
+RESPONSE_TYPE96                                                  1.060153e+00
+RESPONSE_TYPE41                                                  1.086846e+00
+RESPONSE_TYPE89                                                  8.332114e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE3                      3.029207e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE24                     2.594112e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE34               9.057673e-01
+RESPONSE_TYPE97                                                  8.417259e-01
+RESPONSE_TYPE26                                                  1.064074e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE39                     4.507203e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE34                   4.779181e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE3                           7.065253e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE24                          7.976870e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE29                          7.103079e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE29                     3.084157e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE22 3.311028e-01
+RESPONSE_TYPE59                                                  1.104159e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE21               1.126140e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE29               1.080826e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE33                          1.028174e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE49                     8.489890e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE34                          6.252160e-01
+INCIDENT_MONTHNovember                                           1.009940e-01
+RESPONSE_TYPE57                                                  1.140465e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE34 3.412997e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE21                          6.562252e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE21           2.772317e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9              1.403882e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE32                          1.123006e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE39                          7.669943e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE39               1.572881e+00
+INITIAL_UNIT_PERSONNEL                                           3.948549e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE34           2.442205e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE29                   1.034730e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE49           7.536848e-01
+INCIDENT_MONTHApril                                              1.039916e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE41           1.705543e+00
+EST_KM                                                           1.015172e-02
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                        1.258903e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2              4.056471e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE96                          1.498103e+00
+EVENT_TYPEFire - Commercial/Industrial                           1.733152e-01
+RESPONSE_TYPE66                                                  7.689947e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE32               1.747740e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE29                     8.965457e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE29                     8.118858e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                      1.326233e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE11                     1.550983e+00
+INCIDENT_MONTHJuly                                               9.893959e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE89                     1.344977e+00
+ALARM_TO_FD5                                                     1.090641e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE31                     9.084391e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE3  5.555233e-01
+ALARM_TO_FD4                                                     3.106710e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE11                     1.026121e+00
+INCIDENT_MONTHSeptember                                          1.019639e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE24             1.698425e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE34                     7.489509e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE23                   8.379437e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE33                     8.057769e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE39 8.490977e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE21                     7.572196e-01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE31                1.789452e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE39           5.682274e-01
+EVENT_TYPEFire - Subway - Downtown                               8.571684e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE57                     1.648787e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE35 1.038364e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE97                     1.057746e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                             1.837220e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE99                     9.169151e-01
+EVENT_TYPEFire - Hydro Vault                                     6.361326e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE31 9.726980e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE22            1.291297e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE24 5.364126e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE33                     4.854384e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE32                     5.548704e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                             9.128166e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                        1.252093e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5             8.861865e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE99           1.113360e+00
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE57                1.578148e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE34  1.231430e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3              1.057945e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE35                     1.123321e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                   6.628849e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                        1.654740e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE33 8.684001e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown                  1.069328e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE21  1.138005e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7              2.012253e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE59                     1.340302e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                   4.376621e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE3                      9.259742e-01
+ALARM_TO_FD9                                                     1.125218e+00
+EVENT_TYPEFire - Highrise Residential - Downtown                 2.720787e-01
+EVENT_TYPEFire - Subway                                          6.063262e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4              5.698247e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE22           4.210590e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5                9.610818e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE96                     1.814193e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE97           1.438496e+00
+INCIDENT_DAYWednesday                                            8.060860e-02
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                      4.837948e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE3             9.837272e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE23           9.068772e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE24            1.216379e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE32                     1.017295e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE24  1.501036e+00
+ALARM_TO_FD8                                                     1.118692e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE59            1.955940e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE35                          1.450946e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE96  2.093390e+00
+INCIDENT_MONTHMay                                                1.011682e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE99                1.280549e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                        1.622595e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE3   1.538257e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE34                     5.324082e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                      1.603518e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE33            1.488072e+00
+INCIDENT_MONTHJune                                               1.038079e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                             7.038468e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE97                          1.393946e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                      4.690319e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2     2.107776e+00
+EVENT_TYPEFire - Institution                                     4.373969e-01
+INCIDENT_MONTHAugust                                             1.027181e-01
+INCIDENT_MONTHMarch                                              1.030654e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                        4.144258e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE29 7.162728e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                        9.215745e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE26                     1.508219e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE26                          1.766271e+00
+EVENT_TYPEFire - Other:RESPONSE_TYPE29                           1.051557e+00
+INCIDENT_MONTHDecember                                           1.010108e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE3                            7.484575e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE97                           1.466742e+00
+EVENT_TYPEFire - Other:RESPONSE_TYPE21                           1.228660e+00
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5               7.167325e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE29  1.565473e+00
+EVENT_TYPEFire - Transformer/Pole                                4.306095e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE59                   1.331653e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE29           3.564297e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE21 5.086102e-01
+INCIDENT_DAYFriday                                               7.919903e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE31           7.605448e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                        9.725909e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE31                     1.028435e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE59                     1.480006e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5    2.792610e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4    1.087182e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE39                     8.803223e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE26           1.655249e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                   1.215443e+00
+EVENT_TYPEFire - Other:RESPONSE_TYPE49                           1.714324e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                      1.637775e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE24           3.501436e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE23                     7.877209e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5     6.508910e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE34                           6.582395e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE57                     1.643852e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE11           1.332702e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE99                          1.254258e+00
+EVENT_TYPEFire - Alarm Waterfront                                1.189952e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE22                     6.107113e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE35           1.211865e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                        2.505476e-01
+INCIDENT_DAYTuesday                                              8.077555e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE3            3.165654e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                             9.678013e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE35                     8.261582e-01
+ALARM_TO_FD2                                                     2.582148e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE39                     1.296560e+00
+ALARM_TO_FD3                                                     5.591676e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE21             1.247194e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE11                     1.386167e+00
+ALARM_TO_FD7                                                     1.472463e+00
+EVENT_TYPEFire - Other:ALARM_TO_FD2                              9.452175e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE89                   1.320052e+00
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE33       1.995971e+00
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE62                3.869714e+14
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE62           3.869714e+14
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE62                   3.869714e+14
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE62                3.869714e+14
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE62                     3.869714e+14
+EVENT_TYPEFire - Residential:RESPONSE_TYPE62                     3.869714e+14
+RESPONSE_TYPE62                                                  3.869714e+14
+EVENT_TYPEFire - Other:RESPONSE_TYPE23                           1.381141e+00
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4               2.565821e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                        7.467892e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                  1.659429e+14
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                     1.659429e+14
+ALARM_TO_FD11                                                    1.659429e+14
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                  1.659429e+14
+EVENT_TYPEFire - Institution:RESPONSE_TYPE3                      7.914791e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE33  1.611894e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE22  1.595552e+00
+EVENT_TYPEFire - Other                                           5.428013e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE32           5.893461e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE39  1.899324e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE33           6.412086e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5              2.476471e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE31  1.630811e+00
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                        1.251868e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                   1.559289e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE21            8.937049e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2    6.251964e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE53                1.198904e+14
+EVENT_TYPEFire - Residential:RESPONSE_TYPE53                     1.198904e+14
+RESPONSE_TYPE53                                                  1.198904e+14
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE53           1.198904e+14
+EVENT_TYPEFire - Institution - School                            7.797833e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE49 1.213015e+00
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2               1.341098e+00
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                  1.334041e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                      1.346043e+00
+AID_TO_FROM_OTHER_DEPTS4                                         2.071724e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE11  1.902070e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE39            1.419848e+00
+INCIDENT_DAYThursday                                             8.072622e-02
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                        7.176625e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE24                     7.713415e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE21                     5.227595e-01
+EVENT_TYPEFire - Highrise Commercial                             1.184570e+00
+EVENT_TYPEFire - Other:ALARM_TO_FD4                              8.916050e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE35  1.689279e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                        1.430603e+00
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                   1.469747e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                        3.482509e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                        3.443233e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE96                     1.165925e+00
+INCIDENT_DAYMonday                                               8.094640e-02
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE34            1.085902e+00
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE49             1.737173e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE59           1.379634e+00
+INCIDENT_MONTHFebruary                                           1.049561e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                  1.286863e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                             1.066085e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                   1.115945e+00
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE34             1.415059e+00
+INCIDENT_DAYSaturday                                             7.916469e-02
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE97                8.138153e+06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE24                   1.869590e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE97                   2.052376e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE34                2.378027e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE39                   3.126218e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE96                   3.323188e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE99                   3.884559e+04
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                      4.506034e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE29                4.724969e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE33                   4.377218e+04
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                   4.124463e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE21                5.170922e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE3                 5.246676e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE21                   5.563953e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE59                6.105981e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE26                   1.469232e+00
+EVENT_TYPEFire - Outside Storage                                 6.618542e+04
+EVENT_TYPEFire - Institution - Downtown                          7.322825e+04
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE32 7.267614e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE96                7.160545e+04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE96                 6.618542e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE29          7.322825e+04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE39                8.030896e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE21          7.322825e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE22          7.322825e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE32          7.322825e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE34          7.322825e+04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE3                  1.724686e+05
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                   7.635504e+04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE35          7.322825e+04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE3                1.059174e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE32       9.970662e+04
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                   7.756270e+04
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                   8.408194e+04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE57                   9.688499e+04
+RESPONSE_TYPE50                                                  1.253300e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE22                   1.027800e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE50                          1.253300e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE23                          1.319031e+05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                   1.075615e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE50                     1.253300e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE50                     1.253300e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE25           3.595752e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE50           1.253300e+05
+RESPONSE_TYPE43                                                  1.395595e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE23                1.193350e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE50                   1.253300e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE89                1.270280e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE49                2.568801e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE33          2.557873e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE22                2.529716e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE50                     1.253300e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE96                2.561750e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE89                2.638199e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE21                2.682177e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE24                2.498719e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE32  1.450708e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE59                2.717242e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE97                2.782240e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE29                2.755884e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE11                2.777480e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE50                1.253300e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE38                4.386609e+05
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE24               1.759154e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE31       1.568468e+05
+RESPONSE_TYPE25                                                  3.119463e+05
+RESPONSE_TYPE93                                                  3.155359e+05
+RESPONSE_TYPE94                                                  1.779945e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE93           4.750779e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE2                 1.565538e+05
+RESPONSE_TYPE913                                                 1.889310e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE24                           1.550390e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE96           1.559162e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE2            1.565538e+05
+RESPONSE_TYPE2                                                   1.565538e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE57                3.177320e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE43             3.769265e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE2                      1.565538e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE24                     1.566952e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE94                          1.779945e+05
+RESPONSE_TYPE58                                                  3.523119e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE94                   1.779945e+05
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2             1.666732e+05
+RESPONSE_TYPE92                                                  2.014579e+05
+RESPONSE_TYPE98                                                  2.010659e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE66                3.549805e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE50 3.765243e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE39                           1.765749e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE29             1.771198e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE38                     3.805669e+05
+RESPONSE_TYPE42                                                  1.919262e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE94           1.779945e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE97                 3.619250e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE3                 3.546374e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE99          3.656243e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE29                 3.604483e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE92                   2.014579e+05
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE98               4.079489e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE24                 3.606492e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE98                          2.010659e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE34                 3.695213e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE92                     2.014579e+05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                   1.564709e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE31                   1.753858e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE99                     2.021392e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE3              2.030401e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE11 2.044108e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE38                4.291725e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE22             1.999254e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE32             2.003101e+05
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2                2.229577e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE98                     2.010659e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5          2.137099e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE99                     2.062126e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE38                   4.326698e+05
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6              2.253222e+05
+RESPONSE_TYPE46                                                  2.452020e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE13           4.485985e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE26                4.351152e+05
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                      2.253222e+05
+ALARM_TO_FD6                                                     2.253222e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE23                4.350557e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE49  2.515784e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE39                2.496888e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE31                2.496888e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE99                2.496888e+05
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                        2.253222e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE89                           2.322547e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE34                2.496888e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise                       2.137099e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE38           5.035317e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE32                2.496888e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE26  2.517941e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE31                2.383036e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE32                2.340212e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE89           2.523574e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE35                2.496888e+05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE29            2.508884e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE33                2.496888e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE97                     2.485220e+05
+EVENT_TYPEFire - Other:ALARM_TO_FD3                              2.320026e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE26                           2.521744e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE33                           2.465760e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE47           5.605272e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE96 2.524380e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE33                     2.510414e+05
+EVENT_TYPEFire Alarm - Check Call                                2.496888e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE96                     2.523414e+05
+RESPONSE_TYPE910                                                 2.501922e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE32                   2.479056e+05
+RESPONSE_TYPE67                                                  3.578007e+05
+RESPONSE_TYPE51                                                  3.565114e+05
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                             3.038214e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE97                     3.549371e+05
+RESPONSE_TYPE13                                                  2.764827e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE45                     7.000590e+05
+RESPONSE_TYPE911                                                 3.686653e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE99  3.540133e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE41                     3.562784e+05
+RESPONSE_TYPE37                                                  3.553473e+05
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                        3.561094e+05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE31            3.556598e+05
+RESPONSE_TYPE44                                                  3.465758e+05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                   2.431916e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE50                2.928088e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE59                     3.555139e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE99 3.544468e+05
+RESPONSE_TYPE36                                                  3.558555e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE41  3.562167e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE31                          3.528297e+05
+RESPONSE_TYPE64                                                  3.905653e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE49                     3.565671e+05
+EVENT_TYPEFire - Other:ALARM_TO_FD8                              3.326470e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE89                          3.516742e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE49                     3.563188e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4     3.469376e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE99             3.543722e+05
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE21           6.909328e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3     3.577416e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE11             3.561233e+05
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                3.516874e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE22       3.560486e+05
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                        3.431153e+05
+RESPONSE_TYPE47                                                  3.930351e+05
+EVENT_TYPEFire Waterfront Marina/Industrial                      3.086097e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE25                   3.491200e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE21       3.558864e+05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                   2.787684e+05
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                  3.558771e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE92                3.516578e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE36           3.558555e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE94                3.161141e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE36                           3.558555e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE66             3.547960e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE57                          3.601675e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE66           3.553563e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE99                           3.592990e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE25                3.387128e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE26                     3.561034e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE23                     3.470379e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE57                           3.576929e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE93                   3.606663e+05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE32            3.557804e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE24                3.378002e+05
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                  3.617206e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE26                3.389880e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3    3.567131e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE58                   3.663865e+05
+RESPONSE_TYPE45                                                  4.804846e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE96                           3.591303e+05
+RESPONSE_TYPE38                                                  3.566396e+05
+EVENT_TYPEFire - Waterfront                                      3.546240e+05
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE35                3.559131e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE23 3.558554e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE37                     3.553473e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE25                     3.407027e+05
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE32                3.562457e+05
+EVENT_TYPEFire - Other:ALARM_TO_FD7                              3.644479e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE32                     3.554839e+05
+RESPONSE_TYPE69                                                  3.670737e+05
+EVENT_TYPEFire - Other:ALARM_TO_FD5                              3.558076e+05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE23            3.560530e+05
+RESPONSE_TYPE65                                                  4.300781e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE58                3.642111e+05
+RESPONSE_TYPE921                                                 3.512896e+05
+EVENT_TYPEFire - Other:ALARM_TO_FD9                              3.600897e+05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE59 3.566594e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE36                     3.558555e+05
+ALARM_TO_FD10                                                    3.719457e+05
+RESPONSE_TYPE912                                                 3.539143e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE92                3.653880e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE31                     3.559964e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE31             3.560287e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE35                   3.517314e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE50                 3.831250e+05
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE34                      3.546240e+05
+RESPONSE_TYPE54                                                  3.994992e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE910                4.403292e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE37                4.349940e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE93                4.646381e+05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE93                          4.792310e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE98                4.804556e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE58                     5.268008e+05
+RESPONSE_TYPE12                                                  4.745313e+07
+EVENT_TYPEFire - Residential:RESPONSE_TYPE93                     4.776130e+05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE36                5.619807e+05
+EVENT_TYPEFire - Waterfront - Highrise                           6.170158e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE58                     5.523854e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE24          1.550166e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE31          2.132111e+05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE23                 2.615254e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE3           2.139386e+05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                   2.725743e+05
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                   2.427468e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE3       3.963093e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE21      5.145724e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE59          3.628419e+05
+RESPONSE_TYPE698                                                 2.807041e+06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE98                   2.260230e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE39      4.566349e+05
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE21                      5.024950e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4         5.305567e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE65                     4.490869e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2         5.280734e+05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE66          3.620039e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE2                    2.957579e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE92                     4.104752e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7         3.481694e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE2                      1.993859e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE42                   3.292432e+05
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                     5.284891e+05
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE50               3.786311e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE47                   5.181613e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE64           4.508519e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE94                     2.077344e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE913          4.067114e+05
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                    3.341594e+05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE24       4.578011e+05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE36                   3.570192e+05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE50  3.782662e+05
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5         3.475549e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE98                     4.098161e+05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE36                     5.030776e+05
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE22           4.240655e+05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE2                      3.871961e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE94                3.840306e+05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE98                3.944947e+05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE698                    6.716755e+07
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                    4.050564e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE913                          4.512859e+05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE92           4.099187e+05
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5              5.404418e+05
+EVENT_TYPEFire - Other:RESPONSE_TYPE50                           2.177307e+05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE50             3.782568e+05
+                                                                       z value
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE12                   -5.479416e+07
+RESPONSE_TYPE22                                                  -3.419426e+01
+RESPONSE_TYPE34                                                  -2.948797e+01
+RESPONSE_TYPE24                                                  -2.452288e+01
+RESPONSE_TYPE3                                                   -1.933308e+01
+RESPONSE_TYPE21                                                  -1.878588e+01
+RESPONSE_TYPE29                                                  -1.632515e+01
+RESPONSE_TYPE33                                                  -1.471000e+01
+INCIDENT_YEAR2016                                                 1.428537e+01
+INCIDENT_YEAR2015                                                 1.361495e+01
+INCIDENT_YEAR2014                                                 1.334374e+01
+EVENT_TYPEFire - Grass/Rubbish                                   -1.314536e+01
+INCIDENT_YEAR2013                                                 1.310466e+01
+RESPONSE_TYPE32                                                  -1.201493e+01
+RESPONSE_TYPE39                                                  -1.193036e+01
+RESPONSE_TYPE31                                                  -9.017001e+00
+RESPONSE_TYPE35                                                  -8.094967e+00
+RESPONSE_TYPE49                                                  -7.913295e+00
+EVENT_TYPEFire - Residential                                      7.104406e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE34                     -7.066193e+00
+RESPONSE_TYPE23                                                  -6.923165e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE21                     -6.405336e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE22                     -6.132919e+00
+RESPONSE_TYPE99                                                  -6.028286e+00
+INCIDENT_YEAR2012                                                 5.811569e+00
+(Intercept)                                                       5.711636e+00
+RESPONSE_TYPE11                                                  -5.228412e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE3                    -5.226426e+00
+RESPONSE_TYPE96                                                  -5.107707e+00
+RESPONSE_TYPE41                                                  -5.084274e+00
+RESPONSE_TYPE89                                                  -4.743594e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE3                      -4.721284e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE24                     -4.669820e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE34                4.497028e+00
+RESPONSE_TYPE97                                                  -4.335918e+00
+RESPONSE_TYPE26                                                  -4.300544e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE39                     -4.135482e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE34                   -3.982587e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE3                            3.936829e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE24                           3.863337e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE29                           3.793819e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE29                     -3.737105e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE22  3.724931e+00
+RESPONSE_TYPE59                                                  -3.660171e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE21                3.539740e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE29                3.535109e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE33                           3.521150e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE49                     -3.504425e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE34                           3.418805e+00
+INCIDENT_MONTHNovember                                            3.233634e+00
+RESPONSE_TYPE57                                                  -3.200259e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE34  2.963661e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE21                           2.828823e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE21           -2.662189e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9               2.654919e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE32                           2.573271e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE39                           2.552879e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE39                2.443105e+00
+INITIAL_UNIT_PERSONNEL                                           -2.396576e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE34           -2.369078e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE29                   -2.368706e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE49           -2.286640e+00
+INCIDENT_MONTHApril                                              -2.276534e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE41            2.261671e+00
+EST_KM                                                            2.247221e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                        -2.230349e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2               2.226384e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE96                           2.204020e+00
+EVENT_TYPEFire - Commercial/Industrial                            2.182766e+00
+RESPONSE_TYPE66                                                  -2.103055e+00
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE32                2.092909e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE29                      2.027674e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE29                      2.026038e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                      -2.025517e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE11                      2.014371e+00
+INCIDENT_MONTHJuly                                                2.014098e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE89                     -1.975861e+00
+ALARM_TO_FD5                                                     -1.968210e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE31                     -1.947357e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE3   1.887070e+00
+ALARM_TO_FD4                                                      1.884914e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE11                     -1.826421e+00
+INCIDENT_MONTHSeptember                                           1.752183e+00
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE24              1.742221e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE34                      1.722123e+00
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE23                   -1.692514e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE33                      1.663313e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE39  1.623279e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE21                      1.612501e+00
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE31                 1.580922e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE39           -1.569167e+00
+EVENT_TYPEFire - Subway - Downtown                               -1.559520e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE57                      1.556861e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE35  1.553902e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE97                     -1.548962e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                             -1.523337e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE99                     -1.520850e+00
+EVENT_TYPEFire - Hydro Vault                                     -1.462807e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE31  1.432123e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE22             1.428229e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE24  1.414622e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE33                     -1.413419e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE32                     -1.379319e+00
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                             -1.366914e+00
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                         1.361164e+00
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5             -1.333087e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE99           -1.314460e+00
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE57                -1.310685e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE34  -1.309641e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3               1.299030e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE35                      1.294193e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                    1.280821e+00
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                        -1.266669e+00
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE33  1.266199e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown                   1.193526e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE21  -1.189848e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7               1.166268e+00
+EVENT_TYPEFire - Residential:RESPONSE_TYPE59                     -1.161123e+00
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                    1.151395e+00
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE3                       1.141086e+00
+ALARM_TO_FD9                                                     -1.137903e+00
+EVENT_TYPEFire - Highrise Residential - Downtown                 -1.124753e+00
+EVENT_TYPEFire - Subway                                           1.122423e+00
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4              -1.118492e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE22           -1.110957e+00
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5                -1.103224e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE96                      1.101885e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE97           -1.092177e+00
+INCIDENT_DAYWednesday                                             1.084035e+00
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                      -1.083420e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE3              1.080018e+00
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE23            1.074863e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE24             1.069641e+00
+EVENT_TYPEFire - Institution:RESPONSE_TYPE32                      1.056445e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE24  -1.043934e+00
+ALARM_TO_FD8                                                      1.042303e+00
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE59             1.039191e+00
+EVENT_TYPEFire - Subway:RESPONSE_TYPE35                           1.006517e+00
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE96   9.964067e-01
+INCIDENT_MONTHMay                                                -9.957806e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE99                -9.856554e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                         9.709648e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE3   -9.594873e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE34                      9.550846e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                       9.310145e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE33             9.301793e-01
+INCIDENT_MONTHJune                                               -9.247337e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                             -9.161894e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE97                           8.927816e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                      -8.846020e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2     -8.552816e-01
+EVENT_TYPEFire - Institution                                      8.395540e-01
+INCIDENT_MONTHAugust                                              7.881574e-01
+INCIDENT_MONTHMarch                                              -7.721264e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                        -7.717280e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE29  7.675697e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                        -7.666840e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE26                     -7.626921e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE26                           7.355311e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE29                            7.207429e-01
+INCIDENT_MONTHDecember                                            7.125977e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE3                            -7.046200e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE97                           -6.963501e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE21                           -6.886349e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5                6.815726e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE29  -6.763380e-01
+EVENT_TYPEFire - Transformer/Pole                                -6.754499e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE59                    6.748292e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE29           -6.745851e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE21  6.688840e-01
+INCIDENT_DAYFriday                                                6.600524e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE31            6.467143e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                        -6.417423e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE31                      6.381692e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE59                      6.253361e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5    -5.982552e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4    -5.895107e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE39                      5.771523e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE26            5.742814e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                   -5.661939e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE49                            5.630140e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                       5.572477e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE24            5.549286e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE23                     -5.494849e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5      5.379920e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE34                           -5.351687e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE57                     -5.244307e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE11           -5.210797e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE99                           5.170961e-01
+EVENT_TYPEFire - Alarm Waterfront                                -5.073634e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE22                      5.000744e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE35           -4.976828e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                        -4.961303e-01
+INCIDENT_DAYTuesday                                               4.862599e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE3            -4.835763e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                              4.797906e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE35                     -4.795816e-01
+ALARM_TO_FD2                                                     -4.620105e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE39                      4.606875e-01
+ALARM_TO_FD3                                                      4.284820e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE21              4.279782e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE11                     -4.183947e-01
+ALARM_TO_FD7                                                     -3.891382e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD2                               3.861690e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE89                   -3.788965e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE33       -3.752331e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE62                -3.643379e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE62           -3.643379e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE62                   -3.643379e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE62                -3.643379e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE62                     -3.643379e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE62                     -3.643379e-01
+RESPONSE_TYPE62                                                   3.643379e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE23                           -3.617976e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4               -3.594416e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                        -3.525629e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                  -3.434144e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                     -3.434144e-01
+ALARM_TO_FD11                                                     3.434144e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                  -3.434144e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE3                      -3.391966e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE33  -3.328713e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE22  -3.152835e-01
+EVENT_TYPEFire - Other                                            3.105509e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE32            2.916664e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE39  -2.871609e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE33           -2.842593e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5               2.766043e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE31  -2.700802e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                        -2.674174e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                    2.672453e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE21             2.593556e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2    -2.573602e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE53                -2.532021e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE53                     -2.532021e-01
+RESPONSE_TYPE53                                                   2.532021e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE53           -2.532021e-01
+EVENT_TYPEFire - Institution - School                            -2.468452e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE49 -2.438842e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2                2.435220e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                   2.392521e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                       2.332977e-01
+AID_TO_FROM_OTHER_DEPTS4                                          2.320000e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE11  -2.063453e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE39             1.925831e-01
+INCIDENT_DAYThursday                                              1.870187e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                         1.580113e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE24                      1.560535e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE21                     -1.435869e-01
+EVENT_TYPEFire - Highrise Commercial                              1.429325e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD4                              -1.330619e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE35  -1.266094e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                         1.161741e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                    1.139350e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                         1.025209e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                        -9.780960e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE96                     -9.528767e-02
+INCIDENT_DAYMonday                                                9.333156e-02
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE34            -7.148578e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE49              6.421625e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE59            6.084691e-02
+INCIDENT_MONTHFebruary                                           -5.889305e-02
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                  -5.784053e-02
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                             -3.748203e-02
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                    3.532373e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE34              3.390832e-02
+INCIDENT_DAYSaturday                                             -2.927788e-02
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE97                -2.123421e-03
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE24                   -1.204682e-03
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE97                   -1.141227e-03
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE34                -1.026337e-03
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE39                   -7.382250e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE96                   -6.662052e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE99                   -5.807383e-04
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                      -5.240467e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE29                -5.179233e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE33                   -5.111734e-04
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                   -4.996319e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE21                -4.797688e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE3                 -4.670018e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE21                   -4.195923e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE59                -4.021451e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE26                   -3.939973e-04
+EVENT_TYPEFire - Outside Storage                                  3.674858e-04
+EVENT_TYPEFire - Institution - Downtown                           3.423350e-04
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE32 -3.281259e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE96                -3.270082e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE96                 -3.219226e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE29          -3.091437e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE39                -3.049920e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE21          -2.946121e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE22          -2.943328e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE32          -2.914150e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE34          -2.860382e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE3                  -2.859314e-04
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                   -2.804448e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE35          -2.784243e-04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE3                 2.775970e-04
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE32       -2.686967e-04
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                   -2.542040e-04
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                   -2.432139e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE57                   -2.414379e-04
+RESPONSE_TYPE50                                                  -2.327402e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE22                   -2.199235e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE50                           2.179855e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE23                           2.162763e-04
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                   -2.116888e-04
+EVENT_TYPEFire - Institution:RESPONSE_TYPE50                      2.090190e-04
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE50                      2.078695e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE25            2.046320e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE50            1.984872e-04
+RESPONSE_TYPE43                                                  -1.975523e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE23                -1.972593e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE50                    1.952825e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE89                -1.926739e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE49                -1.925863e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE33          -1.915274e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE22                -1.898505e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE50                      1.878938e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE96                -1.852497e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE89                -1.832853e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE21                -1.830983e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE24                -1.820788e-04
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE32  -1.798099e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE59                -1.793532e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE97                -1.773332e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE29                -1.761094e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE11                -1.752363e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE50                 1.745400e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE38                -1.739826e-04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE24                1.721658e-04
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE31       -1.701277e-04
+RESPONSE_TYPE25                                                  -1.681025e-04
+RESPONSE_TYPE93                                                  -1.646177e-04
+RESPONSE_TYPE94                                                  -1.642566e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE93            1.601798e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE2                 -1.593671e-04
+RESPONSE_TYPE913                                                 -1.587098e-04
+EVENT_TYPEFire - Other:RESPONSE_TYPE24                           -1.575779e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE96           -1.573498e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE2            -1.556912e-04
+RESPONSE_TYPE2                                                    1.545185e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE57                -1.539530e-04
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE43              1.516946e-04
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE2                      -1.501545e-04
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE24                     -1.485420e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE94                           1.484845e-04
+RESPONSE_TYPE58                                                  -1.478920e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE94                    1.472038e-04
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2              1.467657e-04
+RESPONSE_TYPE92                                                  -1.459573e-04
+RESPONSE_TYPE98                                                  -1.455380e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE66                -1.440774e-04
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE50  1.431347e-04
+EVENT_TYPEFire - Other:RESPONSE_TYPE39                           -1.428123e-04
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE29             -1.424375e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE38                     -1.422217e-04
+RESPONSE_TYPE42                                                  -1.421836e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE94            1.399278e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE97                 -1.375107e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE3                 -1.373625e-04
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE99          -1.371880e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE29                 -1.366560e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE92                    1.350148e-04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE98                1.337337e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE24                 -1.319004e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE98                           1.300895e-04
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE34                 -1.299585e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE92                      1.297799e-04
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                   -1.277746e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE31                   -1.265377e-04
+EVENT_TYPEFire - Institution:RESPONSE_TYPE99                     -1.249889e-04
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE3              -1.239302e-04
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE11 -1.223836e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE38                -1.222402e-04
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE22             -1.205439e-04
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE32             -1.193687e-04
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2                -1.193617e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE98                      1.191501e-04
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5           1.185050e-04
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE99                     -1.180549e-04
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE38                   -1.178883e-04
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6               1.157225e-04
+RESPONSE_TYPE46                                                  -1.150393e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE13           -1.144338e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE26                -1.105542e-04
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                       1.091402e-04
+ALARM_TO_FD6                                                     -1.089518e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE23                -1.088726e-04
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE49  -1.087774e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE39                -1.084914e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE31                -1.084818e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE99                -1.073775e-04
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                         1.070380e-04
+EVENT_TYPEFire - Other:RESPONSE_TYPE89                           -1.062055e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE34                -1.061471e-04
+EVENT_TYPEFire - Alarm Waterfront Highrise                       -1.059936e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE38           -1.057331e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE32                -1.053096e-04
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE26  -1.026082e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE31                -1.016444e-04
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE32                -1.015233e-04
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE89           -1.012177e-04
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE35                -1.003417e-04
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE29            -9.993893e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE33                -9.913324e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE97                     -9.818182e-05
+EVENT_TYPEFire - Other:ALARM_TO_FD3                              -9.813595e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE26                           -9.800545e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE33                           -9.782741e-05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE47            9.499175e-05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE96 -9.435180e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE33                     -9.402286e-05
+EVENT_TYPEFire Alarm - Check Call                                 9.371636e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE96                     -9.245618e-05
+RESPONSE_TYPE910                                                  9.133845e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE32                   -8.741421e-05
+RESPONSE_TYPE67                                                  -8.565931e-05
+RESPONSE_TYPE51                                                  -8.514762e-05
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                              8.481825e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE97                      8.307706e-05
+RESPONSE_TYPE13                                                   8.306928e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE45                      8.303898e-05
+RESPONSE_TYPE911                                                 -8.264834e-05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE99   8.249577e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE41                      8.174938e-05
+RESPONSE_TYPE37                                                  -8.153062e-05
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                        -8.071363e-05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE31             8.061420e-05
+RESPONSE_TYPE44                                                  -8.042395e-05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                   -8.037593e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE50                -8.028642e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE59                      8.023278e-05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE99  7.966154e-05
+RESPONSE_TYPE36                                                  -7.965730e-05
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE41   7.951700e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE31                           7.947667e-05
+RESPONSE_TYPE64                                                  -7.941922e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE49                      7.930104e-05
+EVENT_TYPEFire - Other:ALARM_TO_FD8                              -7.845197e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE89                           7.839271e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE49                      7.837464e-05
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4      7.802222e-05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE99              7.790513e-05
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE21            7.768794e-05
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3      7.709273e-05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE11              7.705289e-05
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                 7.656455e-05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE22       -7.650906e-05
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                         7.574888e-05
+RESPONSE_TYPE47                                                  -7.572666e-05
+EVENT_TYPEFire Waterfront Marina/Industrial                       7.566898e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE25                    7.505721e-05
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE21       -7.488659e-05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                   -7.480476e-05
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                   7.383964e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE92                 7.230051e-05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE36            7.206429e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE94                -7.194727e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE36                            7.142917e-05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE66              7.103317e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE57                          -7.085532e-05
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE66            7.083837e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE99                           -7.074709e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE25                 7.061133e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE26                     -7.045833e-05
+EVENT_TYPEFire - Institution:RESPONSE_TYPE23                     -7.030605e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE57                           -7.028422e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE93                    6.946156e-05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE32            -6.933828e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE24                -6.895376e-05
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                   6.859774e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE26                -6.836909e-05
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3    -6.827868e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE58                    6.809621e-05
+RESPONSE_TYPE45                                                  -6.789099e-05
+EVENT_TYPEFire - Other:RESPONSE_TYPE96                           -6.787623e-05
+RESPONSE_TYPE38                                                   6.746643e-05
+EVENT_TYPEFire - Waterfront                                       6.712748e-05
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE35                -6.651764e-05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE23 -6.649706e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE37                      6.621314e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE25                      6.610691e-05
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE32                -6.602439e-05
+EVENT_TYPEFire - Other:ALARM_TO_FD7                              -6.599699e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE32                     -6.593965e-05
+RESPONSE_TYPE69                                                   6.586206e-05
+EVENT_TYPEFire - Other:ALARM_TO_FD5                              -6.568440e-05
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE23            -6.545709e-05
+RESPONSE_TYPE65                                                  -6.545482e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE58                 6.542507e-05
+RESPONSE_TYPE921                                                  6.538980e-05
+EVENT_TYPEFire - Other:ALARM_TO_FD9                              -6.523153e-05
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE59 -6.476960e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE36                      6.464461e-05
+ALARM_TO_FD10                                                    -6.459505e-05
+RESPONSE_TYPE912                                                  6.409919e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE92                -6.366156e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE31                     -6.280131e-05
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE31             -6.204608e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE35                   -6.095687e-05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE50                 -6.093495e-05
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE34                      -6.057326e-05
+RESPONSE_TYPE54                                                   5.996888e-05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE910                -5.253882e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE37                -4.963675e-05
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE93                 4.946872e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE93                           4.867349e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE98                -4.841369e-05
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE58                      4.674942e-05
+RESPONSE_TYPE12                                                  -4.656244e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE93                      4.487215e-05
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE36                -4.334942e-05
+EVENT_TYPEFire - Waterfront - Highrise                           -4.076857e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE58                      4.009912e-05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE24           2.475890e-05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE31           2.208718e-05
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE23                  1.951362e-05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE3            1.565465e-05
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                    1.415330e-05
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                    1.346507e-05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE3        1.344460e-05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE21       1.182004e-05
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE59           1.169208e-05
+RESPONSE_TYPE698                                                  1.028814e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE98                    1.026840e-05
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE39       9.811639e-06
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE21                       9.806894e-06
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4          9.319580e-06
+EVENT_TYPEFire - Institution:RESPONSE_TYPE65                      8.408899e-06
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2          8.216246e-06
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE66           7.787691e-06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE2                     7.032481e-06
+EVENT_TYPEFire - Institution:RESPONSE_TYPE92                      6.740068e-06
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7         -6.549833e-06
+EVENT_TYPEFire - Residential:RESPONSE_TYPE2                      -5.990077e-06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE42                   -5.880762e-06
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                     -5.603826e-06
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE50                5.528863e-06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE47                    5.141187e-06
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE64            5.071549e-06
+EVENT_TYPEFire - Residential:RESPONSE_TYPE94                     -4.923314e-06
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE913           4.824324e-06
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                    -4.625218e-06
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE24       -4.494711e-06
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE36                    4.379501e-06
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE50  -3.231759e-06
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5          3.158815e-06
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE98                      2.618007e-06
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE36                      2.104076e-06
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE22            1.702130e-06
+EVENT_TYPEFire - Institution:RESPONSE_TYPE2                      -1.651169e-06
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE94                 1.205686e-06
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE98                 1.182149e-06
+EVENT_TYPEFire - Residential:RESPONSE_TYPE698                    -8.886245e-07
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                     7.200649e-07
+EVENT_TYPEFire - Other:RESPONSE_TYPE913                           3.996004e-07
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE92            3.353516e-07
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5               7.030433e-08
+EVENT_TYPEFire - Other:RESPONSE_TYPE50                           -6.681561e-08
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE50             -1.508565e-08
+                                                                      Pr(>|z|)
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE12                    0.000000e+00
+RESPONSE_TYPE22                                                  2.943105e-256
+RESPONSE_TYPE34                                                  4.106780e-191
+RESPONSE_TYPE24                                                  8.421952e-133
+RESPONSE_TYPE3                                                    2.830268e-83
+RESPONSE_TYPE21                                                   9.854496e-79
+RESPONSE_TYPE29                                                   6.538080e-60
+RESPONSE_TYPE33                                                   5.561031e-49
+INCIDENT_YEAR2016                                                 2.699545e-46
+INCIDENT_YEAR2015                                                 3.263715e-42
+INCIDENT_YEAR2014                                                 1.288278e-40
+EVENT_TYPEFire - Grass/Rubbish                                    1.809468e-39
+INCIDENT_YEAR2013                                                 3.096467e-39
+RESPONSE_TYPE32                                                   2.966310e-33
+RESPONSE_TYPE39                                                   8.221480e-33
+RESPONSE_TYPE31                                                   1.933095e-19
+RESPONSE_TYPE35                                                   5.727982e-16
+RESPONSE_TYPE49                                                   2.506652e-15
+EVENT_TYPEFire - Residential                                      1.208414e-12
+EVENT_TYPEFire - Residential:RESPONSE_TYPE34                      1.592419e-12
+RESPONSE_TYPE23                                                   4.416613e-12
+EVENT_TYPEFire - Residential:RESPONSE_TYPE21                      1.500382e-10
+EVENT_TYPEFire - Residential:RESPONSE_TYPE22                      8.628116e-10
+RESPONSE_TYPE99                                                   1.657074e-09
+INCIDENT_YEAR2012                                                 6.189013e-09
+(Intercept)                                                       1.118953e-08
+RESPONSE_TYPE11                                                   1.709725e-07
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE3                     1.728178e-07
+RESPONSE_TYPE96                                                   3.260914e-07
+RESPONSE_TYPE41                                                   3.690343e-07
+RESPONSE_TYPE89                                                   2.099590e-06
+EVENT_TYPEFire - Residential:RESPONSE_TYPE3                       2.343601e-06
+EVENT_TYPEFire - Residential:RESPONSE_TYPE24                      3.014635e-06
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE34                6.890981e-06
+RESPONSE_TYPE97                                                   1.451532e-05
+RESPONSE_TYPE26                                                   1.703797e-05
+EVENT_TYPEFire - Residential:RESPONSE_TYPE39                      3.542101e-05
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE34                    6.816915e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE3                            8.256544e-05
+EVENT_TYPEFire - Subway:RESPONSE_TYPE24                           1.118484e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE29                           1.483479e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE29                      1.861513e-04
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE22  1.953685e-04
+RESPONSE_TYPE59                                                   2.520470e-04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE21                4.005207e-04
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE29                4.076069e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE33                           4.296797e-04
+EVENT_TYPEFire - Residential:RESPONSE_TYPE49                      4.575945e-04
+EVENT_TYPEFire - Subway:RESPONSE_TYPE34                           6.289676e-04
+INCIDENT_MONTHNovember                                            1.222261e-03
+RESPONSE_TYPE57                                                   1.373044e-03
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE34  3.040029e-03
+EVENT_TYPEFire - Subway:RESPONSE_TYPE21                           4.671947e-03
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE21            7.763419e-03
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD9               7.932744e-03
+EVENT_TYPEFire - Subway:RESPONSE_TYPE32                           1.007424e-02
+EVENT_TYPEFire - Subway:RESPONSE_TYPE39                           1.068367e-02
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE39                1.456150e-02
+INITIAL_UNIT_PERSONNEL                                            1.654907e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE34            1.783251e-02
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE29                    1.785041e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE49            2.221682e-02
+INCIDENT_MONTHApril                                               2.281409e-02
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE41            2.371773e-02
+EST_KM                                                            2.462592e-02
+EVENT_TYPEFire - Institution:ALARM_TO_FD4                         2.572429e-02
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD2               2.598849e-02
+EVENT_TYPEFire - Subway:RESPONSE_TYPE96                           2.752292e-02
+EVENT_TYPEFire - Commercial/Industrial                            2.905302e-02
+RESPONSE_TYPE66                                                   3.546095e-02
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE32                3.635732e-02
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE29                      4.259352e-02
+EVENT_TYPEFire - Institution:RESPONSE_TYPE29                      4.276088e-02
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD8                       4.281433e-02
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE11                      4.397056e-02
+INCIDENT_MONTHJuly                                                4.399920e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE89                      4.817055e-02
+ALARM_TO_FD5                                                      4.904384e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE31                      5.149193e-02
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE3   5.915095e-02
+ALARM_TO_FD4                                                      5.944140e-02
+EVENT_TYPEFire - Residential:RESPONSE_TYPE11                      6.778687e-02
+INCIDENT_MONTHSeptember                                           7.974239e-02
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE24              8.146975e-02
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE34                      8.504716e-02
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE23                    9.054807e-02
+EVENT_TYPEFire - Institution:RESPONSE_TYPE33                      9.624984e-02
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE39  1.045298e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE21                      1.068529e-01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE31                 1.138959e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE39            1.166089e-01
+EVENT_TYPEFire - Subway - Downtown                                1.188733e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE57                      1.195034e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE35  1.202079e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE97                      1.213910e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD8                              1.276743e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE99                      1.282975e-01
+EVENT_TYPEFire - Hydro Vault                                      1.435201e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE31  1.521086e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE22             1.532260e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE24  1.571794e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE33                      1.575325e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE32                      1.677964e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD4                              1.716521e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD9                         1.734620e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD5              1.825032e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE99            1.886915e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE57                 1.899643e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE34   1.903172e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD3               1.939337e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE35                      1.955989e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD2                    2.002566e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD3                         2.052738e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE33  2.054417e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown                   2.326633e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE21   2.341061e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD7               2.435060e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE59                      2.455920e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD5                    2.495698e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE3                       2.538341e-01
+ALARM_TO_FD9                                                      2.551609e-01
+EVENT_TYPEFire - Highrise Residential - Downtown                  2.606936e-01
+EVENT_TYPEFire - Subway                                           2.616826e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD4               2.633570e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE22            2.665868e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD5                 2.699299e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE96                      2.705118e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE97            2.747553e-01
+INCIDENT_DAYWednesday                                             2.783492e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD4                       2.786220e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE3              2.801341e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE23            2.824362e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE24             2.847809e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE32                      2.907648e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE24   2.965160e-01
+ALARM_TO_FD8                                                      2.972711e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE59             2.987161e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE35                           3.141672e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE96   3.190526e-01
+INCIDENT_MONTHMay                                                 3.193568e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE99                 3.243022e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD7                         3.315658e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE3    3.373133e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE34                      3.395349e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD7                       3.518461e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE33             3.522783e-01
+INCIDENT_MONTHJune                                                3.551044e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD2                              3.595676e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE97                           3.719741e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD2                       3.763713e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD2      3.923953e-01
+EVENT_TYPEFire - Institution                                      4.011585e-01
+INCIDENT_MONTHAugust                                              4.306047e-01
+INCIDENT_MONTHMarch                                               4.400396e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD4                         4.402756e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE29  4.427429e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD2                         4.432694e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE26                      4.456470e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE26                           4.620161e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE29                            4.710677e-01
+INCIDENT_MONTHDecember                                            4.760948e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE3                             4.810468e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE97                            4.862096e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE21                            4.910530e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD5                4.955092e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE29   4.988260e-01
+EVENT_TYPEFire - Transformer/Pole                                 4.993900e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE59                    4.997843e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE29            4.999394e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE21  5.035695e-01
+INCIDENT_DAYFriday                                                5.092202e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE31            5.178169e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD4                         5.210405e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE31                      5.233635e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE59                      5.317505e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD5     5.496697e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD4     5.555187e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE39                      5.638366e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE26            5.657774e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD4                    5.712620e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE49                            5.734253e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD9                       5.773582e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE24            5.789435e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE23                      5.826727e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD5      5.905826e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE34                            5.925332e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE57                      5.999790e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE11            6.023112e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE99                           6.050891e-01
+EVENT_TYPEFire - Alarm Waterfront                                 6.118999e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE22                      6.170227e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE35            6.187076e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD5                         6.198025e-01
+INCIDENT_DAYTuesday                                               6.267829e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE3             6.286866e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD3                              6.313763e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE35                      6.315249e-01
+ALARM_TO_FD2                                                      6.440738e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE39                      6.450228e-01
+ALARM_TO_FD3                                                      6.683002e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE21              6.686670e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE11                      6.756585e-01
+ALARM_TO_FD7                                                      6.971739e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD2                               6.993715e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE89                    7.047647e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE33        7.074871e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE62                 7.156057e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE62            7.156057e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE62                    7.156057e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE62                 7.156057e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE62                      7.156057e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE62                      7.156057e-01
+RESPONSE_TYPE62                                                   7.156057e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE23                            7.175033e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD4                7.192648e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD2                         7.244162e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD11                   7.312867e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD11                      7.312867e-01
+ALARM_TO_FD11                                                     7.312867e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD11                   7.312867e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE3                       7.344616e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE33   7.392314e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE22   7.525464e-01
+EVENT_TYPEFire - Other                                            7.561420e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE32            7.705417e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE39   7.739891e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE33            7.762117e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD5               7.820840e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE31   7.870986e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD5                         7.891478e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD8                    7.892803e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE21             7.953609e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD2     7.969007e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE53                 8.001120e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE53                      8.001120e-01
+RESPONSE_TYPE53                                                   8.001120e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE53            8.001120e-01
+EVENT_TYPEFire - Institution - School                             8.050281e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE49  8.073205e-01
+EVENT_TYPEFire - Institution - School:ALARM_TO_FD2                8.076010e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD3                   8.109101e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD3                       8.155302e-01
+AID_TO_FROM_OTHER_DEPTS4                                          8.165380e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE11   8.365212e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE39             8.472855e-01
+INCIDENT_DAYThursday                                              8.516460e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD3                         8.744479e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE24                      8.759909e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE21                      8.858267e-01
+EVENT_TYPEFire - Highrise Commercial                              8.863435e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD4                               8.941444e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE35   8.992496e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD8                         9.075146e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD2                    9.092893e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD5                         9.183432e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD2                         9.220835e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE96                      9.240863e-01
+INCIDENT_DAYMonday                                                9.256402e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE34             9.430111e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE49              9.487980e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE59            9.514811e-01
+INCIDENT_MONTHFebruary                                            9.530373e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD5                   9.538757e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD5                              9.701007e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD4                    9.718216e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE34              9.729503e-01
+INCIDENT_DAYSaturday                                              9.766430e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE97                 9.983058e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE24                    9.990388e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE97                    9.990894e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE34                 9.991811e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE39                    9.994110e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE96                    9.994684e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE99                    9.995366e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD5                       9.995819e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE29                 9.995868e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE33                    9.995921e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD7                    9.996014e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE21                 9.996172e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE3                  9.996274e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE21                    9.996652e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE59                 9.996791e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE26                    9.996856e-01
+EVENT_TYPEFire - Outside Storage                                  9.997068e-01
+EVENT_TYPEFire - Institution - Downtown                           9.997269e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE32  9.997382e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE96                 9.997391e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE96                  9.997431e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE29           9.997533e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE39                 9.997567e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE21           9.997649e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE22           9.997652e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE32           9.997675e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE34           9.997718e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE3                   9.997719e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD3                    9.997762e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE35           9.997778e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE3                 9.997785e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE32        9.997856e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD9                    9.997972e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD3                    9.998059e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE57                    9.998074e-01
+RESPONSE_TYPE50                                                   9.998143e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE22                    9.998245e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE50                           9.998261e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE23                           9.998274e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD8                    9.998311e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE50                      9.998332e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE50                      9.998341e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE25            9.998367e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE50            9.998416e-01
+RESPONSE_TYPE43                                                   9.998424e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE23                 9.998426e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE50                    9.998442e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE89                 9.998463e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE49                 9.998463e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE33           9.998472e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE22                 9.998485e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE50                      9.998501e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE96                 9.998522e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE89                 9.998538e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE21                 9.998539e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE24                 9.998547e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE32   9.998565e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE59                 9.998569e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE97                 9.998585e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE29                 9.998595e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE11                 9.998602e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE50                 9.998607e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE38                 9.998612e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE24                9.998626e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE31        9.998643e-01
+RESPONSE_TYPE25                                                   9.998659e-01
+RESPONSE_TYPE93                                                   9.998687e-01
+RESPONSE_TYPE94                                                   9.998689e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE93            9.998722e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE2                  9.998728e-01
+RESPONSE_TYPE913                                                  9.998734e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE24                            9.998743e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE96            9.998745e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE2             9.998758e-01
+RESPONSE_TYPE2                                                    9.998767e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE57                 9.998772e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE43              9.998790e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE2                       9.998802e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE24                      9.998815e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE94                           9.998815e-01
+RESPONSE_TYPE58                                                   9.998820e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE94                    9.998825e-01
+EVENT_TYPEFire - Institution - Downtown:ALARM_TO_FD2              9.998829e-01
+RESPONSE_TYPE92                                                   9.998835e-01
+RESPONSE_TYPE98                                                   9.998839e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE66                 9.998850e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE50  9.998858e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE39                            9.998861e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE29              9.998864e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE38                      9.998865e-01
+RESPONSE_TYPE42                                                   9.998866e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE94            9.998884e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE97                  9.998903e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE3                  9.998904e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE99           9.998905e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE29                  9.998910e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE92                    9.998923e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE98                9.998933e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE24                  9.998948e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE98                           9.998962e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE34                  9.998963e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE92                      9.998965e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD7                    9.998981e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE31                    9.998990e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE99                      9.999003e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE3               9.999011e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE11  9.999024e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE38                 9.999025e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE22              9.999038e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE32              9.999048e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD2                 9.999048e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE98                      9.999049e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:ALARM_TO_FD5           9.999054e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE99                      9.999058e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE38                    9.999059e-01
+EVENT_TYPEFire - Commercial/Industrial:ALARM_TO_FD6               9.999077e-01
+RESPONSE_TYPE46                                                   9.999082e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE13            9.999087e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE26                 9.999118e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD6                       9.999129e-01
+ALARM_TO_FD6                                                      9.999131e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE23                 9.999131e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE49   9.999132e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE39                 9.999134e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE31                 9.999134e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE99                 9.999143e-01
+EVENT_TYPEFire - Residential:ALARM_TO_FD6                         9.999146e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE89                            9.999153e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE34                 9.999153e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise                        9.999154e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE38            9.999156e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE32                 9.999160e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE26   9.999181e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE31                 9.999189e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE32                 9.999190e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE89            9.999192e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE35                 9.999199e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE29             9.999203e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE33                 9.999209e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE97                      9.999217e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD3                               9.999217e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE26                            9.999218e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE33                            9.999219e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE47            9.999242e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE96  9.999247e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE33                      9.999250e-01
+EVENT_TYPEFire Alarm - Check Call                                 9.999252e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE96                      9.999262e-01
+RESPONSE_TYPE910                                                  9.999271e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE32                    9.999303e-01
+RESPONSE_TYPE67                                                   9.999317e-01
+RESPONSE_TYPE51                                                   9.999321e-01
+EVENT_TYPEFire - Subway:ALARM_TO_FD9                              9.999323e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE97                      9.999337e-01
+RESPONSE_TYPE13                                                   9.999337e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE45                      9.999337e-01
+RESPONSE_TYPE911                                                  9.999341e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE99   9.999342e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE41                      9.999348e-01
+RESPONSE_TYPE37                                                   9.999349e-01
+EVENT_TYPEFire - Hydro Vault:ALARM_TO_FD8                         9.999356e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE31             9.999357e-01
+RESPONSE_TYPE44                                                   9.999358e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD9                    9.999359e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE50                 9.999359e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE59                      9.999360e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE99  9.999364e-01
+RESPONSE_TYPE36                                                   9.999364e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE41   9.999366e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE31                           9.999366e-01
+RESPONSE_TYPE64                                                   9.999366e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE49                      9.999367e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD8                               9.999374e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE89                           9.999375e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE49                      9.999375e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD4      9.999377e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE99              9.999378e-01
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE21            9.999380e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:ALARM_TO_FD3      9.999385e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE11              9.999385e-01
+EVENT_TYPEFire - Highrise Commercial:ALARM_TO_FD3                 9.999389e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE22        9.999390e-01
+EVENT_TYPEFire - Institution:ALARM_TO_FD9                         9.999396e-01
+RESPONSE_TYPE47                                                   9.999396e-01
+EVENT_TYPEFire Waterfront Marina/Industrial                       9.999396e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE25                    9.999401e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE21        9.999402e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD5                    9.999403e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD2                   9.999411e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE92                 9.999423e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE36            9.999425e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE94                 9.999426e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE36                            9.999430e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE66              9.999433e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE57                           9.999435e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE66            9.999435e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE99                            9.999436e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE25                 9.999437e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE26                      9.999438e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE23                      9.999439e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE57                            9.999439e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE93                    9.999446e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE32             9.999447e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE24                 9.999450e-01
+EVENT_TYPEFire - Subway - Downtown:ALARM_TO_FD4                   9.999453e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE26                 9.999454e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:ALARM_TO_FD3     9.999455e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE58                    9.999457e-01
+RESPONSE_TYPE45                                                   9.999458e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE96                            9.999458e-01
+RESPONSE_TYPE38                                                   9.999462e-01
+EVENT_TYPEFire - Waterfront                                       9.999464e-01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE35                 9.999469e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE23  9.999469e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE37                      9.999472e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE25                      9.999473e-01
+EVENT_TYPEFire - Alarm Waterfront:RESPONSE_TYPE32                 9.999473e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD7                               9.999473e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE32                      9.999474e-01
+RESPONSE_TYPE69                                                   9.999474e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD5                               9.999476e-01
+EVENT_TYPEFire - Institution - School:RESPONSE_TYPE23             9.999478e-01
+RESPONSE_TYPE65                                                   9.999478e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE58                 9.999478e-01
+RESPONSE_TYPE921                                                  9.999478e-01
+EVENT_TYPEFire - Other:ALARM_TO_FD9                               9.999480e-01
+EVENT_TYPEFire - Highrise Residential - Downtown:RESPONSE_TYPE59  9.999483e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE36                      9.999484e-01
+ALARM_TO_FD10                                                     9.999485e-01
+RESPONSE_TYPE912                                                  9.999489e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE92                 9.999492e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE31                      9.999499e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE31              9.999505e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE35                    9.999514e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE50                  9.999514e-01
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE34                       9.999517e-01
+RESPONSE_TYPE54                                                   9.999522e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE910                 9.999581e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE37                 9.999604e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE93                 9.999605e-01
+EVENT_TYPEFire - Subway:RESPONSE_TYPE93                           9.999612e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE98                 9.999614e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE58                      9.999627e-01
+RESPONSE_TYPE12                                                   9.999628e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE93                      9.999642e-01
+EVENT_TYPEFire Alarm - Check Call:RESPONSE_TYPE36                 9.999654e-01
+EVENT_TYPEFire - Waterfront - Highrise                            9.999675e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE58                      9.999680e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE24           9.999802e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE31           9.999824e-01
+EVENT_TYPEFire - Outside Storage:RESPONSE_TYPE23                  9.999844e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE3            9.999875e-01
+EVENT_TYPEFire - Transformer/Pole:ALARM_TO_FD6                    9.999887e-01
+EVENT_TYPEFire Alarm - Check Call:ALARM_TO_FD6                    9.999893e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE3        9.999893e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE21       9.999906e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE59           9.999907e-01
+RESPONSE_TYPE698                                                  9.999918e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE98                    9.999918e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:RESPONSE_TYPE39       9.999922e-01
+EVENT_TYPEFire - Waterfront:RESPONSE_TYPE21                       9.999922e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD4          9.999926e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE65                      9.999933e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD2          9.999934e-01
+EVENT_TYPEFire - Institution - Downtown:RESPONSE_TYPE66           9.999938e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE2                     9.999944e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE92                      9.999946e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD7          9.999948e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE2                       9.999952e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE42                    9.999953e-01
+EVENT_TYPEFire - Grass/Rubbish:ALARM_TO_FD10                      9.999955e-01
+EVENT_TYPEFire - Subway - Downtown:RESPONSE_TYPE50                9.999956e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE47                    9.999959e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE64            9.999960e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE94                      9.999961e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE913           9.999962e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD4                     9.999963e-01
+EVENT_TYPEFire - Alarm Waterfront Highrise:RESPONSE_TYPE24        9.999964e-01
+EVENT_TYPEFire - Grass/Rubbish:RESPONSE_TYPE36                    9.999965e-01
+EVENT_TYPEFire - Highrise Commercial - Downtown:RESPONSE_TYPE50   9.999974e-01
+EVENT_TYPEFire Waterfront Marina/Industrial:ALARM_TO_FD5          9.999975e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE98                      9.999979e-01
+EVENT_TYPEFire - Hydro Vault:RESPONSE_TYPE36                      9.999983e-01
+EVENT_TYPEFire - Waterfront - Highrise:RESPONSE_TYPE22            9.999986e-01
+EVENT_TYPEFire - Institution:RESPONSE_TYPE2                       9.999987e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE94                 9.999990e-01
+EVENT_TYPEFire - Transformer/Pole:RESPONSE_TYPE98                 9.999991e-01
+EVENT_TYPEFire - Residential:RESPONSE_TYPE698                     9.999993e-01
+EVENT_TYPEFire - Outside Storage:ALARM_TO_FD2                     9.999994e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE913                           9.999997e-01
+EVENT_TYPEFire - Commercial/Industrial:RESPONSE_TYPE92            9.999997e-01
+EVENT_TYPEFire - Waterfront - Highrise:ALARM_TO_FD5               9.999999e-01
+EVENT_TYPEFire - Other:RESPONSE_TYPE50                            9.999999e-01
+EVENT_TYPEFire - Highrise Commercial:RESPONSE_TYPE50              1.000000e+00

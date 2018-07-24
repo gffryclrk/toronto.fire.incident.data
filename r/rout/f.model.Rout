@@ -1,0 +1,94 @@
+Last login: Sat Jul 21 15:10:44 on ttys000
+clarks-MacBook-Pro:~ clark$ cd /Users/clark/Documents/personal/data/toronto.fire-incident-2011-2015/
+clarks-MacBook-Pro:toronto.fire-incident-2011-2015 clark$ ls
+OFMCodes				docs					sh
+README.md				html					xls
+SIR-XML-Definitions-2016.xlsx		img					xml
+SIR-XML-Definitions-OpenData.xlsx	ofmcodes2009.pdf			xq
+csv					r					zip
+clarks-MacBook-Pro:toronto.fire-incident-2011-2015 clark$ R
+
+R version 3.5.0 (2018-04-23) -- "Joy in Playing"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> load("~/Documents/personal/data/toronto.fire-incident-2011-2015/r/dataprep.RData")
+> ls()
+[1] "c.model"  "FIRES"    "full_idx" "I"        "idx"      "MEDICAL"  "rules.df"
+[8] "tta"      "y"
+> f.model <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, family=binomial(link='logit'), data = I[full_idx$train,])
+Warning message:
+glm.fit: fitted probabilities numerically 0 or 1 occurred
+> save.image("~/Documents/personal/data/toronto.fire-incident-2011-2015/r/d.model_logistic.RData")
+> custom.summaries <- function(cm){
++   # This will only work (properly) with a 2 way confusion matrix
++   cm <- as.matrix(cm)
++   if(mean(c(2,2) == dim(cm)) != 1) stop("This function presently only works with 2x2 Confusion Matrix (sorry!)")
++   summaries <- list()
++   summaries$ACCURACY <- (cm[1,1] + cm[2,2]) / sum(cm) # Accuracy
++   summaries$FNR <- cm[1,2]/(cm[1,2] + cm[2,2]) # FN Rate
++   summaries$PRECISION <- cm[2,2]/(cm[2,2] + cm[2,1]) # Precision
++   summaries$RECALL <- cm[2,2]/(cm[2,2] + cm[1,2]) # Recall
++   summaries$F1Score <- (2 * cm[2,2]) / ((2 * cm[2,2]) + cm[2,1] + cm[1,2]) # F1-Score
++   return(summaries)
++ }
+> predict.logistic <- function(model, test){
++   y <- data.frame(prob=vector(mode='numeric',length=nrow(test)))
++   y$prob <- predict(model, newdata=test)
++   y$pred <- ifelse(y$prob > 0.5,1,0)
++   # y$CRITICAL <- I[idx$cv, 'CRITICAL']
++   return(y)
++ }
+> full.logistic.cm <- table(predict.logistic(f.model, I[full_idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[full_idx$cv, 'CRITICAL'])
+Error in eval(predvars, data, env) : object 'EVENT_TYPE' not found
+> full.logistic.cm <- table(predict.logistic(f.model, I[full_idx$cv, c('EVENT_TYPE', 'EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[full_idx$cv, 'CRITICAL'])
+Error in model.frame.default(Terms, newdata, na.action = na.action, xlev = object$xlevels) :
+  factor EVENT_TYPE has new levels Island Plane Crash/Fire
+> table(I[full_idx$train, 'EVENT_TYPE'])[table(I[full_idx$train, 'EVENT_TYPE']) ==0]
+named integer(0)
+> which(idx_full$train == 61811)
+Error in which(idx_full$train == 61811) : object 'idx_full' not found
+> which(full_idx$train == 61811)
+[1] 286893
+> which(full_idx$cv == 61811)
+integer(0)
+> full.logistic.cm <- table(predict.logistic(f.model, I[full_idx$cv[-61811], c('EVENT_TYPE', 'EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[full_idx$cv[-61811], 'CRITICAL'])
+Warning message:
+In predict.lm(object, newdata, se.fit, scale = 1, type = ifelse(type ==  :
+  prediction from a rank-deficient fit may be misleading
+> full.logistic.cm
+
+         0      1
+  0 126537   3109
+  1    287   2391
+> (custom.summaries(full.logistic.cm))
+$ACCURACY
+[1] 0.9743357
+
+$FNR
+[1] 0.5652727
+
+$PRECISION
+[1] 0.8928305
+
+$RECALL
+[1] 0.4347273
+
+$F1Score
+[1] 0.5847395
+
+>

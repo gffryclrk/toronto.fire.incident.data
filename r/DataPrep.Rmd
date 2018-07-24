@@ -124,7 +124,10 @@ I$INCIDENT_DAY <- factor(x = format(I$INCIDENT_DATE, '%A'), levels=c("Sunday","M
 
 I$INCIDENT_MONTH <- factor(x = format(I$INCIDENT_DATE, '%B'),
                            levels = c('January','February','March','April','May','June','July',
-                                      'August', 'September','November','December'))
+                                      'August', 'September','October','November','December'))
+
+# I$INCIDENT_MONTH <- format(I$INCIDENT_DATE, '%B')
+# I$INCIDENT_MONTH
 I$INCIDENT_YEAR <- factor(x = format(I$INCIDENT_DATE, '%Y'), levels=c(2011,2012,2013,2014,2015,2016))
 ```
 
@@ -323,6 +326,8 @@ I[I$RESPONSE_TYPE %in% c(53,41:51,54,57:59), 'RESPONSE_GROUP'] <- "G"
 I[I$RESPONSE_TYPE %in% c(61:69, 601:605,698,699), 'RESPONSE_GROUP'] <- "H"
 I[I$RESPONSE_TYPE %in% c(701:703,71,73:76,82,84,85,86,88,89,898,899), 'RESPONSE_GROUP'] <- "I"
 I[I$RESPONSE_TYPE %in% c(921,922,910:913,92:99), 'RESPONSE_GROUP'] <- "J"
+
+I$RESPONSE_GROUP <- factor(I$RESPONSE_GROUP, levels=LETTERS[1:10])
 
 ```
 
@@ -617,13 +622,7 @@ idx$cf[2,2]/(idx$cf[2,2] + idx$cf[1,2]) # Recall: 0.6887794
 (2 * idx$cf[2,2]) / ((2 * idx$cf[2,2]) + idx$cf[2,1] + idx$cf[1,2]) # F1-Score: 0.7825151
 
 
-predict.logistic <- function(model, test, prob=0.5){
-  y <- data.frame(prob=vector(mode='numeric',length=nrow(test)))
-  y$prob <- predict(model, newdata=test)
-  y$pred <- ifelse(y$prob > prob,1,0)
-  # y$CRITICAL <- I[idx$cv, 'CRITICAL']
-  return(y)
-}
+
 
 # I was curious as to whether or not EVENT_TYPE would make a difference: Nope. 
 e.model <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + MONTH + YEAR, family=binomial(link='logit'), data = I[idx$train,])
@@ -703,6 +702,7 @@ I[full_idx$cv[-which(full_idx$cv %in% which(I$EVENT_TYPE_CD %in% c('ISPCF',NA)))
 
 
 df.ROC <- rbind(data.frame(predictor = predict(d.model, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=1), data.frame(predictor = predict(lr.i.model_a, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=2), data.frame(predictor = predict(lr.i.model_b, I[idx$cv,]), known.truth = I[idx$cv, 'CRITICAL'], model=3))
+
 ```
 
 ## Summaries
@@ -721,21 +721,33 @@ custom.summaries <- function(cm){
   summaries$F1Score <- (2 * cm[2,2]) / ((2 * cm[2,2]) + cm[2,1] + cm[1,2]) # F1-Score
   return(summaries)
 }
+
+predict.logistic <- function(model, test, prob=0.5){
+  y <- data.frame(prob=vector(mode='numeric',length=nrow(test)))
+  y$prob <- predict(model, newdata=test)
+  y$pred <- ifelse(y$prob > prob,1,0)
+  # y$CRITICAL <- I[idx$cv, 'CRITICAL']
+  return(y)
+}
 ```
 
+## K-fold cross validation
+I've run into a sticky problem. In order to do K-Fold cross validation (as opposed to Hold One Out) the training set needs to have at least one observation from every level of factor. 
 
-### KNN 
-Doesn't work because of categorical variables (duh?)
-Maybe Naive Bayes or Decision Tree
 ```{r}
-# library(class)
-d.model.knn <- knn(
-  train=I[idx$train, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')],
-  test=I[idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','MONTH','YEAR')],
-  cl=as.numeric(I[idx$train, 'CRITICAL']),
-  k=3
-)
+FireSet <- I[I$EVENT_GROUP %in% 'Fire', ]
+source("refold.models.R")
+metrics <- refold.models(FireSet)
+
+source("refold.nb.R")
+metric.nb <- refold.nb(FireSet)
+
+source("refold.rf.R")
+metric.rf <- refold.rf(FireSet)
+
 ```
+
+
 
 ### Naive Bayes
 ```{r}
@@ -768,5 +780,40 @@ f.model.nb <- naiveBayes(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE 
 nb$cm <- table(predict(
   f.model.nb,
   I[full_idx$cv, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')]), I[full_idx$cv, 'CRITICAL'])
+```
+
+## Random Forest
+
+```{r}
+# install.packages("randomForest")
+# library(randomForest)
+
+## There's a max of 53 levels per category for randomForest(). I've opted to drop levels without values in EVENT_TYPE_CD and
+## use RESPONSE_GROUP
+
+# ForestSet.train <- I[idx$train,]
+# ForestSet.train$EVENT_TYPE_CD <- droplevels(ForestSet.train$EVENT_TYPE_CD)
+
+I$EVENT_TYPE_CD.c <- as.character(I$EVENT_TYPE_CD)
+I$EVENT_TYPE_CD.dl <- factor(I$EVENT_TYPE_CD, levels=levels(droplevels(I[I$EVENT_GROUP %in% 'Fire', 'EVENT_TYPE_CD'])))
+
+d.model.rf <- randomForest(
+  CRITICAL ~ EVENT_TYPE_CD.dl + ALARM_TO_FD + RESPONSE_GROUP + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, 
+  I[idx$train,]
+  )
+
+I$ALARM_TO_FD.o <- I$ALARM_TO_FD
+# I$ALARM_TO_FD <- factor(I$ALARM_TO_FD, levels=levels(I$ALARM_TO_FD)[-length(levels(I$ALARM_TO_FD))])
+I$ALARM_TO_FD <- factor(I$ALARM_TO_FD.o)
+I$AID_TO_FROM_OTHER_DEPTS.o <- I$AID_TO_FROM_OTHER_DEPTS 
+# I$AID_TO_FROM_OTHER_DEPTS <- factor(I$AID_TO_FROM_OTHER_DEPTS, levels=levels(I$AID_TO_FROM_OTHER_DEPTS)[-length(levels(I$AID_TO_FROM_OTHER_DEPTS))])
+I$AID_TO_FROM_OTHER_DEPTS <- factor(I$AID_TO_FROM_OTHER_DEPTS.o)
+# I$EST_KM.f <- factor(I$EST_KM)
+I$EST_KM.f <- cut(I$EST_KM, breaks=seq(0,100, by=2))
+I$INITIAL_UNIT_PERSONNEL.f <- factor(I$INITIAL_UNIT_PERSONNEL)
+
+y.rf <- predict(d.model.rf, I[idx$cv,c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])
+table(y.rf, I[idx$cv, 'CRITICAL'])
+custom.summaries(table(y.rf, I[idx$cv, 'CRITICAL']))
 ```
 

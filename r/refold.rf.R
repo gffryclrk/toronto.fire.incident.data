@@ -1,21 +1,39 @@
 refold.rf <- function(F){
   # require(e1071)
-  source("useful_fn.R")
+  # library()
+  require(randomForest)
+  source("r/useful_fn.R")
   metrics <- data.frame(ACCURACY=double(), FNR=double(), PRECISION=double(), RECALL=double(), F1Score=double())
-  # F$EST_KM.f <- factor(F$EST_KM)
-  # F$INITIAL_UNIT_PERSONNEL.f <- factor(F$INITIAL_UNIT_PERSONNEL)
+  F$EST_KM.f <- factor(F$EST_KM)
+  F$INITIAL_UNIT_PERSONNEL.f <- factor(F$INITIAL_UNIT_PERSONNEL)
+  F$EVENT_TYPE_CD.dl <- factor(F$EVENT_TYPE_CD, levels=levels(droplevels(F[F$EVENT_GROUP %in% 'Fire', 'EVENT_TYPE_CD'])))
+  F$RESPONSE_GROUP <- factor(F$RESPONSE_GROUP, levels=LETTERS[1:10]) 
+  F$ALARM_TO_FD <- factor(F$ALARM_TO_FD)
+  # F$INITIAL_CALL_HOUR <- factor(F$INITIAL_CALL_HOUR)
+  # F$INITIAL_CALL_MIN <- factor(F$INITIAL_CALL_MIN)
+  F$INIITAL_CALL_HOUR <- cut(F$INITIAL_CALL_HOUR, 30)
+  F$INITIAL_CALL_MIN <- cut(F$INITIAL_CALL_HOUR, 30)
+  
+  l <- list()
   
   folds <- 10
   for(n in (1:folds)){
-      sets <- repsample(F, c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR'))
-      
-      # g.model <- glm(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, family=binomial(link='logit'), data = F[sets$train,])
-      
+      # sets <- repsample(F, c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR'))
+      # sets <- repsample(F, c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR'))
+      sets <- repsample(F, c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INITIAL_CALL_HOUR','INITIAL_CALL_MIN'))
       
       # g.model <- naiveBayes(CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + AID_TO_FROM_OTHER_DEPTS + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, data = F[sets$train,])
       
+      # g.model <- randomForest(
+      #   CRITICAL ~ EVENT_TYPE_CD.dl + ALARM_TO_FD + RESPONSE_GROUP + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, 
+      #   F[sets$train,]
+      # )
+      # g.model <- randomForest(
+      #   CRITICAL ~ EVENT_TYPE_CD.dl + ALARM_TO_FD + RESPONSE_GROUP + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, 
+      #   F[sets$train,]
+      # )
       g.model <- randomForest(
-        CRITICAL ~ EVENT_TYPE_CD.dl + ALARM_TO_FD + RESPONSE_GROUP + AID_TO_FROM_OTHER_DEPTS + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR, 
+        CRITICAL ~ EVENT_TYPE_CD.dl + ALARM_TO_FD + RESPONSE_GROUP + EST_KM.f + INITIAL_UNIT_PERSONNEL.f + INCIDENT_DAY + INCIDENT_MONTH + INITIAL_CALL_HOUR + INITIAL_CALL_MIN, 
         F[sets$train,]
       )
       
@@ -24,13 +42,16 @@ refold.rf <- function(F){
         # predict(
         #   g.model, 
         #   F[sets$test, c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_TYPE','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])
-        predict(g.model, F[sets$test,c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])
+        predict(g.model, F[sets$test,c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INITIAL_CALL_HOUR','INITIAL_CALL_MIN')])
       }, error = function(e){
         return("error")
       })
       if(!is.factor(y)) next;
       
+      cat("Prediction ", n, " complete.\n")
+      
       g.cm <- table(y, F[sets$test, 'CRITICAL'])
+      l[[n]] <- g.cm
       
       g.stats <- custom.summaries(g.cm)
       
@@ -43,6 +64,9 @@ refold.rf <- function(F){
       
     }
 
-  return(metrics)
+  # return(metrics)
+  
+  l$metrics <- metrics
+  return(l)
   
 }

@@ -1,0 +1,7 @@
+These three outputs, from Logistic Regression, Naive Bayes, and Random Forest, are ten runs of their corresponding "refold" functions (in R directory). 
+
+The 10 runs are with the following formula:
+
+CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR
+
+In the case of Random Forest, factor levels and groupings had to be adjusted in order to make model training and predictions possible.

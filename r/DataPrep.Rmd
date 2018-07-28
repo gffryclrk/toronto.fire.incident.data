@@ -705,6 +705,18 @@ df.ROC <- rbind(data.frame(predictor = predict(d.model, I[idx$cv,]), known.truth
 
 ```
 
+## LR With Interaction II
+When I originally did the LR with Interaction I was using AID_TO_FROM_OTHER_DEPTS which I later noticed is filled out per the OFM Standard Incidents Code list. There's 0 NA values so I think this feature is inputted by the CAD system. However, since it's odd, I'm going to try a model or two without it.
+
+```{r}
+lr.i.model_a2 <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_TYPE:ALARM_TO_FD, family=binomial(link='logit'), data = I[idx$train,])
+
+table(predict.logistic(lr.i.model_a, I[idx$cv, c('EVENT_TYPE','EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])$pred, I[idx$cv, 'CRITICAL'])
+
+lr.i.model_b2 <- glm(CRITICAL ~ EVENT_TYPE + EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INCIDENT_YEAR + EVENT_TYPE:ALARM_TO_FD + EVENT_TYPE:RESPONSE_TYPE, family=binomial(link='logit'), data = I[idx$train,])
+```
+
+
 ## Summaries
 I keep copy/pasting the above FN, Precision, Recall summaries and it's driving me bonkers.
 
@@ -737,7 +749,7 @@ I've run into a sticky problem. In order to do K-Fold cross validation (as oppos
 ```{r}
 FireSet <- I[I$EVENT_GROUP %in% 'Fire', ]
 source("refold.models.R")
-metrics <- refold.models(FireSet)
+metric.lr <- refold.models(FireSet)
 
 source("refold.nb.R")
 metric.nb <- refold.nb(FireSet)
@@ -815,5 +827,43 @@ I$INITIAL_UNIT_PERSONNEL.f <- factor(I$INITIAL_UNIT_PERSONNEL)
 y.rf <- predict(d.model.rf, I[idx$cv,c('EVENT_TYPE_CD.dl','ALARM_TO_FD','RESPONSE_GROUP','AID_TO_FROM_OTHER_DEPTS','EST_KM.f','INITIAL_UNIT_PERSONNEL.f','INCIDENT_DAY','INCIDENT_MONTH','INCIDENT_YEAR')])
 table(y.rf, I[idx$cv, 'CRITICAL'])
 custom.summaries(table(y.rf, I[idx$cv, 'CRITICAL']))
+```
+
+## Comparing the Models
+I think it's time to combine all of my output metrics from the 10x model runs and perhaps make some pretty charts
+
+```{r}
+metrics.all <- rbind(metrics.lr, metric.nb$metrics, metric.rf$metrics)
+metrics.all$model <- factor(rep(c('LR','NB','RF'), each=10))
+
+metrics.stack <- stack(metrics.all[,1:4])
+metrics.stack$model <- factor(rep(c('LR','NB','RF'), each=10))
+metrics.stack$run <- 1:10
+ggplot(data = metrics.stack[!metrics.stack$ind %in% 'FNR',], mapping=aes(x=run, y=values, colour=model, linetype=ind, points=ind)) + geom_point() + geom_line() + ylim(0.6,1)
+
+# Below has the hline NULL model
+ggplot(data = metrics.stack[!metrics.stack$ind %in% 'FNR',], mapping=aes(x=run, y=values, colour=model, linetype=ind, points=ind)) + geom_point() + geom_line() + ylim(0.6,1) + scale_x_continuous(breaks=1:10) + labs(x='Iteration', y = 'Percent', title='Accuracy, Precision & Recall for 3 Models') + geom_hline(yintercept=0.79) + annotate("text",4, 0.79, label="ACCURACY {CRITICAL = 0}", vjust=-0.5)
+
+## Above I forgot F1-Score! oops
+metrics.stack2 <- stack(metrics.all[,c(1,3:5)])
+metrics.stack2$model <- factor(rep(c('LR','NB','RF'), each=10))
+metrics.stack2$run <- 1:10
+
+ggplot(data = metrics.stack2, mapping=aes(x=run, y=values, colour=model, shape=ind, linetype=ind)) + geom_point() + geom_line() + ylim(0.65,0.95) + scale_x_continuous(breaks=1:10) + labs(x='Iteration', y = 'Percent', title='Accuracy, Precision, Recall\n& F1-Score for 3 Models')
+
+metrics.stack3 <- stack(metrics.all[,c(1,3:5)])
+metrics.stack3$model <- factor(rep(c('LR','NB','RF'), each=10))
+metrics.stack3$run <- 1:10
+
+```
+
+## One way ANOVA
+
+```{r}
+fit <- lm(values ~ model, data = metrics.stack3[metrics.stack3$ind %in% 'F1Score',])
+anova(fit)
+fit <- lm(values ~ model, data = metrics.stack3[metrics.stack3$ind %in% 'ACCURACY',])
+anova(fit)
+
 ```
 

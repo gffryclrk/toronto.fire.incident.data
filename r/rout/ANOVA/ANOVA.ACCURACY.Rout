@@ -1,0 +1,8 @@
+Analysis of Variance Table
+
+Response: values
+          Df     Sum Sq    Mean Sq F value    Pr(>F)    
+model      2 0.00124577 0.00062289  632.78 < 2.2e-16 ***
+Residuals 27 0.00002658 0.00000098                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

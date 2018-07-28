@@ -1,0 +1,6 @@
+Output from 10x run of formula:
+
+CRITICAL ~ EVENT_TYPE_CD + ALARM_TO_FD + RESPONSE_TYPE + EST_KM + INITIAL_UNIT_PERSONNEL + INCIDENT_DAY + INCIDENT_MONTH + INITIAL_CALL_HOUR + INITIAL_CALL_MIN
+
+Continuous converted to factors for NB & RF
+Factors Grouped into bins for RF where factor level > 50 (HOURS, MINUTES)

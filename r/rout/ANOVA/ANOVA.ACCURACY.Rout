@@ -1,8 +1,28 @@
+
+Call:
+lm(formula = ACCURACY ~ model, data = metrics.all)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-0.0029589 -0.0012436 -0.0000093  0.0009666  0.0032405 
+
+Coefficients:
+              Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)  0.9161575  0.0004979 1840.211   <2e-16 ***
+modelNB     -0.0057184  0.0007041   -8.122    1e-08 ***
+modelRF     -0.0201557  0.0007041  -28.627   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.001574 on 27 degrees of freedom
+Multiple R-squared:  0.9699,	Adjusted R-squared:  0.9677 
+F-statistic: 435.3 on 2 and 27 DF,  p-value: < 2.2e-16
+
 Analysis of Variance Table
 
-Response: values
-          Df     Sum Sq    Mean Sq F value    Pr(>F)    
-model      2 0.00124577 0.00062289  632.78 < 2.2e-16 ***
-Residuals 27 0.00002658 0.00000098                      
+Response: ACCURACY
+          Df    Sum Sq   Mean Sq F value    Pr(>F)    
+model      2 2.158e-03 1.079e-03  435.32 < 2.2e-16 ***
+Residuals 27 6.692e-05 2.480e-06                      
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

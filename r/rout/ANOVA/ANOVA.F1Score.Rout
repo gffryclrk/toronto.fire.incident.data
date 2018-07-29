@@ -1,8 +1,28 @@
+
+Call:
+lm(formula = F1Score ~ model, data = metrics.all)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-0.0073213 -0.0016091  0.0001379  0.0024599  0.0081829 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.776649   0.001188 653.948   <2e-16 ***
+modelNB     -0.004354   0.001680  -2.592   0.0152 *  
+modelRF     -0.036931   0.001680 -21.988   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.003756 on 27 degrees of freedom
+Multiple R-squared:  0.9553,	Adjusted R-squared:  0.952 
+F-statistic: 288.8 on 2 and 27 DF,  p-value: < 2.2e-16
+
 Analysis of Variance Table
 
-Response: values
+Response: F1Score
           Df    Sum Sq   Mean Sq F value    Pr(>F)    
-model      2 0.0050979 2.549e-03  253.82 < 2.2e-16 ***
-Residuals 27 0.0002711 1.004e-05                      
+model      2 0.0081471 0.0040735  288.81 < 2.2e-16 ***
+Residuals 27 0.0003808 0.0000141                      
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

@@ -851,10 +851,11 @@ metrics.stack2$run <- 1:10
 
 ggplot(data = metrics.stack2, mapping=aes(x=run, y=values, colour=model, shape=ind, linetype=ind)) + geom_point() + geom_line() + ylim(0.65,0.95) + scale_x_continuous(breaks=1:10) + labs(x='Iteration', y = 'Percent', title='Accuracy, Precision, Recall\n& F1-Score for 3 Models')
 
-metrics.stack3 <- stack(metrics.all[,c(1,3:5)])
+metrics.stack3 <- stack(metrics.all2[,c(1,3:5)])
 metrics.stack3$model <- factor(rep(c('LR','NB','RF'), each=10))
 metrics.stack3$run <- 1:10
 
+ggplot(data = metrics.stack3, mapping=aes(x=run, y=values, colour=model, shape=ind, linetype=ind)) + geom_point() + geom_line() + ylim(0.65,0.95) + scale_x_continuous(breaks=1:10) + labs(x='Iteration', y = 'Percent', title='Accuracy, Precision, Recall\n& F1-Score for 3 Models') + scale_y_continuous(labels = scales::percent)
 ```
 
 ## One way ANOVA

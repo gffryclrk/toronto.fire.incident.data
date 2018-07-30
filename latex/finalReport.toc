@@ -14,5 +14,5 @@
 \contentsline {subsection}{\numberline {6.4}Fire Class: Binary Class with Naive Bayes \& Random Forest}{9}
 \contentsline {section}{\numberline {7}Model Evaluation}{9}
 \contentsline {subsection}{\numberline {7.1}ANOVA}{10}
-\contentsline {section}{\numberline {8}Conclusion}{10}
+\contentsline {section}{\numberline {8}Conclusion}{11}
 \contentsline {section}{\numberline {9}References}{11}

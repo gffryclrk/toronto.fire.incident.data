@@ -22,17 +22,21 @@
 	% \captionsetup{belowskip=-20pt}
 
 \usepackage{array,multirow,float}
+\usepackage[affil-it]{authblk} 
+\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
 
-\title{Mining Toronto Fire Services Incidents}
+\title{Mining Toronto Fire Services Incident Data}
 \author{Geoffrey Clark}
-\date{\today}
+\affil{Prepared for Dr. Ceni Babaoglu
+\\ CKME136: Data Analytics Capstone Course 
+\\ Data Science Lab, Ryerson University}
 
 \begin{document}
 
 \maketitle
-
+\vspace{-1cm}
 \begin{abstract}
-The goal of this project is to explore the viability of 'classical' machine learning algorithms on a fire incident data set. An open source data set on Toronto Fire Services Incidents was obtained, cleaned and the subject of some exploratory analysis. A binary class attribute was assigned to each incident based on post-incident features such as damage and number of responding units. Three machine learning algorithms—Logistic Regression, Naive Bayes and Random Forest—were then used to predict the class attribute using features whose values would be known at the time of incident call. The results are presented and discussed.
+The goal of this project was to explore the viability of 'classical' machine learning algorithms on a fire incident data set. An open source data set on Toronto Fire Services Incidents was obtained, cleaned and the subject of some exploratory analysis. A binary class attribute was assigned to each incident based on post-incident features such as damage and number of responding units. Three machine learning algorithms—Logistic Regression, Naive Bayes and Random Forest—were then used to predict the class attribute using features whose values would be known at the time of incident call. The results are presented and discussed.
 \end{abstract}
 
 \tableofcontents 
@@ -95,7 +99,7 @@ INCIDENT\_DAY, MONTH, HOUR, ... & Extracted from INCIDENT\_DATE \\ \bottomrule
 % \end{table}
 % \end{wrapfigure}
 
-Fire services incident data has been the subject of other types of research also, including spacial and temporal analysis in both Toronto (Asgary, A., Ghaffari, A., Levy, J., 2009) and Ankara (Ceyhan, E., Ertŭgay, K., \& Düzgün, Ş., 2013). International scope is not limited to Japan, Canada and Turkey, however, as research has been published on the implementation of fire incident reporting systems and their value in the United States as well (Bergen, G., Frattaroli, S., Ballesteros M.F., Ta, V.M., Beach, C., \& Gielen, A.C., 2008).
+Fire services incident data has been the subject of other types of research also, including spacial and temporal analysis in both Toronto, Canada (Asgary, A., Ghaffari, A., Levy, J., 2009) and Ankara, Turkey (Ceyhan, E., Ertŭgay, K., \& Düzgün, Ş., 2013). International scope is not limited to Japan, Canada and Turkey, however, as research has been published on the implementation of fire incident reporting systems and their value in the United States as well (Bergen, G., Frattaroli, S., Ballesteros M.F., Ta, V.M., Beach, C., \& Gielen, A.C., 2008).
 
 \section{Dataset}
 
@@ -114,7 +118,7 @@ The dataset used in this project was both a great resource and large challenge. 
 
 Each observation in the data set corresponds to an incident such as fire, medical call, or police assist and has a corresponding unique identifier. Some features, such as incident number, event type and alarm source appear to have been available at the time of incident call and are most likely inputted by the Computer Aided Dispatch (CAD) system. This characteristic of being inputted automatically has led to these features being relatively reliable and complete compared to others in the dataset. 
 
-Also present in the dataset are features that contain values which would be entered, most likely manually, following an incident and include such features as estimated damage, number of firefighter and civilian injuries and casualties, number of rescues, and the Office of the Fire Marshall (OFM) Investigations Department was contacted. The features used in the analysis and modeling sections of this project were chosen largely for their completeness and time of input: before or after the incident. Some features, such as highest alarm level reached and which fire department station dispatched, were dropped due to lack of availability or obfuscated values. 
+Also present in the dataset are features that contain values which would be entered, most likely manually, following an incident and include such features as estimated damage, number of firefighter and civilian injuries and casualties, number of rescues, and if the Office of the Fire Marshall (OFM) Investigations Department was contacted. The features used in the analysis and modeling sections of this project were chosen largely for their completeness and time of input: before or after the incident. Some features, such as highest alarm level reached and which fire department station dispatched, were dropped due to lack of availability or obfuscated values. 
 
 The breakdown of number of incidents by year in Figure~\ref{fig:yearly} reveals a relatively constant trend of incidents with a slightly higher amount in the first year of the dataset, 2011. 
 
@@ -128,7 +132,7 @@ The breakdown of number of incidents by year in Figure~\ref{fig:yearly} reveals 
 	}
 \end{wrapfigure}
 
-This project's approach was to first import, clean and prepare the dataset, secondly perform an exploratory analysis, thirdly to train \& test a predictive model a dependent variable of choice, and finally to evaluate the models performance. A graphical outline is provided in Figure~\ref{fig:blocks}.
+This project's approach was to first import, clean and prepare the dataset, secondly perform an exploratory analysis, thirdly to train \& test a predictive model on a dependent variable of choice, and finally to evaluate the models performance. A graphical outline is provided in Figure~\ref{fig:blocks}.
 
 
 \medskip\noindent\textbf{Step 1: Data Preparation}
@@ -290,20 +294,20 @@ Table~\ref{tab:type-class} shows a cross table of Incident Class by Incident Typ
 
 \subsection{Fire Classification: Binary Class}
 
-In order to help combat the significant class imbalance an alternative classification method was applied to the data set: by slightly changing the above thresholds, and examining a few post-incident features, a binary class was created to identify critical incidents was created. The characteristics chosen to declare incidents critical is as follows:
+In order to help combat the significant class imbalance an alternative classification method was applied to the data set: by slightly changing the above thresholds, and examining a few post-incident features, a binary class was created to identify critical incidents. The characteristics chosen to declare incidents critical is as follows:
 
 \begin{enumerate}
 	\item All incidents that were previously classified as Low, Medium, High or Very High risk are now assigned critical. 
 
-	\item Damage (EST\_LOSS): There are a total of 10,480 incidents with Damage $>$ 0. All of these incidents are assigned critical. 
+	\item Damage (\textsf{EST\_LOSS}): There are a total of 10,480 incidents with Damage $>$ 0. All of these incidents are assigned critical. 
 
-	\item Responding Units: The 99th percentile of RESPONDING\_UNITS is 7 units. Any incident with seven or more responding units is assigned as critical.
+	\item Responding Units: The 99th percentile of \textsf{RESPONDING\_UNITS} is 7 units. Any incident with seven or more responding units is assigned as critical.
 
-	\item Rescues: There are 7907 incidents where RESCUES $>$ 0.
+	\item Rescues: There are 7907 incidents where \textsf{RESCUES} $>$ 0.
 
-	\item Office of the Fire Marshall Investigations: there are 1144 observations in the data set where OFM\_INVESTIGATIONS\_CONTACTED is TRUE. 
+	\item Office of the Fire Marshall Investigations: there are 1144 observations in the data set where \textsf{OFM\_INVESTIGATIONS\_CONTACTED} is TRUE. 
 
-	\item Estimated value at risk: This data set also contains a feature EST\_VALUE\_AT\_RISK which is categorical and contains levels pertaining to dollar value estimates. There are 9565 observations with non-zero value estimates for this feature. All incidents with a non-zero value for this feature are assigned to the critical class.
+	\item Estimated value at risk: This data set also contains a feature \textsf{EST\_VALUE\_AT\_RISK} which is categorical and contains levels pertaining to dollar value estimates. There are 9565 observations with non-zero value estimates for this feature. All incidents with a non-zero value for this feature are assigned to the critical class.
 
 \end{enumerate}
 
@@ -405,7 +409,7 @@ The remaining three metrics; precision, recall, and F\textsubscript{1}-Score are
 		}
 \end{wrapfigure}
 
-Depending on a specific application a model may be trained to maximize a certain metric: perhaps some situations demand high recall, others high precision, and some still where a balance between the two is most desirable. Among the three models trained and tested in this project Linear Regression had the highest percentage of predicted critical incidents be accurately labeled (Precision). Conversely, however, it identified on average the lowest percentage of actual critical incidents (Recall), although in this case the average difference between the other models is significantly less. This relationship brings the F\textsubscript{1}-Score for the three models much closer together, especially between Linear Regression and Naive Bayes which alternate between maximizing precision and recall, respectively. 
+Depending on a specific application a model may be trained to maximize a certain metric: perhaps some situations demand high recall, others high precision, and some still where a balance between the two is most desirable. Among the three models trained and tested in this project Linear Regression had the highest percentage of correctly predicted critical incidents (Precision). Conversely, however, it identified on average the lowest percentage of actual critical incidents (Recall), although in this case the average difference between the other models is significantly less. This relationship brings the F\textsubscript{1}-Score for the three models much closer together, especially between Linear Regression and Naive Bayes which alternate between maximizing precision and recall, respectively. 
 
 
 
@@ -428,6 +432,8 @@ The p-value represents the probability that the averages for the corresponding m
 \end{wraptable}
 
 \noindent that the evaluation metrics were sampled from different populations and thus the choice of model will impact the resulting predictive performance. Not shown, however, are the associated coefficients and p-values for differences between the models F\textsubscript{1}-Score: perhaps as expected by the very close averages for F\textsubscript{1}-Score between Logistic Regression and Naive Bayes there is a much lower p-value for a difference between these two models. Although the difference is still significant, it is much less so with a p-value of 0.0152, which corresponds to the 95\% confidence level. This means there is strong evidence for a difference of F\textsubscript{1}-Scores between the three models, but much less of a difference between Naive Bayes and Logistic Regression.
+
+\clearpage
 
 \begin{wraptable}[13]{r}{0.6\textwidth}
 	\begin{subfigure}[h]{\textwidth}

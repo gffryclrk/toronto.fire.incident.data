@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 JUL 2018 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 JUL 2018 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,34 +502,42 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@dima=\skip60
 \bigstrutjot=\dimen141
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip61
+\@affilsep=\skip62
+\c@Maxaffil=\count107
+\c@authors=\count108
+\c@affil=\count109
+)
 (./finalReport.aux)
 \openout1 = `finalReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
+\scratchcounter=\count110
 \scratchdimen=\dimen142
 \scratchbox=\box30
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count111
+\nofMParguments=\count112
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count110
+\MPscratchCnt=\count113
 \MPscratchDim=\dimen143
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
 \everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -626,10 +634,6 @@ Package color Info: Driver file: pdftex.def on input line 147.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
 (./finalReport.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 6.
@@ -645,188 +649,192 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 68.
+(Font)              <9> on input line 72.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 68.
+(Font)              <5> on input line 72.
 
-Overfull \hbox (4.03244pt too wide) in paragraph at lines 86--86
+Overfull \hbox (4.03244pt too wide) in paragraph at lines 90--90
 []|\OT1/cmss/m/n/9 OFM[]INVESTIGATIONS[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\OT1/cmss/m/n/9 INCIDENT[]DAY,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\OT1/cmss/m/n/9 Extracted from IN-CI-
  []
 
-[2] <../img/Incidents_by_year.png, id=15, 301.125pt x 240.9pt>
+[2] <../img/Incidents_by_year.png, id=16, 301.125pt x 240.9pt>
 File: ../img/Incidents_by_year.png Graphic file (type png)
 
 <use ../img/Incidents_by_year.png>
-Package pdftex.def Info: ../img/Incidents_by_year.png used on input line 108.
+Package pdftex.def Info: ../img/Incidents_by_year.png used on input line 112.
 (pdftex.def)             Requested size: 193.47577pt x 154.78564pt.
 
-<../img/block-diagram.jpg, id=17, 301.125pt x 451.6875pt>
+<../img/block-diagram.jpg, id=18, 301.125pt x 451.6875pt>
 File: ../img/block-diagram.jpg Graphic file (type jpg)
 
 <use ../img/block-diagram.jpg>
-Package pdftex.def Info: ../img/block-diagram.jpg used on input line 124.
+Package pdftex.def Info: ../img/block-diagram.jpg used on input line 128.
 (pdftex.def)             Requested size: 193.47577pt x 290.22311pt.
  [3 <../img/Incidents_by_year.png> <../img/block-diagram.jpg>]
-<../img/incident-count-by-property-group.png, id=22, 481.8pt x 301.125pt>
+<../img/incident-count-by-property-group.png, id=23, 481.8pt x 301.125pt>
 File: ../img/incident-count-by-property-group.png Graphic file (type png)
 
 <use ../img/incident-count-by-property-group.png>
 Package pdftex.def Info: ../img/incident-count-by-property-group.png used on in
-put line 151.
+put line 155.
 (pdftex.def)             Requested size: 241.84842pt x 151.15485pt.
 
-<../img/incident_count_by_event_group.png, id=23, 481.8pt x 301.125pt>
+<../img/incident_count_by_event_group.png, id=24, 481.8pt x 301.125pt>
 File: ../img/incident_count_by_event_group.png Graphic file (type png)
 
 <use ../img/incident_count_by_event_group.png>
 Package pdftex.def Info: ../img/incident_count_by_event_group.png used on input
- line 158.
+ line 162.
 (pdftex.def)             Requested size: 241.84842pt x 151.15485pt.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 16
-9.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 17
+3.
 
 
-Underfull \hbox (badness 2384) in paragraph at lines 174--175
+Underfull \hbox (badness 2384) in paragraph at lines 178--179
 \OT1/cmr/m/n/12 The Alarm to Fire De-part-ment fea-ture,
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 174--175
+Underfull \hbox (badness 5008) in paragraph at lines 178--179
 \OT1/cmr/m/n/12 fea-tures are re-lated in the sense that
  []
 
 [4 <../img/incident-count-by-property-group.png> <../img/incident_count_by_even
 t_group.png>]
-<../img/event-group-portion_vs_alarm-to-fd-BW.png, id=31, 481.8pt x 602.25pt>
+<../img/event-group-portion_vs_alarm-to-fd-BW.png, id=32, 481.8pt x 602.25pt>
 File: ../img/event-group-portion_vs_alarm-to-fd-BW.png Graphic file (type png)
 
 <use ../img/event-group-portion_vs_alarm-to-fd-BW.png>
 Package pdftex.def Info: ../img/event-group-portion_vs_alarm-to-fd-BW.png used 
-on input line 179.
+on input line 183.
 (pdftex.def)             Requested size: 241.84842pt x 302.30971pt.
 
-<../img/daily-hourly-coxwell-crop.png, id=32, 481.8pt x 286.06876pt>
+<../img/daily-hourly-coxwell-crop.png, id=33, 481.8pt x 286.06876pt>
 File: ../img/daily-hourly-coxwell-crop.png Graphic file (type png)
 
 <use ../img/daily-hourly-coxwell-crop.png>
 Package pdftex.def Info: ../img/daily-hourly-coxwell-crop.png used on input lin
-e 195.
+e 199.
 (pdftex.def)             Requested size: 289.08221pt x 171.64258pt.
 
-Overfull \hbox (31.95459pt too wide) in paragraph at lines 202--203
+Overfull \hbox (31.95459pt too wide) in paragraph at lines 206--207
 \OT1/cmss/m/n/12 ALARM[]TO[]FD, RE-SPONSE[]GROUP, PROP-ERTY[]GROUP, MONTH, DAY,
  HOUR, EVENT[]TYPE[]CD\OT1/cmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 [5 <../img/event-group-portion_vs_alarm-to-fd-BW.png> <../img/daily-hourly-coxw
 ell-crop.png (PNG copy)>]
-Overfull \hbox (2.87398pt too wide) in paragraph at lines 207--207
+Overfull \hbox (2.87398pt too wide) in paragraph at lines 211--211
 []|\OT1/cmss/m/n/9 #| 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 208
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 212
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 208.
+LaTeX Font Info:    No file OMScmss.fd. on input line 212.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 208.
+(Font)              for symbol `textbraceleft' on input line 212.
 
 
-Overfull \hbox (21.99606pt too wide) in paragraph at lines 205--220
+Overfull \hbox (21.99606pt too wide) in paragraph at lines 209--224
  []|  [] 
  []
 
 [6]
-Overfull \hbox (37.97528pt too wide) in paragraph at lines 247--272
+Overfull \hbox (37.97528pt too wide) in paragraph at lines 251--276
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 279.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 283.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 279.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 283.
  [7]
-<../img/total_critical_incidents_by_event_group.png, id=48, 481.8pt x 301.125pt
+<../img/total_critical_incidents_by_event_group.png, id=49, 481.8pt x 301.125pt
 >
 File: ../img/total_critical_incidents_by_event_group.png Graphic file (type png
 )
  <use ../img/total_critical_incidents_by_event_group.png>
 Package pdftex.def Info: ../img/total_critical_incidents_by_event_group.png use
-d on input line 336.
+d on input line 340.
 (pdftex.def)             Requested size: 241.84842pt x 151.15485pt.
  [8]
-Overfull \vbox (4.51225pt too high) detected at line 357
+Overfull \vbox (4.51225pt too high) detected at line 361
  []
 
 
-Package wrapfig Warning: Stationary wraptable forced to float on input line 388
+Package wrapfig Warning: Stationary wraptable forced to float on input line 392
 .
 
 [9 <../img/total_critical_incidents_by_event_group.png>]
-<../img/accuracy_precision_recall_3models.png, id=57, 301.125pt x 481.8pt>
+<../img/accuracy_precision_recall_3models.png, id=58, 301.125pt x 481.8pt>
 File: ../img/accuracy_precision_recall_3models.png Graphic file (type png)
 
 <use ../img/accuracy_precision_recall_3models.png>
 Package pdftex.def Info: ../img/accuracy_precision_recall_3models.png used on i
-nput line 402.
+nput line 406.
 (pdftex.def)             Requested size: 193.47577pt x 309.57132pt.
 
-Underfull \hbox (badness 1009) in paragraph at lines 430--431
+Underfull \hbox (badness 1009) in paragraph at lines 434--435
 []\OT1/cmr/m/n/12 that the eval-u-a-tion met-rics were
  []
 
+[10 <../img/accuracy_precision_recall_3models.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 453.
+(Font)              <10.95> on input line 459.
 
-Package wrapfig Warning: Stationary wraptable forced to float on input line 459
+
+Package wrapfig Warning: Stationary wraptable forced to float on input line 465
 .
 
-[10 <../img/accuracy_precision_recall_3models.png>]
-Underfull \hbox (badness 1132) in paragraph at lines 460--461
+
+Underfull \hbox (badness 1132) in paragraph at lines 466--467
 \OT1/cmr/m/n/12 tures avail-able fol-low-ing an in-ci-
  []
 
 
-Overfull \hbox (89.44824pt too wide) in paragraph at lines 476--477
+Overfull \hbox (89.44824pt too wide) in paragraph at lines 482--483
 \OT1/cmr/m/n/12 dents and their causes: A case of Toronto, Canada. Fire Safety 
 Jour-nal, 45, 44-57.doi:10.1016/j.firesaf.2009.10.002 
  []
 
 
-Overfull \hbox (144.56934pt too wide) in paragraph at lines 482--483
+Overfull \hbox (144.56934pt too wide) in paragraph at lines 488--489
 \OT1/cmr/m/n/12 tional Jour-nal of Com-puter Sci-ence & Tech-nol-ogy. 145-148. 
 Re-trieved from http://ijcst.com/icaccbie11/sp1/krishnaveni.pdf 
  []
 
-[11]
-Overfull \hbox (21.69608pt too wide) in paragraph at lines 492--493
+[11
+
+]
+Overfull \hbox (21.69608pt too wide) in paragraph at lines 498--499
 \OT1/cmr/m/n/12 Record. Re-trieved from http://www.oafc.on.ca/article/new-dispa
 tch-system-helps-fire-department-
  []
 
 
-Overfull \hbox (38.31998pt too wide) in paragraph at lines 494--496
+Overfull \hbox (38.31998pt too wide) in paragraph at lines 500--502
 \OT1/cmr/m/n/12 #e3d443bb-2593-2615-4972-20e24c0ab876 un-der the Open Data Li-c
 ense: https://www.toronto.ca/city-
  []
@@ -837,11 +845,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 4309 strings out of 492995
- 65727 string characters out of 6132704
- 141353 words of memory out of 5000000
- 7788 multiletter control sequences out of 15000+600000
- 12204 words of font info for 42 fonts, out of 8000000 for 9000
+ 4377 strings out of 492995
+ 66478 string characters out of 6132704
+ 142502 words of memory out of 5000000
+ 7851 multiletter control sequences out of 15000+600000
+ 11934 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,14n,41p,1367b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -857,11 +865,12 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on finalReport.pdf (12 pages, 381048 bytes).
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on finalReport.pdf (12 pages, 395966 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

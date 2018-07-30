@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Literature Review}{2}
+\contentsline {section}{\numberline {3}Dataset}{2}
+\contentsline {section}{\numberline {4}Approach}{3}
+\contentsline {section}{\numberline {5}Exploratory Analysis}{4}
+\contentsline {subsection}{\numberline {5.1}Event \& Property Type}{4}
+\contentsline {subsection}{\numberline {5.2}Alarm to Fire Department, Event Group}{4}
+\contentsline {subsection}{\numberline {5.3}Temporal Feature Analysis}{5}
+\contentsline {subsection}{\numberline {5.4}Association Rules}{6}
+\contentsline {section}{\numberline {6}Modeling}{7}
+\contentsline {subsection}{\numberline {6.1}Model Selection}{7}
+\contentsline {subsection}{\numberline {6.2}Fire Classification: Binary Class}{8}
+\contentsline {subsection}{\numberline {6.3}Fire Incidents: Binary Class with Logistic Regression}{8}
+\contentsline {subsection}{\numberline {6.4}Fire Class: Binary Class with Naive Bayes \& Random Forest}{9}
+\contentsline {section}{\numberline {7}Model Evaluation}{9}
+\contentsline {subsection}{\numberline {7.1}ANOVA}{10}
+\contentsline {section}{\numberline {8}Conclusion}{10}
+\contentsline {section}{\numberline {9}References}{11}

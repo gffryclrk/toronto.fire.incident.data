@@ -1,0 +1,58 @@
+---
+title: "Toronto Fire Services Incidents Revisitied"
+author: "Geoffrey Clark"
+date: "10/2/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Data
+A lot of preparation has already been conducted so we'll just load that data here...
+```{r}
+load("dataprep.RData")
+
+# Set a seed for reproducability:
+set.seed(42)
+```
+
+## Class Imbalance
+There's a pretty big class imbalance here: ~96/4
+```{r}
+table(I$CRITICAL) / nrow(I) * 100
+
+# Let's first create a data.frame containing features of interest, Incidents subset:
+I_s <- I[,c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INITIAL_CALL_HOUR','INITIAL_CALL_MIN','CRITICAL')]
+# I_s$EVENT_TYPE_CD <- as.factor(I_s$EVENT_TYPE_CD)
+
+# With less features it's easy to oversample the imbalanced class with ROSE (Random Over-sampling Examples).
+# For simplicity let's use a previously randomly selected training set (training/validation/test = 60/20/20)
+
+table(I_s[full_idx$train, 'CRITICAL'])/length(full_idx$train)
+
+library(ROSE)
+
+I_s_ROSE <- ROSE(CRITICAL ~ ., data=I_s[full_idx$train,])$data
+
+# Our data now has about a 50/50 class split. Not bad!
+
+table(I_s_ROSE$CRITICAL) / nrow(I_s_ROSE) * 100
+
+# Let's train a model with this new set and see how it performs.
+
+model_logistic_bal <- glm(CRITICAL ~ ., data=I_s_ROSE, family=binomial(link="logit"))
+model_logistic_imb <- glm(CRITICAL ~., data = I_s[full_idx$train,], family=binomial(link="logit"))
+source("custom_summaries.R")
+
+model_log_bal_predict <- predict.logistic(model_logistic_bal, I_s[full_idx$cv,], prob=0.5)
+model_log_imb_predict <- predict.logistic(model_logistic_imb, I_s[full_idx$cv,], prob=0.5)
+
+source("refold.models.R")
+metric.lr <- refold.models(I_s_ROSE)
+
+
+```
+
+

@@ -1,5 +1,6 @@
 refold.models <- function(F){
-  source("r/useful_fn.R")
+  cat(getwd())
+  source("useful_fn.R")
   metrics <- data.frame(ACCURACY=double(), FNR=double(), PRECISION=double(), RECALL=double(), F1Score=double())
   
   l <- list()

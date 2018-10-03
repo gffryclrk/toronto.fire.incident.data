@@ -31,6 +31,7 @@ custom.summaries <- function(cm){
 }
 
 predict.logistic <- function(model, test, prob=0.5){
+  test <- test[test$EVENT_TYPE_CD %in% model$xlevels$EVENT_TYPE_CD,]
   y <- data.frame(prob=vector(mode='numeric',length=nrow(test)))
   y$prob <- predict(model, newdata=test)
   y$pred <- ifelse(y$prob > prob,1,0)

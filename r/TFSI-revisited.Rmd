@@ -49,10 +49,22 @@ source("custom_summaries.R")
 model_log_bal_predict <- predict.logistic(model_logistic_bal, I_s[full_idx$cv,], prob=0.5)
 model_log_imb_predict <- predict.logistic(model_logistic_imb, I_s[full_idx$cv,], prob=0.5)
 
-source("refold.models.R")
-metric.lr <- refold.models(I_s_ROSE)
+# source("refold.models.R")
+# metric.lr <- refold.models(I_s_ROSE)
 
 
 ```
 
+## Comparing Models
+
+Now that we have a few metrics we can visualize and compare them.
+
+```{r}
+model_log_imb_predict$cls <- as.numeric(I_s[full_idx$cv, 'CRITICAL']) -1
+model_log_imb_predict$acc <- ((model_log_imb_predict$pred & model_log_imb_predict$cls) | (!model_log_imb_predict$pred & !model_log_imb_predict$cls))
+custom.summaries(table(model_log_imb_predict$pred, model_log_imb_predict$cls))
+mean(model_log_imb_predict$acc, na.rm=T) # ACCURACY
+
+
+```
 

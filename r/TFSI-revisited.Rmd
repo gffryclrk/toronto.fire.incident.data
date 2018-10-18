@@ -18,6 +18,8 @@ load("dataprep.RData")
 set.seed(42)
 ```
 
+
+
 ## Class Imbalance
 There's a pretty big class imbalance here: ~96/4
 ```{r}
@@ -25,7 +27,7 @@ table(I$CRITICAL) / nrow(I) * 100
 
 # Let's first create a data.frame containing features of interest, Incidents subset:
 I_s <- I[,c('EVENT_TYPE_CD','ALARM_TO_FD','RESPONSE_TYPE','EST_KM','INITIAL_UNIT_PERSONNEL','INCIDENT_DAY','INCIDENT_MONTH','INITIAL_CALL_HOUR','INITIAL_CALL_MIN','CRITICAL')]
-# I_s$EVENT_TYPE_CD <- as.factor(I_s$EVENT_TYPE_CD)
+I_s$EVENT_TYPE_CD <- as.factor(I_s$EVENT_TYPE_CD)
 
 # With less features it's easy to oversample the imbalanced class with ROSE (Random Over-sampling Examples).
 # For simplicity let's use a previously randomly selected training set (training/validation/test = 60/20/20)
@@ -54,17 +56,86 @@ model_log_imb_predict <- predict.logistic(model_logistic_imb, I_s[full_idx$cv,],
 
 
 ```
+### Input Data: Responding Units
+```{r}
+## Responding Units
+# Load & Combine Dataset from Yearwise .csv
 
-## Comparing Models
+RU <- read.csv("../csv/2011_ru.csv", header=T, stringsAsFactors = F, na.strings=c("","NA"))
 
-Now that we have a few metrics we can visualize and compare them.
+
+for(yr in (2012:2016)){
+  r_file <- paste("../csv/",yr, "_ru.csv", sep="")
+  
+  r_df <- read.csv(r_file, header=T, stringsAsFactors = F)
+  RU <- rbind(RU, r_df)
+  rm(r_df)
+  rm(r_file)
+    
+}
+
+
+```
+
+### Responding Unit Features
+
+The goal here is to retrieve information from the responding units XML
+According to contact at Toronto Fire, the first unit dispatched is usually from the station that received the dispatch.
+
 
 ```{r}
-model_log_imb_predict$cls <- as.numeric(I_s[full_idx$cv, 'CRITICAL']) -1
-model_log_imb_predict$acc <- ((model_log_imb_predict$pred & model_log_imb_predict$cls) | (!model_log_imb_predict$pred & !model_log_imb_predict$cls))
-custom.summaries(table(model_log_imb_predict$pred, model_log_imb_predict$cls))
-mean(model_log_imb_predict$acc, na.rm=T) # ACCURACY
+RS <- data.frame(INCIDENT_NUMBER=character(),
+                 FIRST_STATION=character(),
+                 SECOND_STATION=character(),
+                 THIRD_STATION=character(),
+                 FIRST_APPARATUS=character(),
+                 SECOND_APPARATUS=character(),
+                 THIRD_APPARATUS=character())
 
 
+sum(is.na(RU$DISPATCH_TIME)) #46. 
+# Small number of observations without DISPATHC_TIME. Removing them for now 
+
+RU <- RU[!is.na(RU$DISPATCH_TIME),]
+RU <- RU[grepl("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}", RU$DISPATCH_TIME),]
+
+
+RU$DISPATCH_TIME <- as.POSIXct(RU$DISPATCH_TIME)
+
+curr_year = 0
+for(i in I$INCIDENT_NUMBER[nchar(I$INCIDENT_NUMBER) == 9]){
+  if(curr_year != substr(i,2,3)){
+    curr_year <- substr(i, 2,3)
+    cat("\n", curr_year) 
+  }
+  
+  subset <- RU[RU$INCIDENT_NUMBER == i,]
+  subset <- subset[order(subset[,3]),]
+  
+  this_RS <- data.frame(INCIDENT_NUMBER=i,
+                 FIRST_STATION=as.character(NA),
+                 SECOND_STATION=as.character(NA),
+                 THIRD_STATION=as.character(NA),
+                 FIRST_APPARATUS=as.character(NA),
+                 SECOND_APPARATUS=as.character(NA),
+                 THIRD_APPARATUS=as.character(NA))
+  
+  this_RS$FIRST_STATION <- strsplit(subset[1,'CAD_UNIT_ID'], "\\D+")[[1]][2]
+  this_RS$FIRST_APPARATUS <- strsplit(subset[1,'CAD_UNIT_ID'], "\\d+")[[1]][1]
+  
+  if(nrow(subset) > 1){
+    this_RS$SECOND_STATION <- strsplit(subset[2,'CAD_UNIT_ID'], "\\D+")[[1]][2]
+    this_RS$SECOND_APPARATUS <- strsplit(subset[2,'CAD_UNIT_ID'], "\\d+")[[1]][1]
+  }
+  if(nrow(subset) > 2){
+    this_RS$THIRD_STATION <- strsplit(subset[3,'CAD_UNIT_ID'], "\\D+")[[1]][2]
+    this_RS$THIRD_APPARATUS <- strsplit(subset[3,'CAD_UNIT_ID'], "\\d+")[[1]][1]
+    
+  }
+  
+  RS <- rbind(RS, this_RS)
+  
+  
+}
 ```
 

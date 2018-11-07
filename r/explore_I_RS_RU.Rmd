@@ -1,0 +1,23 @@
+---
+title: "Exploring I, RS, RU"
+author: "Geoffrey Clark"
+date: "11/3/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+load("environ/I_RS.RData")
+```
+
+```{r}
+table(RS$FIRST_APPARATUS)
+table(RS$FIRST_STATION)
+
+View(RU[RU$INCIDENT_NUMBER %in% RS[RS$FIRST_STATION %in% 1, c('INCIDENT_NUMBER','FIRST_APPARATUS','FIRST_STATION')][1],]) # Mostly ATVs
+```
+

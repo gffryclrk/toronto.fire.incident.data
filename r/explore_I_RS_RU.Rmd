@@ -21,3 +21,125 @@ table(RS$FIRST_STATION)
 View(RU[RU$INCIDENT_NUMBER %in% RS[RS$FIRST_STATION %in% 1, c('INCIDENT_NUMBER','FIRST_APPARATUS','FIRST_STATION')][1],]) # Mostly ATVs
 ```
 
+## Times, Dates
+Always with temporal data, types, etc
+```{r}
+RU[!grepl('\\d{4}-\\d{2}-\\d{2}', RU$DISPATCH_TIME), 'DISPATCH_TIME'] <- NA
+RU$DISPATCH_TIME <- as.POSIXct(RU$DISPATCH_TIME)
+```
+
+
+## Cleaning up the Results
+
+```{r}
+# The below re-assignments are based on information obtained from Wikipedia:
+# https://en.wikipedia.org/wiki/Toronto_Fire_Services#Fire_stations
+
+RS[RS$FIRST_STATION %in% 11, 'FIRST_STATION'] <- 111
+RS[RS$FIRST_STATION %in% 10, 'FIRST_STATION'] <- 114
+RS[RS$FIRST_STATION %in% 13, 'FIRST_STATION'] <- 132
+RS[RS$FIRST_STATION %in% 14, 'FIRST_STATION'] <- 142
+RS[RS$FIRST_STATION %in% 21, 'FIRST_STATION'] <- 212
+RS[RS$FIRST_STATION %in% 22, 'FIRST_STATION'] <- 225
+RS[RS$FIRST_STATION %in% 23, 'FIRST_STATION'] <- 231
+RS[RS$FIRST_STATION %in% 24, 'FIRST_STATION'] <- 242
+RS[RS$FIRST_STATION %in% c(30,33), 'FIRST_STATION'] <- 332
+RS[RS$FIRST_STATION %in% 31, 'FIRST_STATION'] <- 312
+RS[RS$FIRST_STATION %in% 32, 'FIRST_STATION'] <- 323
+RS[RS$FIRST_STATION %in% 34, 'FIRST_STATION'] <- 345
+RS[RS$FIRST_STATION %in% 40, 'FIRST_STATION'] <- 445
+RS[RS$FIRST_STATION %in% 41, 'FIRST_STATION'] <- 415
+RS[RS$FIRST_STATION %in% 42, 'FIRST_STATION'] <- 423
+RS[RS$FIRST_STATION %in% 43, 'FIRST_STATION'] <- 432
+# RS[RS$FIRST_STATION %in% 43, 'FIRST_STATION'] <- 432
+
+
+# There's an issue with Car 12 (District Chief) & Car 45: I'm not sure what station they're from.
+# There's 134 observations of Car 12 in FIRST_STATION and 132 of Car 44 so I'm going to re-appoint these cases to
+# the station of the second responding unit.
+# Same procedure being applied to stations reportedly from 551,552, etc. There are no such stations.
+
+for(i in unique(RS[RS$FIRST_STATION %in% c(12,44,551,552,661,662), 'INCIDENT_NUMBER'])){
+  
+  subset <- RU[RU$INCIDENT_NUMBER %in% i,]
+  subset <- subset[!is.na(subset$DISPATCH_TIME),]
+  if(nrow(subset) < 2) next
+  subset <- subset[order(subset[,3]),]
+  
+  
+  
+  RS[RS$INCIDENT_NUMBER %in% i, 'FIRST_STATION'] <- regmatches(subset[2,'CAD_UNIT_ID'], regexpr("\\D+", subset[2,'CAD_UNIT_ID']), invert=T)[[1]][2] 
+  RS[RS$INCIDENT_NUMBER %in% i, 'FIRST_APPARATUS'] <- regmatches(subset[2,'CAD_UNIT_ID'], regexpr("\\D+", subset[2,'CAD_UNIT_ID']), invert=F)
+    
+  
+}
+rm(i)
+
+# After the above re-assignment, where Incidents whose first responder was from Car 12 or Car 44 were assigned to second responder,
+# there are still 1 and 8 observations for each respective car. For these incidents I am going to arbitrarily assign them to
+# another sation in the same district that doesn't have a car.
+
+RS[RS$FIRST_STATION %in% 12, 'FIRST_STATION'] <- sample(c(112,113,115,116,121,122),1)
+RS[RS$FIRST_STATION %in% 44, 'FIRST_STATION'] <- sample((441:444),1)
+
+# All that remains are 2 incidents from 4 nonsensical stations: 551, 552, and 661. There are 4 incidents from 662. I'm going to drop them all.
+
+RS <- RS[!RS$FIRST_STATION %in% c(551,552,661,662),]
+
+# All incidents with first station 1, 2, 3 or 4 that are ATVs are probably from the CNE
+# The only station with ATVs is 346: The Canadian National Exhibition
+
+RS[RS$FIRST_STATION %in% (1:4) & RS$FIRST_APPARATUS %in% 'ATV','FIRST_STATION'] <- 346
+
+# There's an Odd apparatus here encoded as PA_AQUFP. I'm not sure what that means but am going to skip it and re-assign the first station
+# to the value of the second station. In this case it's 212. It seemed important to keep because it's a critical incident. 
+
+RS[RS$FIRST_STATION %in% '', 'FIRST_STATION'] <- RS[RS$FIRST_STATION %in% '', 'SECOND_STATION']
+
+# There is a mystery appartus, ICS, without any other responding units. It's not a critical incident so I'm dropping it.
+RS <- RS[!RS$FIRST_APPARATUS %in% 'ICS',]
+
+# The other is a Mystery MR vehicle that I'm not sure about. In this case there's other units so I'll assign FIRST to value of SECOND.
+RS[RS$FIRST_APPARATUS %in% 'MR','FIRST_STATION'] <- RS[RS$FIRST_APPARATUS %in% 'MR','SECOND_STATION']
+
+
+# Below I'm fixing a problem with my original REGEX:
+# I didn't notice that some Responding Units have multiple character digit breaks.
+# This oversight gave me results such as: 112CR, 112CA, etc. 
+# I started to manually write out the code below, lost interest,
+# and implemented a vectorized solution. Perhaps I should have
+# done this from the start but, of course, it often seems easier
+# at first to do things the hard way. 
+
+# RS[RS$FIRST_STATION %in% '112CR', 'FIRST_STATION'] <- 112
+# RS[RS$FIRST_STATION %in% '113CA', 'FIRST_STATION'] <- 113
+# RS[RS$FIRST_STATION %in% '114CT', 'FIRST_STATION'] <- 114
+# RS[RS$FIRST_STATION %in% '115CR', 'FIRST_STATION'] <- 115
+# RS[RS$FIRST_STATION %in% '122CR', 'FIRST_STATION'] <- 122
+# RS[RS$FIRST_STATION %in% '131CA', 'FIRST_STATION'] <- 131
+# RS[RS$FIRST_STATION %in% '133CA', 'FIRST_STATION'] <- 133
+# RS[RS$FIRST_STATION %in% '133CR', 'FIRST_STATION'] <- 133
+# RS[RS$FIRST_STATION %in% '134CR', 'FIRST_STATION'] <- 134
+# RS[RS$FIRST_STATION %in% '135CA', 'FIRST_STATION'] <- 135
+# RS[RS$FIRST_STATION %in% '142CA', 'FIRST_STATION'] <- 142
+# RS[RS$FIRST_STATION %in% '213CA', 'FIRST_STATION'] <- 213
+# RS[RS$FIRST_STATION %in% '214CR', 'FIRST_STATION'] <- 214
+# RS[RS$FIRST_STATION %in% '215CA', 'FIRST_STATION'] <- 215
+# RS[RS$FIRST_STATION %in% '222CA', 'FIRST_STATION'] <- 222
+# RS[RS$FIRST_STATION %in% '224CR', 'FIRST_STATION'] <- 224
+# RS[RS$FIRST_STATION %in% '226CA', 'FIRST_STATION'] <- 226
+# RS[RS$FIRST_STATION %in% '231CR', 'FIRST_STATION'] <- 231
+# RS[RS$FIRST_STATION %in% '231CA', 'FIRST_STATION'] <- 231
+# RS[RS$FIRST_STATION %in% '235CR', 'FIRST_STATION'] <- 235
+# RS[RS$FIRST_STATION %in% '241CR', 'FIRST_STATION'] <- 241
+
+first_stations <- RS[RS$FIRST_STATION %in% levels(RS$FIRST_STATION)[grepl("\\d{3}\\D{1,}",levels(RS$FIRST_STATION))], 'FIRST_STATION']
+first_stations <- regmatches(first_stations, regexpr("\\d{3}", first_stations))
+RS[RS$FIRST_STATION %in% levels(RS$FIRST_STATION)[grepl("\\d{3}\\D{1,}",levels(RS$FIRST_STATION))], 'FIRST_STATION'] <- first_stations
+rm(first_stations)
+RS$FIRST_STATION <- droplevels(RS$FIRST_STATION)
+```
+
+
+
+

@@ -26,6 +26,8 @@ Always with temporal data, types, etc
 ```{r}
 RU[!grepl('\\d{4}-\\d{2}-\\d{2}', RU$DISPATCH_TIME), 'DISPATCH_TIME'] <- NA
 RU$DISPATCH_TIME <- as.POSIXct(RU$DISPATCH_TIME)
+RU[RU$ENROUTE_TIME %in% "", 'ENROUTE_TIME'] <- NA
+RU$ENROUTE_TIME <- as.POSIXct(RU$ENROUTE_TIME, format="%Y-%m-%d")
 ```
 
 

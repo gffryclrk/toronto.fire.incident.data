@@ -152,4 +152,10 @@ I_GEO <- merge(I, RS[,c('INCIDENT_NUMBER','FIRST_STATION','FIRST_APPARATUS')], b
 I_GEO <- merge(x = I_GEO, y = station_locations, by.x = 'FIRST_STATION', by.y = 'STATION_NUMBER', all.x = T)
 ```
 
+## Some Visualization
+
+```{r}
+ggplot(data = I_GEO[I_GEO$CRITICAL %in% 1,]) + geom_bar(mapping = aes(x = FIRST_STATION)) + coord_flip() + labs(x = "Total Critical Incidents", y = "First Station", title="First Station Critical Incident Counts")
+```
+
 

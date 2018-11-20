@@ -143,5 +143,13 @@ RS$FIRST_STATION <- droplevels(RS$FIRST_STATION)
 ```
 
 
+## Joining
+```{r}
+station_locations <- read.csv(file="csv/station_locations.csv", header=T)
+
+I_GEO <- merge(I, RS[,c('INCIDENT_NUMBER','FIRST_STATION','FIRST_APPARATUS')], by = 'INCIDENT_NUMBER')
+
+I_GEO <- merge(x = I_GEO, y = station_locations, by.x = 'FIRST_STATION', by.y = 'STATION_NUMBER', all.x = T)
+```
 
 

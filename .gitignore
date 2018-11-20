@@ -10,3 +10,4 @@ docs/.~lock.lit_review.odt#
 *.Rhistory
 *.RData
 .~lock*
+~*.twbr

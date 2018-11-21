@@ -145,7 +145,7 @@ RS$FIRST_STATION <- droplevels(RS$FIRST_STATION)
 
 ## Joining
 ```{r}
-station_locations <- read.csv(file="csv/station_locations.csv", header=T)
+station_locations <- read.csv(file="../csv/station_locations.csv", header=T)
 
 I_GEO <- merge(I, RS[,c('INCIDENT_NUMBER','FIRST_STATION','FIRST_APPARATUS')], by = 'INCIDENT_NUMBER')
 
@@ -156,6 +156,17 @@ I_GEO <- merge(x = I_GEO, y = station_locations, by.x = 'FIRST_STATION', by.y = 
 
 ```{r}
 ggplot(data = I_GEO[I_GEO$CRITICAL %in% 1,]) + geom_bar(mapping = aes(x = FIRST_STATION)) + coord_flip() + labs(x = "Total Critical Incidents", y = "First Station", title="First Station Critical Incident Counts")
+
+ggplot(data = I_GEO) + 
+  geom_bar(mapping = aes(x = FIRST_STATION, fill=CRITICAL)) + 
+  coord_flip() + 
+  labs(y = "Total Incidents", x = "First Station", title="Total and Critical Incidents by Fire Station Toronto", subtitle="2011 - 2016") + 
+  scale_fill_manual(values=c("#333333","#666666")) + 
+  theme_grey(base_size=22) +
+  theme(plot.title = element_text(hjust = 0.5), 
+        plot.subtitle = element_text(hjust = 0.5), 
+        axis.text.y = element_text(size=rel(0.60))
+        )
 ```
 
 
